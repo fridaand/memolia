@@ -1,8 +1,6 @@
 # memolia
 
 Memolia - A fun way to learn languages and sharpen your memory
-<<<<<<< HEAD
-=======
 
 # features
 
@@ -34,7 +32,7 @@ This project is a work in progress and currently serves as:
 
 ## Technologies Used
 
-- **HTML**, **CSS**, **JavaScript**
+- HTML, CSS, JavaScript
 - Custom animations and SVG graphics.
 
 ## Contributions
