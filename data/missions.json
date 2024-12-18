@@ -1,0 +1,34 @@
+{
+  "missions": [
+    {
+      "name": "Fruits",
+      "cards": [
+        {
+          "image": "images/fruits/banana.png",
+          "name": "banana",
+          "sound": "sounds/banana.mp3"
+        },
+        {
+          "image": "images/fruits/cherry.png",
+          "name": "cherry",
+          "sound": "sounds/cherry.mp3"
+        }
+      ]
+    },
+    {
+      "name": "Food",
+      "cards": [
+        {
+          "image": "food/pizza.png",
+          "name": "pizza",
+          "sound": "sounds/pizza.mp3"
+        },
+        {
+          "image": "food/pizza.png",
+          "name": "pizza",
+          "sound": "sounds/pizza.mp3"
+        }
+      ]
+    }
+  ]
+}

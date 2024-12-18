@@ -1,0 +1,20 @@
+[
+  {
+    "name": "chilli",
+    "image": "images/vegetables_1/chilli.png",
+    "language": {
+      "english": "chilli",
+      "french": "X"
+    },
+    "audio": "sound/vegetables_1/chilli.mp3"
+  },
+  {
+    "name": "curry",
+    "image": "images/dishes_1/curry.png",
+    "language": {
+      "english": "curry",
+      "french": "X"
+    },
+    "audio": "sound/dishes_1/curry.mp3"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "burger",
+    "image": "images/dishes_1/burger.png",
+    "language": {
+      "english": "burger",
+      "french": "le burger",
+      "swedish": "burgare",
+      "portuguese-br": "hambúrguer"
+    },
+    "audio": {
+      "english": "sound/dishes_1/burger.mp3",
+      "french": "sound/dishes_1/burger_fr.mp3",
+      "swedish": "sound/dishes_1/burger_sw.mp3",
+      "portuguese-br": "sound/dishes_1/burger_po-br.mp3"
+    }
+  },
+  {
+    "name": "pancakes",
+    "image": "images/dishes_1/pancakes.png",
+    "language": {
+      "english": "pancakes",
+      "french": "les crêpes",
+      "swedish": "pannkakor",
+      "portuguese-br": "panquecas"
+    },
+    "audio": {
+      "english": "sound/dishes_1/pancakes.mp3",
+      "french": "sound/dishes_1/pancakes_fr.mp3",
+      "swedish": "sound/dishes_1/pancakes_sw.mp3",
+      "portuguese-br": "sound/dishes_1/pancakes_po-br.mp3"
+    }
+  },
+  {
+    "name": "pasta",
+    "image": "images/dishes_1/pasta.png",
+    "language": {
+      "english": "pasta",
+      "french": "les pâtes",
+      "swedish": "pasta",
+      "portuguese-br": "massa"
+    },
+    "audio": {
+      "english": "sound/dishes_1/pasta.mp3",
+      "french": "sound/dishes_1/pasta_fr.mp3",
+      "swedish": "sound/dishes_1/pasta_sw.mp3",
+      "portuguese-br": "sound/dishes_1/pasta_po-br.mp3"
+    }
+  },
+  {
+    "name": "pie",
+    "image": "images/dishes_1/pie.png",
+    "language": {
+      "english": "pie",
+      "french": "la tarte",
+      "swedish": "paj",
+      "portuguese-br": "torta"
+    },
+    "audio": {
+      "english": "sound/dishes_1/pie.mp3",
+      "french": "sound/dishes_1/pie_fr.mp3",
+      "swedish": "sound/dishes_1/pie_sw.mp3",
+      "portuguese-br": "sound/dishes_1/pie_po-br.mp3"
+    }
+  },
+  {
+    "name": "pizza",
+    "image": "images/dishes_1/pizza.png",
+    "language": {
+      "english": "pizza",
+      "french": "la pizza",
+      "swedish": "pizza",
+      "portuguese-br": "pizza"
+    },
+    "audio": {
+      "english": "sound/dishes_1/pizza.mp3",
+      "french": "sound/dishes_1/pizza_fr.mp3",
+      "swedish": "sound/dishes_1/pizza_sw.mp3",
+      "portuguese-br": "sound/dishes_1/pizza_po-br.mp3"
+    }
+  },
+  {
+    "name": "salad",
+    "image": "images/dishes_1/salad.png",
+    "language": {
+      "english": "salad",
+      "french": "la salade",
+      "swedish": "sallad",
+      "portuguese-br": "salada"
+    },
+    "audio": {
+      "english": "sound/dishes_1/salad.mp3",
+      "french": "sound/dishes_1/salad_fr.mp3",
+      "swedish": "sound/dishes_1/salad_sw.mp3",
+      "portuguese-br": "sound/dishes_1/salad_po-br.mp3"
+    }
+  },
+  {
+    "name": "soup",
+    "image": "images/dishes_1/soup.png",
+    "language": {
+      "english": "soup",
+      "french": "la soupe",
+      "swedish": "soppa",
+      "portuguese-br": "sopa"
+    },
+    "audio": {
+      "english": "sound/dishes_1/soup.mp3",
+      "french": "sound/dishes_1/soup_fr.mp3",
+      "swedish": "sound/dishes_1/soup_sw.mp3",
+      "portuguese-br": "sound/dishes_1/soup_po-br.mp3"
+    }
+  },
+  {
+    "name": "taco",
+    "image": "images/dishes_1/taco.png",
+    "language": {
+      "english": "taco",
+      "french": "le taco",
+      "swedish": "taco",
+      "portuguese-br": "taco"
+    },
+    "audio": {
+      "english": "sound/dishes_1/taco.mp3",
+      "french": "sound/dishes_1/taco_fr.mp3",
+      "swedish": "sound/dishes_1/taco_sw.mp3",
+      "portuguese-br": "sound/dishes_1/taco_po-br.mp3"
+    }
+  },
+  {
+    "name": "wok",
+    "image": "images/dishes_1/wok.png",
+    "language": {
+      "english": "wok",
+      "french": "le wok",
+      "swedish": "wok",
+      "portuguese-br": "wok"
+    },
+    "audio": {
+      "english": "sound/dishes_1/wok.mp3",
+      "french": "sound/dishes_1/wok_fr.mp3",
+      "swedish": "sound/dishes_1/wok_sw.mp3",
+      "portuguese-br": "sound/dishes_1/wok_po-br.mp3"
+    }
+  },
+  {
+    "name": "wrap",
+    "image": "images/dishes_1/wrap.png",
+    "language": {
+      "english": "wrap",
+      "french": "le wrap",
+      "swedish": "rulle",
+      "portuguese-br": "wrap"
+    },
+    "audio": {
+      "english": "sound/dishes_1/wrap.mp3",
+      "french": "sound/dishes_1/wrap_fr.mp3",
+      "swedish": "sound/dishes_1/wrap_sw.mp3",
+      "portuguese-br": "sound/dishes_1/wrap_po-br.mp3"
+    }
+  }
+]

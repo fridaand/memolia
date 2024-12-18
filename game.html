@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memolia - lingo memory game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-container">
+      <div class="site-wrapper">
+        <header>
+          <!-- SECTION PAGE LABEL -->
+          <section class="section_title-play">
+            <container class="container_page-label">
+              <div class="wrapper_h2-text-button h2-padding">
+                <h2 id="cate"></h2>
+                <div class="wrapper_text-button"></div>
+              </div>
+
+              <div class="hitbox_tr clickable" id="button_trigger">
+                <img
+                  src="./icons/nav/cross_s.svg"
+                  alt="opens a dialog box to exit the game"
+                />
+              </div>
+            </container>
+
+            <!-- SECTION DRAUGHTS & SECONDS -->
+            <container class="container_total">
+              <article class="article_game-info">
+                <div class="wrapper_spel-min direction">
+                  <div class="wrapper_text-min">
+                    <span class="score container-direction"></span> DRAG
+                  </div>
+                  <div class="wrapper_text-min">
+                    <span class="info-seconds container-direction"></span>
+                    SEKUNDER
+                  </div>
+                </div>
+              </article>
+              <div class="wrapper_buttons-round">
+                <div id="button-mute" class="hitbox button-mute r">
+                  <img
+                    id="sound-icon"
+                    class="button_m_r"
+                    src="./icons/buttons/button_sound-on.png"
+                    alt="Mute sound for the memory cards"
+                  />
+                </div>
+                <div
+                  id="button-pause"
+                  class="hitbox button-pause r"
+                  onclick="pause()"
+                >
+                  <img
+                    id="play-pause"
+                    class="button_m_r"
+                    src="./icons/buttons/button_pause-primary.png"
+                    alt="Play/pause time for the memory game"
+                  />
+                </div>
+              </div>
+            </container>
+          </section>
+        </header>
+
+        <main class="main_card-area">
+          <div class="container_game clickable"></div>
+        </main>
+
+        <footer>
+          <!-- SECTION TOTAL GAMES & MINUTES -->
+          <container class="container_total">
+            <article class="article_game-info">
+              <div class="wrapper_spel-min">
+                <div class="wrapper_text-min">
+                  <span id="info-rounds"></span>SPEL
+                </div>
+                <div class="wrapper_text-min">
+                  <span id="info-totaltime"></span>MINUTER
+                </div>
+              </div>
+            </article>
+
+            <div class="wrapper_total-stars_horizontal"></div>
+          </container>
+        </footer>
+      </div>
+    </div>
+
+    <!-- POPUP EXIT GAME-->
+    <div id="popUpId" class="popup_bg">
+      <div class="popup_styling">
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl">
+            <img
+              class="button_close"
+              src="./icons/nav/cross_s.svg"
+              alt="close dialog box to return to game"
+            />
+          </div>
+        </div>
+
+        <h2>VILL DU AVSLUTA?</h2>
+
+        <div class="wrapper_buttons">
+          <a href="" onclick="history.back()"
+            ><div class="button_primary button_me" id="goBackButton">
+              <h3 class="button_label">Ja</h3>
+            </div></a
+          >
+          <a class="button_close"
+            ><div class="button_primary button_me">
+              <h3 class="button_label">Nej</h3>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- test POPUP GAME ENDS-->
+
+    <div class="popup_bg section_end-game">
+      <div class="container_end-game popup_styling">
+        <div class="wrapper_h2-text">
+          <h2>BRA GJORT!</h2>
+          <div class="p-gap">
+            <p>Du klarade spelet med <span class="score"></span> drag</p>
+            <p>på <span class="info-seconds"></span> sekunder</p>
+          </div>
+        </div>
+        <div class="wrapper_buttons">
+          <div class="actions button_primary button_me" onclick="restartGame()">
+            <h3 class="dark">Spela igen</h3>
+          </div>
+          <div
+            class="button_primary button_me"
+            onclick="window.location.href='menu.html';"
+          >
+            <h3 class="button_label">Huvudmeny</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script tag last in the body-->
+    <script src="common.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
+
+<!-- "Icons from Flaticon (www.flaticon.com)" -->

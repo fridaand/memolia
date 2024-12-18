@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memolia</title>
+    <link
+      href="https://fonts.bunny.net/css?family=quicksand:300,400,500,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-container">
+      <div class="site-wrapper">
+        <!-- "NAVBAR" -->
+        <header>
+          <nav class="navbar">
+            <h1>memolia</h1>
+            <div class="wrapper-horizontal">
+              <!-- MENU DD LANGUAGE -->
+              <div class="dd">
+                <div
+                  class="dd-header"
+                  class="clickable"
+                  onclick="toggleDropdown()"
+                >
+                  <div class="dd-header_title" id="ddTitle">ENG</div>
+                  <img
+                    class="arrow-sm"
+                    src="/icons/nav/arrow_m_cream1.svg"
+                    alt="open/close language menu"
+                    id="ddArrow"
+                  />
+                </div>
+
+                <div class="dd__list" class="clickable">
+                  <div
+                    class="dd__item"
+                    data-value="english"
+                    data-title="ENG"
+                    onclick="selectOption(this)"
+                  >
+                    ENGELSKA
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="french"
+                    data-title="FRA"
+                    onclick="selectOption(this)"
+                  >
+                    FRANSKA
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="portuguese-br"
+                    data-title="POR (BR)"
+                    onclick="selectOption(this)"
+                  >
+                    PORTUGISISKA (BR)
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="swedish"
+                    data-title="SVE"
+                    onclick="selectOption(this)"
+                  >
+                    SVENSKA
+                  </div>
+                </div>
+              </div>
+
+              <a href="">
+                <div class="hitbox" id="game-info">
+                  <!-- <img
+                    class="hamburger-icon"
+                    src="/icons/nav/hamburger_dots_hitbox.svg"
+                    alt=""
+                  /> -->
+
+                  <div class="button_primary button_mini"><h3>?</h3></div>
+                </div>
+              </a>
+            </div>
+          </nav>
+
+          <!-- SECTION PAGE LABEL -->
+          <container class="container_page-label">
+            <div class="wrapper_h2-text-button">
+              <h2>OM SPELET</h2>
+            </div>
+          </container>
+
+          <!-- SECTION TOTAL GAMES & MINUTES -->
+          <container class="container_total">
+            <!-- <h4 class="h3_label_s">TOTALT</h4> -->
+            <article class="article_game-info">
+              <div class="wrapper_spel-min">
+                <div class="wrapper_text-min">
+                  <span id="info-rounds"></span>SPEL
+                </div>
+                <div class="wrapper_text-min">
+                  <span id="info-totaltime"></span>MINUTER
+                </div>
+              </div>
+            </article>
+            <div class="wrapper_buttons">
+              <a href="menu.html">
+                <div class="button_primary button_me button_icon-text">
+                  <img
+                    class="icon_s"
+                    src="icons/nav/icon_categories.svg"
+                    alt="go to main menu categories to choose a game"
+                  />
+                  <h3 class="dark hide-button-text-sm">KATEGORIER</h3>
+                </div>
+              </a>
+
+              <a href="words.html">
+                <div class="button_primary button_me button_icon-text">
+                  <img class="icon_s" src="icons/nav/icon_words.svg" alt="" />
+                  <h3 class="hide-button-text-sm">ORD</h3>
+                </div>
+              </a>
+            </div>
+          </container>
+        </header>
+        <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
+        <main id="scroll-area" class="scroll-area top_minus">
+          <div class="container_text-animation">
+            <svg
+              class="svg-path-container"
+              viewBox="0 0 500 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <path id="wave-path" d="M 0 100 Q 125 50 250 100 T 500 100" />
+              </defs>
+
+              <text class="h3_animated_path">
+                <textPath class="animated-text" href="#wave-path">
+                  Kul att du har hittat hit!
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <section class="section_text bg_petrol4">
+            <h2 class="typing-text">Välkommen till memolia!</h2>
+
+            <div class="wrapper_p">
+              <p>
+                <strong class="p_game-title">memolia</strong> är en plattform
+                där du kan lära dig språk och hålla igång ditt minne genom att
+                spela memory.
+              </p>
+            </div>
+          </section>
+
+          <section class="section_text bg_yellow5">
+            <h2>Spelet</h2>
+
+            <div class="wrapper_p">
+              <h3>Så här spelar du</h3>
+              <p>
+                För att välja ett spel klickar du på en spelkategori på
+                kategorisidan.
+              </p>
+              <p>Klicka på korten för att vända dem och hitta matchande par.</p>
+              <p>När du har hittat alla paren så har du klarat spelet.</p>
+              <p>
+                För varje avklarat spel får du en stjärna. Du kan maximalt få
+                fem stjärnor per kategori. Du kan dock spela obegränsat antal
+                omgångar!
+              </p>
+            </div>
+
+            <div class="wrapper_p">
+              <h3>Funktioner</h3>
+
+              <p>
+                Språk: Det går att spela memory på olika språk. Du gör ditt
+                språkval i språkvalsmenyn upp i högra hörnet. Det förinställda
+                språket för memorykorten är engelska.
+              </p>
+              <p>
+                Ordlista: Varje memoryspel har en ordlista där du kan se vilka
+                ord som ingår i spelet. Ordlistan når du från kategorisidan
+                genom att klicka på knappen med bok-ikonen.
+              </p>
+              <p>
+                Antal drag och tid: Spelet visar både antal drag och hur lång
+                tid som har förflutit per omgång samt den totala spelade tiden
+                och omgångar.
+              </p>
+              <p>
+                Pausa spelet: Tryck på pausknappen om du behöver ta en paus. Du
+                kan inte fortsätta spela förrän du trycker på pausknappen igen
+                för att återuppta spelet.
+              </p>
+              <p>
+                Ljud: När du klickar på korten spelas ordet upp. Om du vill kan
+                du muta ljudet genom att klicka på muteknappen.
+              </p>
+            </div>
+
+            <div class="wrapper_p">
+              <h3>Återställ spelet</h3>
+              <p>Vill du återställa tid och poäng för alla spel?</p>
+              <p>
+                Tryck på knappen nedan för att återställa all information.
+                Uppdatera sedan din webbläsare
+              </p>
+
+              <div role="alert" class="warning">
+                <p>
+                  <strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.
+                </p>
+              </div>
+            </div>
+            <div class="hitbox_tl">
+              <div
+                class="button_primary button_text button_warning clickable"
+                id="clear-button"
+              >
+                <h3>nollställ alla spel</h3>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+            <h2>Projektinformation</h2>
+            <div class="wrapper_p">
+              <h3>Utveckling</h3>
+              <p>
+                <strong class="p_game-title">memolia</strong> är utvecklat och
+                designat av Frida Andersson. Spelet är en betaversion under
+                utveckling.
+              </p>
+              <p>
+                Ikoner kommer ifrån
+                <span>
+                  <a href="https://www.flaticon.com" target="_blank"
+                    >Flaticon</a
+                  ></span
+                >
+              </p>
+            </div>
+          </section>
+        </main>
+
+        <!-- SECTION FOOTER -->
+        <footer>
+          <div class="footer_container">
+            <div class="hitbox" id="scroll-button">
+              <div class="button">
+                <img
+                  src="/icons/nav/arrow_m_cream1.svg"
+                  alt="scroll to bottom/top"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- POPUP CLEAR -->
+    <div id="clear-dialog" class="popup_bg hidden">
+      <div class="popup_styling">
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl clickable">
+            <img
+              class="button_close"
+              src="./icons/nav/cross_s.svg"
+              alt="close dialog box to return to game"
+            />
+          </div>
+        </div>
+        <div class="wrapper_h2-text">
+          <h2>RADERA ALLT?</h2>
+          <div class="wrapper_text">
+            <p>
+              Är du säker på att du vill ta bort alla poäng och spelad tid för
+              alla språk?
+            </p>
+            <p><strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.</p>
+          </div>
+        </div>
+        <div class="wrapper_buttons">
+          <div class="button_primary clickable" id="cancel-clear">
+            <h3 class="dark">avbryt</h3>
+          </div>
+          <div
+            class="button_primary button_warning clickable"
+            id="confirm-clear"
+          >
+            <h3 class="dark">radera</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dd.js"></script>
+    <script src="common.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>
+
+<!-- "Icons from Flaticon (www.flaticon.com)" -->

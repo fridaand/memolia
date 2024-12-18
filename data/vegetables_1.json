@@ -1,0 +1,162 @@
+[
+  {
+    "name": "avocado",
+    "image": "images/vegetables_1/avocado.png",
+    "language": {
+      "english": "avocado",
+      "french": "l'avocat",
+      "swedish": "avokado",
+      "portuguese-br": "abacate"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/avocado.mp3",
+      "french": "sound/vegetables_1/avocado_fr.mp3",
+      "swedish": "sound/vegetables_1/avocado_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/avocado_po-br.mp3"
+    }
+  },
+  {
+    "name": "beetroot",
+    "image": "images/vegetables_1/beetroot.png",
+    "language": {
+      "english": "beetroot",
+      "french": "la betterave",
+      "swedish": "rödbeta",
+      "portuguese-br": "beterraba"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/beetroot.mp3",
+      "french": "sound/vegetables_1/beetroot_fr.mp3",
+      "swedish": "sound/vegetables_1/beetroot_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/beetroot_po-br.mp3"
+    }
+  },
+  {
+    "name": "bellpepper",
+    "image": "images/vegetables_1/bellpepper.png",
+    "language": {
+      "english": "bell pepper",
+      "french": "le poivron",
+      "swedish": "paprika",
+      "portuguese-br": "pimentão"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/bellpepper.mp3",
+      "french": "sound/vegetables_1/bellpepper_fr.mp3",
+      "swedish": "sound/vegetables_1/bellpepper_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/bellpepper_po-br.mp3"
+    }
+  },
+  {
+    "name": "carrot",
+    "image": "images/vegetables_1/carrot.png",
+    "language": {
+      "english": "carrot",
+      "french": "la carotte",
+      "swedish": "morot",
+      "portuguese-br": "cenoura"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/carrot.mp3",
+      "french": "sound/vegetables_1/carrot_fr.mp3",
+      "swedish": "sound/vegetables_1/carrot_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/carrot_po-br.mp3"
+    }
+  },
+  {
+    "name": "cucumber",
+    "image": "images/vegetables_1/cucumber.png",
+    "language": {
+      "english": "cucumber",
+      "french": "le concombre",
+      "swedish": "gurka",
+      "portuguese-br": "pepino"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/cucumber.mp3",
+      "french": "sound/vegetables_1/cucumber_fr.mp3",
+      "swedish": "sound/vegetables_1/cucumber_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/cucumber_po-br.mp3"
+    }
+  },
+  {
+    "name": "eggplant",
+    "image": "images/vegetables_1/eggplant.png",
+    "language": {
+      "english": "eggplant",
+      "french": "l'aubergine",
+      "swedish": "aubergine",
+      "portuguese-br": "berinjela"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/eggplant.mp3",
+      "french": "sound/vegetables_1/eggplant_fr.mp3",
+      "swedish": "sound/vegetables_1/eggplant_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/eggplant_po-br.mp3"
+    }
+  },
+  {
+    "name": "lettuce",
+    "image": "images/vegetables_1/lettuce.png",
+    "language": {
+      "english": "lettuce",
+      "french": "la laitue",
+      "swedish": "sallad",
+      "portuguese-br": "alface"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/lettuce.mp3",
+      "french": "sound/vegetables_1/lettuce_fr.mp3",
+      "swedish": "sound/vegetables_1/lettuce_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/lettuce_po-br.mp3"
+    }
+  },
+  {
+    "name": "mushroom",
+    "image": "images/vegetables_1/mushroom.png",
+    "language": {
+      "english": "mushroom",
+      "french": "le champignon",
+      "swedish": "svamp",
+      "portuguese-br": "cogumelo"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/mushroom.mp3",
+      "french": "sound/vegetables_1/mushroom_fr.mp3",
+      "swedish": "sound/vegetables_1/mushroom_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/mushroom_po-br.mp3"
+    }
+  },
+  {
+    "name": "onion",
+    "image": "images/vegetables_1/onion.png",
+    "language": {
+      "english": "onion",
+      "french": "l'oignon",
+      "swedish": "lök",
+      "portuguese-br": "cebola"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/onion.mp3",
+      "french": "sound/vegetables_1/onion_fr.mp3",
+      "swedish": "sound/vegetables_1/onion_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/onion_po-br.mp3"
+    }
+  },
+  {
+    "name": "tomato",
+    "image": "images/vegetables_1/tomato.png",
+    "language": {
+      "english": "tomato",
+      "french": "la tomate",
+      "swedish": "tomat",
+      "portuguese-br": "tomate"
+    },
+    "audio": {
+      "english": "sound/vegetables_1/tomato.mp3",
+      "french": "sound/vegetables_1/tomato_fr.mp3",
+      "swedish": "sound/vegetables_1/tomato_sw.mp3",
+      "portuguese-br": "sound/vegetables_1/tomato_po-br.mp3"
+    }
+  }
+]

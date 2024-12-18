@@ -1,0 +1,34 @@
+[
+  {
+    "name": "cherry",
+    "image": "images/fruits_1/cherry.png",
+    "language": {
+      "english": "cherry",
+      "french": "la cerise",
+      "swedish": "körsbär",
+      "portuguese-br": "cereja"
+    },
+    "audio": {
+      "english": "sound/fruits_1/cherry.mp3",
+      "french": "sound/fruits_1/cherry_fr.mp3",
+      "swedish": "sound/fruits_1/cherry_sw.mp3",
+      "portuguese-br": "sound/fruits_1/cherry_po-br.mp3"
+    }
+  },
+  {
+    "name": "orange",
+    "image": "images/fruits_1/orange.png",
+    "language": {
+      "english": "orange",
+      "french": "l'orange",
+      "swedish": "apelsin",
+      "portuguese-br": "laranja"
+    },
+    "audio": {
+      "english": "sound/fruits_1/orange.mp3",
+      "french": "sound/fruits_1/orange_fr.mp3",
+      "swedish": "sound/fruits_1/orange_sw.mp3",
+      "portuguese-br": "sound/fruits_1/orange_po-br.mp3"
+    }
+  }
+]

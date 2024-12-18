@@ -1,0 +1,162 @@
+[
+  {
+    "name": "bird",
+    "image": "images/animals_1/bird.png",
+    "language": {
+      "english": "bird",
+      "french": "l'oiseau",
+      "swedish": "fågel",
+      "portuguese-br": "pássaro"
+    },
+    "audio": {
+      "english": "sound/animals_1/bird.mp3",
+      "french": "sound/animals_1/bird_fr.mp3",
+      "swedish": "sound/animals_1/bird_sw.mp3",
+      "portuguese-br": "sound/animals_1/bird_po-br.mp3"
+    }
+  },
+  {
+    "name": "cat",
+    "image": "images/animals_1/cat.png",
+    "language": {
+      "english": "cat",
+      "french": "le chat",
+      "swedish": "katt",
+      "portuguese-br": "gato"
+    },
+    "audio": {
+      "english": "sound/animals_1/cat.mp3",
+      "french": "sound/animals_1/cat_fr.mp3",
+      "swedish": "sound/animals_1/cat_sw.mp3",
+      "portuguese-br": "sound/animals_1/cat_po-br.mp3"
+    }
+  },
+  {
+    "name": "cow",
+    "image": "images/animals_1/cow.png",
+    "language": {
+      "english": "cow",
+      "french": "la vache",
+      "swedish": "ko",
+      "portuguese-br": "vaca"
+    },
+    "audio": {
+      "english": "sound/animals_1/cow.mp3",
+      "french": "sound/animals_1/cow_fr.mp3",
+      "swedish": "sound/animals_1/cow_sw.mp3",
+      "portuguese-br": "sound/animals_1/cow_po-br.mp3"
+    }
+  },
+  {
+    "name": "dog",
+    "image": "images/animals_1/dog.png",
+    "language": {
+      "english": "dog",
+      "french": "le chien",
+      "swedish": "hund",
+      "portuguese-br": "cachorro"
+    },
+    "audio": {
+      "english": "sound/animals_1/dog.mp3",
+      "french": "sound/animals_1/dog_fr.mp3",
+      "swedish": "sound/animals_1/dog_sw.mp3",
+      "portuguese-br": "sound/animals_1/dog_po-br.mp3"
+    }
+  },
+  {
+    "name": "fish",
+    "image": "images/animals_1/fish.png",
+    "language": {
+      "english": "fish",
+      "french": "le poisson",
+      "swedish": "fisk",
+      "portuguese-br": "peixe"
+    },
+    "audio": {
+      "english": "sound/animals_1/fish.mp3",
+      "french": "sound/animals_1/fish_fr.mp3",
+      "swedish": "sound/animals_1/fish_sw.mp3",
+      "portuguese-br": "sound/animals_1/fish_po-br.mp3"
+    }
+  },
+  {
+    "name": "hamster",
+    "image": "images/animals_1/hamster.png",
+    "language": {
+      "english": "hamster",
+      "french": "le hamster",
+      "swedish": "hamster",
+      "portuguese-br": "hamster"
+    },
+    "audio": {
+      "english": "sound/animals_1/hamster.mp3",
+      "french": "sound/animals_1/hamster_fr.mp3",
+      "swedish": "sound/animals_1/hamster_sw.mp3",
+      "portuguese-br": "sound/animals_1/hamster_po-br.mp3"
+    }
+  },
+  {
+    "name": "horse",
+    "image": "images/animals_1/horse.png",
+    "language": {
+      "english": "horse",
+      "french": "le cheval",
+      "swedish": "häst",
+      "portuguese-br": "cavalo"
+    },
+    "audio": {
+      "english": "sound/animals_1/horse.mp3",
+      "french": "sound/animals_1/horse_fr.mp3",
+      "swedish": "sound/animals_1/horse_sw.mp3",
+      "portuguese-br": "sound/animals_1/horse_po-br.mp3"
+    }
+  },
+  {
+    "name": "pig",
+    "image": "images/animals_1/pig.png",
+    "language": {
+      "english": "pig",
+      "french": "le cochon",
+      "swedish": "gris",
+      "portuguese-br": "porco"
+    },
+    "audio": {
+      "english": "sound/animals_1/pig.mp3",
+      "french": "sound/animals_1/pig_fr.mp3",
+      "swedish": "sound/animals_1/pig_sw.mp3",
+      "portuguese-br": "sound/animals_1/pig_po-br.mp3"
+    }
+  },
+  {
+    "name": "rabbit",
+    "image": "images/animals_1/rabbit.png",
+    "language": {
+      "english": "rabbit",
+      "french": "le lapin",
+      "swedish": "kanin",
+      "portuguese-br": "coelho"
+    },
+    "audio": {
+      "english": "sound/animals_1/rabbit.mp3",
+      "french": "sound/animals_1/rabbit_fr.mp3",
+      "swedish": "sound/animals_1/rabbit_sw.mp3",
+      "portuguese-br": "sound/animals_1/rabbit_po-br.mp3"
+    }
+  },
+  {
+    "name": "sheep",
+    "image": "images/animals_1/sheep.png",
+    "language": {
+      "english": "sheep",
+      "french": "le mouton",
+      "swedish": "får",
+      "portuguese-br": "ovelha"
+    },
+    "audio": {
+      "english": "sound/animals_1/sheep.mp3",
+      "french": "sound/animals_1/sheep_fr.mp3",
+      "swedish": "sound/animals_1/sheep_sw.mp3",
+      "portuguese-br": "sound/animals_1/sheep_po-br.mp3"
+    }
+  }
+]

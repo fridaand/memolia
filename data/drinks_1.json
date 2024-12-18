@@ -1,0 +1,162 @@
+[
+  {
+    "name": "beer",
+    "image": "images/drinks_1/beer.png",
+    "language": {
+      "english": "beer",
+      "french": "la bière",
+      "swedish": "öl",
+      "portuguese-br": "cerveja"
+    },
+    "audio": {
+      "english": "sound/drinks_1/beer.mp3",
+      "french": "sound/drinks_1/beer_fr.mp3",
+      "swedish": "sound/drinks_1/beer_sw.mp3",
+      "portuguese-br": "sound/drinks_1/beer_po-br.mp3"
+    }
+  },
+  {
+    "name": "coffee",
+    "image": "images/drinks_1/coffee.png",
+    "language": {
+      "english": "coffee",
+      "french": "le café",
+      "swedish": "kaffe",
+      "portuguese-br": "café"
+    },
+    "audio": {
+      "english": "sound/drinks_1/coffee.mp3",
+      "french": "sound/drinks_1/coffee_fr.mp3",
+      "swedish": "sound/drinks_1/coffee_sw.mp3",
+      "portuguese-br": "sound/drinks_1/coffee_po-br.mp3"
+    }
+  },
+  {
+    "name": "hot_chocolate",
+    "image": "images/drinks_1/hot_chocolate.png",
+    "language": {
+      "english": "hot chocolate",
+      "french": "le chocolat chaud",
+      "swedish": "varm choklad",
+      "portuguese-br": "chocolate quente"
+    },
+    "audio": {
+      "english": "sound/drinks_1/hot_chocolate.mp3",
+      "french": "sound/drinks_1/hot_chocolate_fr.mp3",
+      "swedish": "sound/drinks_1/hot_chocolate_sw.mp3",
+      "portuguese-br": "sound/drinks_1/hot_chocolate_po-br.mp3"
+    }
+  },
+  {
+    "name": "juice_apple",
+    "image": "images/drinks_1/juice_apple.png",
+    "language": {
+      "english": "apple juice",
+      "french": "le jus de pomme",
+      "swedish": "äpplejuice",
+      "portuguese-br": "suco de maçã"
+    },
+    "audio": {
+      "english": "sound/drinks_1/juice_apple.mp3",
+      "french": "sound/drinks_1/juice_apple_fr.mp3",
+      "swedish": "sound/drinks_1/juice_apple_sw.mp3",
+      "portuguese-br": "sound/drinks_1/juice_apple_po-br.mp3"
+    }
+  },
+  {
+    "name": "juice_orange",
+    "image": "images/drinks_1/juice_orange.png",
+    "language": {
+      "english": "orange juice",
+      "french": "le jus d'orange",
+      "swedish": "apelsinjuice",
+      "portuguese-br": "suco de laranja"
+    },
+    "audio": {
+      "english": "sound/drinks_1/juice_orange.mp3",
+      "french": "sound/drinks_1/juice_orange_fr.mp3",
+      "swedish": "sound/drinks_1/juice_orange_sw.mp3",
+      "portuguese-br": "sound/drinks_1/juice_orange_po-br.mp3"
+    }
+  },
+  {
+    "name": "soda",
+    "image": "images/drinks_1/soda.png",
+    "language": {
+      "english": "soda",
+      "french": "le soda",
+      "swedish": "läsk",
+      "portuguese-br": "refrigerante"
+    },
+    "audio": {
+      "english": "sound/drinks_1/soda.mp3",
+      "french": "sound/drinks_1/soda_fr.mp3",
+      "swedish": "sound/drinks_1/soda_sw.mp3",
+      "portuguese-br": "sound/drinks_1/soda_po-br.mp3"
+    }
+  },
+  {
+    "name": "tea",
+    "image": "images/drinks_1/tea.png",
+    "language": {
+      "english": "tea",
+      "french": "le thé",
+      "swedish": "te",
+      "portuguese-br": "chá"
+    },
+    "audio": {
+      "english": "sound/drinks_1/tea.mp3",
+      "french": "sound/drinks_1/tea_fr.mp3",
+      "swedish": "sound/drinks_1/tea_sw.mp3",
+      "portuguese-br": "sound/drinks_1/tea_po-br.mp3"
+    }
+  },
+  {
+    "name": "water",
+    "image": "images/drinks_1/water.png",
+    "language": {
+      "english": "water",
+      "french": "l'eau",
+      "swedish": "vatten",
+      "portuguese-br": "água"
+    },
+    "audio": {
+      "english": "sound/drinks_1/water.mp3",
+      "french": "sound/drinks_1/water_fr.mp3",
+      "swedish": "sound/drinks_1/water_sw.mp3",
+      "portuguese-br": "sound/drinks_1/water_po-br.mp3"
+    }
+  },
+  {
+    "name": "wine_red",
+    "image": "images/drinks_1/wine_red.png",
+    "language": {
+      "english": "red wine",
+      "french": "le vin rouge",
+      "swedish": "rött vin",
+      "portuguese-br": "vinho tinto"
+    },
+    "audio": {
+      "english": "sound/drinks_1/wine_red.mp3",
+      "french": "sound/drinks_1/wine_red_fr.mp3",
+      "swedish": "sound/drinks_1/wine_red_sw.mp3",
+      "portuguese-br": "sound/drinks_1/wine_red_po-br.mp3"
+    }
+  },
+  {
+    "name": "wine_white",
+    "image": "images/drinks_1/wine_white2.png",
+    "language": {
+      "english": "white wine",
+      "french": "le vin blanc",
+      "swedish": "vitt vin",
+      "portuguese-br": "vinho branco"
+    },
+    "audio": {
+      "english": "sound/drinks_1/wine_white.mp3",
+      "french": "sound/drinks_1/wine_white_fr.mp3",
+      "swedish": "sound/drinks_1/wine_white_sw.mp3",
+      "portuguese-br": "sound/drinks_1/wine_white_po-br.mp3"
+    }
+  }
+]
