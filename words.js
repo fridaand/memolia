@@ -27,6 +27,27 @@ function loadAndDisplayWordList(category, language) {
         translationP.textContent = wordData.language[language]; // Use right language in the dictionary
         wordDiv.appendChild(translationP);
 
+        // Click event for words in dictionary list
+        wordDiv.addEventListener("click", (event) => {
+          if (event.target.classList.contains("swedish")) {
+            // Play swedish audio in the list
+            const audioSrc = wordData.audio.swedish;
+            if (audioSrc) {
+              const audio = new Audio(audioSrc);
+              audio.play();
+            } else {
+            }
+          } else if (event.target.classList.contains("translation")) {
+            // Play audio in the list for current langauge
+            const audioSrc = wordData.audio[language];
+            if (audioSrc) {
+              const audio = new Audio(audioSrc);
+              audio.play();
+            } else {
+            }
+          }
+        });
+
         wordList.appendChild(wordDiv);
       });
     })
