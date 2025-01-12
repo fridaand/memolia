@@ -1,7 +1,7 @@
 [
   {
     "name": "black",
-    "image": "images/colours_1/black.png",
+    "image": "images/colours_1/black.svg",
     "language": {
       "english": "black",
       "french": "noir",
@@ -17,7 +17,7 @@
   },
   {
     "name": "blue",
-    "image": "images/colours_1/blue.png",
+    "image": "images/colours_1/blue.svg",
     "language": {
       "english": "blue",
       "french": "bleu",
@@ -33,7 +33,7 @@
   },
   {
     "name": "green",
-    "image": "images/colours_1/green.png",
+    "image": "images/colours_1/green.svg",
     "language": {
       "english": "green",
       "french": "vert",
@@ -49,7 +49,7 @@
   },
   {
     "name": "grey",
-    "image": "images/colours_1/grey.png",
+    "image": "images/colours_1/grey.svg",
     "language": {
       "english": "grey",
       "french": "gris",
@@ -65,7 +65,7 @@
   },
   {
     "name": "orange",
-    "image": "images/colours_1/orange.png",
+    "image": "images/colours_1/orange.svg",
     "language": {
       "english": "orange",
       "french": "orange",
@@ -81,7 +81,7 @@
   },
   {
     "name": "pink",
-    "image": "images/colours_1/pink.png",
+    "image": "images/colours_1/pink.svg",
     "language": {
       "english": "pink",
       "french": "rose",
@@ -97,7 +97,7 @@
   },
   {
     "name": "purple",
-    "image": "images/colours_1/purple.png",
+    "image": "images/colours_1/purple.svg",
     "language": {
       "english": "purple",
       "french": "violet",
@@ -113,7 +113,7 @@
   },
   {
     "name": "red",
-    "image": "images/colours_1/red.png",
+    "image": "images/colours_1/red.svg",
     "language": {
       "english": "red",
       "french": "rouge",
@@ -129,7 +129,7 @@
   },
   {
     "name": "white",
-    "image": "images/colours_1/white.png",
+    "image": "images/colours_1/white.svg",
     "language": {
       "english": "white",
       "french": "blanc",
@@ -145,7 +145,7 @@
   },
   {
     "name": "yellow",
-    "image": "images/colours_1/yellow.png",
+    "image": "images/colours_1/yellow.svg",
     "language": {
       "english": "yellow",
       "french": "jaune",

@@ -1,7 +1,7 @@
 [
   {
     "name": "apple",
-    "image": "images/fruits_1/apple.png",
+    "image": "images/fruits_1/apple.svg",
     "language": {
       "english": "apple",
       "french": "la pomme",
@@ -17,7 +17,7 @@
   },
   {
     "name": "banana",
-    "image": "images/fruits_1/banana.png",
+    "image": "images/fruits_1/banana.svg",
     "language": {
       "english": "banana",
       "french": "la banane",
@@ -33,7 +33,7 @@
   },
   {
     "name": "cherry",
-    "image": "images/fruits_1/cherry.png",
+    "image": "images/fruits_1/cherry.svg",
     "language": {
       "english": "cherry",
       "french": "la cerise",
@@ -49,7 +49,7 @@
   },
   {
     "name": "grape",
-    "image": "images/fruits_1/grape.png",
+    "image": "images/fruits_1/grape.svg",
     "language": {
       "english": "grape",
       "french": "le raisin",
@@ -65,7 +65,7 @@
   },
   {
     "name": "kiwi",
-    "image": "images/fruits_1/kiwi.png",
+    "image": "images/fruits_1/kiwi.svg",
     "language": {
       "english": "kiwi",
       "french": "le kiwi",
@@ -81,7 +81,7 @@
   },
   {
     "name": "orange",
-    "image": "images/fruits_1/orange.png",
+    "image": "images/fruits_1/orange.svg",
     "language": {
       "english": "orange",
       "french": "l'orange",
@@ -97,7 +97,7 @@
   },
   {
     "name": "peach",
-    "image": "images/fruits_1/peach.png",
+    "image": "images/fruits_1/peach.svg",
     "language": {
       "english": "peach",
       "french": "la pêche",
@@ -113,7 +113,7 @@
   },
   {
     "name": "pineapple",
-    "image": "images/fruits_1/pineapple.png",
+    "image": "images/fruits_1/pineapple.svg",
     "language": {
       "english": "pineapple",
       "french": "l'ananas",
@@ -129,7 +129,7 @@
   },
   {
     "name": "pear",
-    "image": "images/fruits_1/pear.png",
+    "image": "images/fruits_1/pear.svg",
     "language": {
       "english": "pear",
       "french": "la poire",
@@ -145,7 +145,7 @@
   },
   {
     "name": "strawberry",
-    "image": "images/fruits_1/strawberry.png",
+    "image": "images/fruits_1/strawberry.svg",
     "language": {
       "english": "strawberry",
       "french": "la fraise",

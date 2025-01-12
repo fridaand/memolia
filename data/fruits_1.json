@@ -1,23 +1,23 @@
 [
   {
-    "name": "cherry",
-    "image": "images/fruits_1/cherry.png",
+    "name": "apple",
+    "image": "images/fruits_1/apple.svg",
     "language": {
-      "english": "cherry",
-      "french": "la cerise",
-      "swedish": "körsbär",
-      "portuguese-br": "cereja"
+      "english": "apple",
+      "french": "la pomme",
+      "swedish": "äpple",
+      "portuguese-br": "maçã"
     },
     "audio": {
-      "english": "sound/fruits_1/cherry.mp3",
-      "french": "sound/fruits_1/cherry_fr.mp3",
-      "swedish": "sound/fruits_1/cherry_sw.mp3",
-      "portuguese-br": "sound/fruits_1/cherry_po-br.mp3"
+      "english": "sound/fruits_1/apple.mp3",
+      "french": "sound/fruits_1/apple_fr.mp3",
+      "swedish": "sound/fruits_1/apple_sw.mp3",
+      "portuguese-br": "sound/fruits_1/apple_po-br.mp3"
     }
   },
   {
     "name": "orange",
-    "image": "images/fruits_1/orange.png",
+    "image": "images/fruits_1/orange.svg",
     "language": {
       "english": "orange",
       "french": "l'orange",

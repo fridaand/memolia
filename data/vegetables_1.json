@@ -1,7 +1,7 @@
 [
   {
     "name": "avocado",
-    "image": "images/vegetables_1/avocado.png",
+    "image": "images/vegetables_1/avocado.svg",
     "language": {
       "english": "avocado",
       "french": "l'avocat",
@@ -17,7 +17,7 @@
   },
   {
     "name": "beetroot",
-    "image": "images/vegetables_1/beetroot.png",
+    "image": "images/vegetables_1/beetroot.svg",
     "language": {
       "english": "beetroot",
       "french": "la betterave",
@@ -33,7 +33,7 @@
   },
   {
     "name": "bellpepper",
-    "image": "images/vegetables_1/bellpepper.png",
+    "image": "images/vegetables_1/bellpepper.svg",
     "language": {
       "english": "bell pepper",
       "french": "le poivron",
@@ -49,7 +49,7 @@
   },
   {
     "name": "carrot",
-    "image": "images/vegetables_1/carrot.png",
+    "image": "images/vegetables_1/carrot.svg",
     "language": {
       "english": "carrot",
       "french": "la carotte",
@@ -65,7 +65,7 @@
   },
   {
     "name": "cucumber",
-    "image": "images/vegetables_1/cucumber.png",
+    "image": "images/vegetables_1/cucumber.svg",
     "language": {
       "english": "cucumber",
       "french": "le concombre",
@@ -81,7 +81,7 @@
   },
   {
     "name": "eggplant",
-    "image": "images/vegetables_1/eggplant.png",
+    "image": "images/vegetables_1/eggplant.svg",
     "language": {
       "english": "eggplant",
       "french": "l'aubergine",
@@ -97,7 +97,7 @@
   },
   {
     "name": "lettuce",
-    "image": "images/vegetables_1/lettuce.png",
+    "image": "images/vegetables_1/lettuce.svg",
     "language": {
       "english": "lettuce",
       "french": "la laitue",
@@ -113,7 +113,7 @@
   },
   {
     "name": "mushroom",
-    "image": "images/vegetables_1/mushroom.png",
+    "image": "images/vegetables_1/mushroom.svg",
     "language": {
       "english": "mushroom",
       "french": "le champignon",
@@ -129,7 +129,7 @@
   },
   {
     "name": "onion",
-    "image": "images/vegetables_1/onion.png",
+    "image": "images/vegetables_1/onion.svg",
     "language": {
       "english": "onion",
       "french": "l'oignon",
@@ -145,7 +145,7 @@
   },
   {
     "name": "tomato",
-    "image": "images/vegetables_1/tomato.png",
+    "image": "images/vegetables_1/tomato.svg",
     "language": {
       "english": "tomato",
       "french": "la tomate",

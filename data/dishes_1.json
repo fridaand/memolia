@@ -1,7 +1,7 @@
 [
   {
     "name": "burger",
-    "image": "images/dishes_1/burger.png",
+    "image": "images/dishes_1/burger.svg",
     "language": {
       "english": "burger",
       "french": "le burger",
@@ -17,7 +17,7 @@
   },
   {
     "name": "pancakes",
-    "image": "images/dishes_1/pancakes.png",
+    "image": "images/dishes_1/pancakes.svg",
     "language": {
       "english": "pancakes",
       "french": "les crêpes",
@@ -33,7 +33,7 @@
   },
   {
     "name": "pasta",
-    "image": "images/dishes_1/pasta.png",
+    "image": "images/dishes_1/pasta.svg",
     "language": {
       "english": "pasta",
       "french": "les pâtes",
@@ -49,7 +49,7 @@
   },
   {
     "name": "pie",
-    "image": "images/dishes_1/pie.png",
+    "image": "images/dishes_1/pie.svg",
     "language": {
       "english": "pie",
       "french": "la tarte",
@@ -65,7 +65,7 @@
   },
   {
     "name": "pizza",
-    "image": "images/dishes_1/pizza.png",
+    "image": "images/dishes_1/pizza.svg",
     "language": {
       "english": "pizza",
       "french": "la pizza",
@@ -81,7 +81,7 @@
   },
   {
     "name": "salad",
-    "image": "images/dishes_1/salad.png",
+    "image": "images/dishes_1/salad.svg",
     "language": {
       "english": "salad",
       "french": "la salade",
@@ -97,7 +97,7 @@
   },
   {
     "name": "soup",
-    "image": "images/dishes_1/soup.png",
+    "image": "images/dishes_1/soup.svg",
     "language": {
       "english": "soup",
       "french": "la soupe",
@@ -113,7 +113,7 @@
   },
   {
     "name": "taco",
-    "image": "images/dishes_1/taco.png",
+    "image": "images/dishes_1/taco.svg",
     "language": {
       "english": "taco",
       "french": "le taco",
@@ -129,7 +129,7 @@
   },
   {
     "name": "wok",
-    "image": "images/dishes_1/wok.png",
+    "image": "images/dishes_1/wok.svg",
     "language": {
       "english": "wok",
       "french": "le wok",
@@ -145,7 +145,7 @@
   },
   {
     "name": "wrap",
-    "image": "images/dishes_1/wrap.png",
+    "image": "images/dishes_1/wrap.svg",
     "language": {
       "english": "wrap",
       "french": "le wrap",

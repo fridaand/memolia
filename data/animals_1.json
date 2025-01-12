@@ -1,7 +1,7 @@
 [
   {
     "name": "bird",
-    "image": "images/animals_1/bird.png",
+    "image": "images/animals_1/bird.svg",
     "language": {
       "english": "bird",
       "french": "l'oiseau",
@@ -17,7 +17,7 @@
   },
   {
     "name": "cat",
-    "image": "images/animals_1/cat.png",
+    "image": "images/animals_1/cat.svg",
     "language": {
       "english": "cat",
       "french": "le chat",
@@ -33,7 +33,7 @@
   },
   {
     "name": "cow",
-    "image": "images/animals_1/cow.png",
+    "image": "images/animals_1/cow.svg",
     "language": {
       "english": "cow",
       "french": "la vache",
@@ -49,7 +49,7 @@
   },
   {
     "name": "dog",
-    "image": "images/animals_1/dog.png",
+    "image": "images/animals_1/dog.svg",
     "language": {
       "english": "dog",
       "french": "le chien",
@@ -65,7 +65,7 @@
   },
   {
     "name": "fish",
-    "image": "images/animals_1/fish.png",
+    "image": "images/animals_1/fish.svg",
     "language": {
       "english": "fish",
       "french": "le poisson",
@@ -81,7 +81,7 @@
   },
   {
     "name": "hamster",
-    "image": "images/animals_1/hamster.png",
+    "image": "images/animals_1/hamster.svg",
     "language": {
       "english": "hamster",
       "french": "le hamster",
@@ -97,7 +97,7 @@
   },
   {
     "name": "horse",
-    "image": "images/animals_1/horse.png",
+    "image": "images/animals_1/horse.svg",
     "language": {
       "english": "horse",
       "french": "le cheval",
@@ -113,7 +113,7 @@
   },
   {
     "name": "pig",
-    "image": "images/animals_1/pig.png",
+    "image": "images/animals_1/pig.svg",
     "language": {
       "english": "pig",
       "french": "le cochon",
@@ -129,7 +129,7 @@
   },
   {
     "name": "rabbit",
-    "image": "images/animals_1/rabbit.png",
+    "image": "images/animals_1/rabbit.svg",
     "language": {
       "english": "rabbit",
       "french": "le lapin",
@@ -145,7 +145,7 @@
   },
   {
     "name": "sheep",
-    "image": "images/animals_1/sheep.png",
+    "image": "images/animals_1/sheep.svg",
     "language": {
       "english": "sheep",
       "french": "le mouton",
