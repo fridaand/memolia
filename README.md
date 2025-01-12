@@ -32,13 +32,14 @@ This project is a work in progress and currently serves as:
 
 ## Technologies Used
 
-- HTML, CSS, JavaScript
-- Custom animations and SVG graphics.
+- **HTML**, **CSS**, **JavaScript**: För frontendutveckling och funktionalitet.
+- **JSON**: För datahantering och strukturering av spelets ordlista (språk och audio) och bilder.
+- **Figma**: För UI/UX-design och prototyper.
+- **Adobe Illustrator** och **Spline**: För grafik, animationer och 3D-utveckling av spelets intro och bakgrund.
+- **Git** och **GitHub**: För versionskontroll och användartestning.
+- **Ikonbibliotek**: Ikoner från [Freepik](https://www.freepik.com/).
+- **Text-to-Speech (TTS)**: För audio-ordlista på respektive språk.
 
 ## Contributions
 
 At this stage, the project is not open for contributions but feedback is welcome.
-
-## Credits
-
-- Icons made by Flaticon (https://www.flaticon.com)
