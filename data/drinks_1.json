@@ -1,7 +1,7 @@
 [
   {
     "name": "beer",
-    "image": "images/drinks_1/beer.svg",
+    "image": "images/drinks_1/beer.png",
     "language": {
       "english": "beer",
       "french": "la bière",
@@ -17,7 +17,7 @@
   },
   {
     "name": "coffee",
-    "image": "images/drinks_1/coffee.svg",
+    "image": "images/drinks_1/coffee.png",
     "language": {
       "english": "coffee",
       "french": "le café",
@@ -33,7 +33,7 @@
   },
   {
     "name": "hot_chocolate",
-    "image": "images/drinks_1/hot_chocolate.svg",
+    "image": "images/drinks_1/hot_chocolate.png",
     "language": {
       "english": "hot chocolate",
       "french": "le chocolat chaud",
@@ -65,7 +65,7 @@
   },
   {
     "name": "juice_orange",
-    "image": "images/drinks_1/juice_orange.svg",
+    "image": "images/drinks_1/juice_orange.png",
     "language": {
       "english": "orange juice",
       "french": "le jus d'orange",
@@ -113,7 +113,7 @@
   },
   {
     "name": "water",
-    "image": "images/drinks_1/water.svg",
+    "image": "images/drinks_1/water.png",
     "language": {
       "english": "water",
       "french": "l'eau",
