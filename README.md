@@ -32,14 +32,20 @@ This project is a work in progress and currently serves as:
 
 ## Technologies Used
 
-- **HTML**, **CSS**, **JavaScript**: För frontendutveckling och funktionalitet.
-- **JSON**: För datahantering och strukturering av spelets ordlista (språk och audio) och bilder.
-- **Figma**: För UI/UX-design och prototyper.
-- **Adobe Illustrator** och **Spline**: För grafik, animationer och 3D-utveckling av spelets intro och bakgrund.
-- **Git** och **GitHub**: För versionskontroll och användartestning.
-- **Ikonbibliotek**: Ikoner från [Freepik](https://www.freepik.com/).
-- **Text-to-Speech (TTS)**: För audio-ordlista på respektive språk.
+- **HTML**, **CSS**, **JavaScript**: For frontend development and functionality.
+- **JSON**: For data management and structuring the game's word list (languages, audio, and images).
+- **Figma**: For UI/UX design and prototypes.
+- **Adobe Illustrator** and **Spline**: For graphics, animations, and 3D development of the game's intro and background.
+- **Git** och **GitHub**: For version control and user testing.
+- **Icon Library**: Icons from Freepik.
+- **Text-to-Speech (TTS)**: For the audio word list in each language.
 
 ## Contributions
 
-At this stage, the project is not open for contributions but feedback is welcome.
+At this stage, the project is not open for contributions, but feedback is welcome.
+
+## Icon Library and Image Usage
+
+This project uses images from the Freepik icon library. I have permission to use these images, but they cannot be downloaded or redistributed as standalone files.
+
+To view the license terms or obtain your own license, visit Freepik's License Page (https://www.freepik.com/legal/terms-of-use#nav-freepik).
