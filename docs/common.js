@@ -5,6 +5,7 @@ const scrollButton = document.getElementById("scroll-button");
 const scrollArea = document.getElementById("scroll-area");
 const cursor = document.createElement("div");
 const maxNumberOfStartsPerCategory = 5;
+let customCursor = document.querySelector("#custom-cursor");
 
 // ARRAY WITH CATEGORIES
 const categories = [
@@ -17,7 +18,7 @@ const categories = [
   { id: "fruits-game_2", name: "fruits_2" },
 ];
 
-/* HIDE MOUSE FOR IPAD ETC */
+/* HIDE CURSOR FOR IPAD ETC */
 document.addEventListener("DOMContentLoaded", () => {
   const isTouchDevice = matchMedia(
     "(hover: none) and (pointer: coarse)"
@@ -25,9 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (isTouchDevice) {
     document.querySelector("#custom-cursor").style.display = "none";
-    document.documentElement.style.cursor = "auto"; // Återställ standardcursor
+    document.documentElement.style.cursor = "auto"; // Reset cursor
   }
 });
+
+function updateCursorVisibility(event) {
+  if (event.pointerType === "touch") {
+    customCursor.style.display = "none";
+    document.documentElement.style.cursor = "auto";
+  } else {
+    customCursor.style.display = "block";
+    document.documentElement.style.cursor = "none";
+  }
+}
+
+window.addEventListener("pointermove", updateCursorVisibility);
 
 /* TEXT ANIMATION */
 document.addEventListener("DOMContentLoaded", function () {
