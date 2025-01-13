@@ -17,6 +17,18 @@ const categories = [
   { id: "fruits-game_2", name: "fruits_2" },
 ];
 
+/* HIDE MOUSE FOR IPAD ETC */
+document.addEventListener("DOMContentLoaded", () => {
+  const isTouchDevice = matchMedia(
+    "(hover: none) and (pointer: coarse)"
+  ).matches;
+
+  if (isTouchDevice) {
+    document.querySelector("#custom-cursor").style.display = "none";
+    document.documentElement.style.cursor = "auto"; // Återställ standardcursor
+  }
+});
+
 /* TEXT ANIMATION */
 document.addEventListener("DOMContentLoaded", function () {
   const typingElements = document.querySelectorAll(".typing-text");
