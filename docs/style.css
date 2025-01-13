@@ -323,6 +323,9 @@ a:hover ~ #custom-cursor,
 .bg_green2b {
   background: var(--green2b);
 }
+.bg_green3 {
+  background: var(--green3);
+}
 .bg_pink1 {
   background-color: var(--pink1);
   background-image: var(--shadow_round);
@@ -483,7 +486,7 @@ h2 {
 .h3_animated_path {
   font-size: 1.25rem;
   font-weight: 800;
-  fill: var(--yellow2);
+  fill: var(--petrol1);
 }
 
 h3 {
@@ -674,6 +677,7 @@ header {
   flex-direction: row;
   align-items: flex-start;
   gap: var(--spacing-gap-l, 20px);
+  padding-top: 0.75rem;
 }
 
 /* WORDS CATEGORY DD */
@@ -839,8 +843,6 @@ header {
   scale: 1;
   transition-timing-function: ease-in-out;
   transition: 0.5s;
-  min-width: 152px;
-  padding: 0.75rem;
 }
 
 .button_primary:hover {
@@ -854,10 +856,9 @@ header {
   min-height: 2rem;
 }
 
-.button_me {
+.button_icon-text {
   min-width: 120px;
-  min-height: 56px;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1rem;
 }
 
 .button_warning {
@@ -869,6 +870,7 @@ header {
 }
 
 .button_text {
+  min-width: 152px;
   padding: 1.25rem;
 }
 
@@ -878,7 +880,7 @@ header {
 
 .button_close {
   width: auto;
-  height: 1.25rem;
+  height: 1rem;
 }
 
 .wrapper_h2-text-button {
@@ -911,7 +913,7 @@ header {
 footer {
   width: auto;
   height: auto;
-  padding: 0.75rem 2rem;
+  padding: 0.25rem 2rem;
   box-shadow: 0px -0px 16px 2px rgba(0, 0, 0, 0.5) inset;
 }
 
@@ -1327,7 +1329,7 @@ footer {
   padding: 1rem;
   border-radius: 1rem;
   transform-style: preserve-3d;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   background: var(--primary-light);
   color: var(--brown2);
 }
@@ -1342,7 +1344,7 @@ footer {
 }
 
 .front-image {
-  height: 3.25rem;
+  height: 3.5rem;
   width: auto;
 }
 
@@ -1506,6 +1508,15 @@ footer {
 
 /* BREAKPOINTS 1024, 880, 640, 468 */
 @media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  .navbar {
+    height: 3.5rem;
+  }
   header {
     padding: 1.75rem 1.75rem 1rem 1.75rem;
   }
@@ -1514,7 +1525,13 @@ footer {
     padding: 1.25rem;
   }
   footer {
-    padding: 0.25rem 1.25rem;
+    padding: 0rem 2rem;
+  }
+  .button_icon-text {
+    padding: 0.75rem 1rem;
+  }
+  .popup_styling {
+    padding: 2.25rem;
   }
 }
 
@@ -1525,11 +1542,14 @@ footer {
   p {
     line-height: 175%;
   }
+  h3 {
+    font-size: 1rem;
+  }
   body {
     font-size: 1rem;
   }
   header {
-    padding: 1.75rem 1.75rem 1rem 1.75rem;
+    padding: 0.75rem 1.75rem;
   }
   .site-wrapper {
     max-width: 532px;
@@ -1544,17 +1564,21 @@ footer {
     gap: 1.75rem;
   }
   .button_primary {
-    min-width: auto;
-    min-height: auto;
-    padding: 0.75rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
   }
   .button_icon-text {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 0rem;
   }
+  .icon_s {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
   .button_text {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
+    min-width: 120px;
   }
   .button_mini {
     width: 1.75rem;
@@ -1572,7 +1596,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
   .container_total {
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
   }
   .card {
     height: 7rem;
@@ -1588,22 +1612,25 @@ footer {
     margin: 0.25rem;
   }
   .front-image {
-    height: 2.5rem;
+    height: 8vw;
   }
   .section_text {
     padding: 9rem 4rem;
     gap: 2.5rem;
   }
+  .popup_styling {
+    padding: 2rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+
     font-weight: 800;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .site-wrapper {
     width: 600px;
@@ -1611,17 +1638,13 @@ footer {
   .navbar {
     height: 3.25rem;
   }
-  .icon_s {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
   .card {
     width: 19.25vw;
     height: 19.25vw;
     max-width: 7rem;
     max-height: 7rem;
-    min-width: var(--measure-card-size-s, 5.5rem);
-    min-height: var(--measure-card-size-s, 5.5rem);
+    min-width: var(--measure-card-size-s, 5.25rem);
+    min-height: var(--measure-card-size-s, 5.25rem);
     padding: 0.5rem;
   }
   .card-text {
@@ -1637,11 +1660,9 @@ footer {
 
 @media screen and (max-width: 468px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
-  h3 {
-    font-size: 1rem;
-  }
+
   body {
     font-size: 1rem;
   }
@@ -1650,7 +1671,7 @@ footer {
     border-radius: 0 0 1.25rem 1.25rem;
   }
   header {
-    padding: 1.25rem 1.25rem 1rem 1.25rem;
+    padding: 1.25rem 1.25rem 0.75rem 1.25rem;
   }
   .info-seconds {
     min-width: 1.5rem;
@@ -1682,9 +1703,7 @@ footer {
     gap: 0.25rem;
     align-items: start;
   }
-  .container_total {
-    align-items: center;
-  }
+
   .dd {
     min-width: auto;
   }
@@ -1695,12 +1714,7 @@ footer {
     padding: 1.25rem;
     gap: 1rem;
   }
-  footer {
-    padding: 0 1.25rem;
-  }
   .card {
-    min-width: var(--measure-card-size-s, 4rem);
-    min-height: var(--measure-card-size-s, 4rem);
     width: 19.25vw;
     height: 19.25vw;
     padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
@@ -1711,11 +1725,12 @@ footer {
     border-radius: 0.5rem;
   }
   .front-image {
-    height: 2rem;
+    min-height: 2rem;
   }
   .container_game {
     padding: 1.25rem;
     justify-content: center;
+    grid-gap: clamp(0.5rem, 0.5rem, 0.5rem);
   }
   .icon_menu-card_image {
     width: 2rem;
@@ -1742,7 +1757,7 @@ footer {
     row-gap: 1rem;
   }
   .popup_styling {
-    padding: 1.75rem 1.75rem 2.25rem 1.75rem;
+    padding: 1.75rem 1.75rem;
     gap: 1.25rem;
   }
   .container_end-game {
@@ -1754,15 +1769,15 @@ footer {
   .button {
     padding: 0.25rem 1rem;
   }
-  /*   .button_me {
-    width: 2.25rem;
-    height: 2.25rem;
-  } */
+  .button_icon-text {
+    width: 2rem;
+    height: 2rem;
+  }
   .hide-button-text-sm {
     padding: 0.25rem;
   }
   .wrapper_buttons {
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
     gap: 1.5rem;
   }
   .wrapper_buttons-round {
