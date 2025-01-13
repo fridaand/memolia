@@ -34,7 +34,7 @@ html {
   }
 
   html {
-    cursor: auto;
+    cursor: auto !important;
   }
 }
 
