@@ -20,9 +20,10 @@ const categories = [
 
 /* HIDE CURSOR FOR IPAD ETC */
 document.addEventListener("DOMContentLoaded", () => {
-  const isTouchDevice = matchMedia(
-    "(hover: none) and (pointer: coarse)"
-  ).matches;
+  const isTouchDevice =
+    matchMedia("(hover: none) and (pointer: coarse)").matches ||
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0;
 
   if (isTouchDevice) {
     document.querySelector("#custom-cursor").style.display = "none";
