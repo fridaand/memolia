@@ -347,7 +347,7 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
     url(/images/memolia_bg/memolia_index_night.png);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    url(/images/memolia_bg/memolia_index_day1.png);
+    url(/docs/images/memolia_bg/memolia_index_day1.png);
 
   background-position: center;
   margin: 0;
