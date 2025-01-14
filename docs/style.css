@@ -334,6 +334,9 @@ a:hover ~ #custom-cursor,
   background-color: var(--pink2);
   background-image: var(--shadow_round);
 }
+.bg_brown2 {
+  background-color: var(--brown2);
+}
 
 body {
   display: flex;
@@ -396,7 +399,7 @@ main {
 
 .section_environment_crop {
   display: flex;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -412,14 +415,18 @@ main {
   bottom: 0;
   right: 0;
   width: auto;
+  max-width: 300px;
   min-height: 40px;
   padding: 1.5rem 1.75rem;
-  background-color: #26211a;
   color: var(--secondary);
   border-radius: 1.25rem;
   margin: 1rem;
   z-index: 10;
   gap: 2rem;
+}
+
+.width_me {
+  max-width: 160px;
 }
 
 /* LOGOTYPE */
@@ -527,6 +534,12 @@ p {
   line-height: 150%;
   margin: 0;
   text-align: left;
+}
+
+.p_mini {
+  line-height: 125%;
+  font-size: 0.875rem;
+  color: var(--petrol1);
 }
 
 .p_game-title {
@@ -735,8 +748,12 @@ header {
   align-items: flex-start;
 }
 
-.hitbox_tr {
+.hitbox_cr {
+  display: flex;
   justify-content: end;
+  align-items: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
 }
 
 .button {
@@ -913,7 +930,7 @@ header {
 footer {
   width: auto;
   height: auto;
-  padding: 0.25rem 2rem;
+  padding: 0.75rem 2rem;
   box-shadow: 0px -0px 16px 2px rgba(0, 0, 0, 0.5) inset;
 }
 
@@ -1515,7 +1532,7 @@ footer {
     font-size: 2.25rem;
   }
   .navbar {
-    height: 3.5rem;
+    height: 3rem;
   }
   header {
     padding: 1.75rem 1.75rem 1rem 1.75rem;
@@ -1523,9 +1540,6 @@ footer {
   .container_game {
     grid-template-columns: repeat(5, 1fr);
     padding: 1.25rem;
-  }
-  footer {
-    padding: 0rem 2rem;
   }
   .button_icon-text {
     padding: 0.75rem 1rem;
