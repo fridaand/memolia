@@ -1544,6 +1544,10 @@ footer {
   .button_icon-text {
     padding: 0.75rem 1rem;
   }
+  .width_me {
+    max-width: 192px;
+    padding: 0.5rem 1.25rem;
+  }
   .popup_styling {
     padding: 2.25rem;
   }
@@ -1683,6 +1687,9 @@ footer {
   .site-wrapper {
     margin: 0;
     border-radius: 0 0 1.25rem 1.25rem;
+  }
+  .hide_animated_game_bg {
+    display: none;
   }
   header {
     padding: 1.25rem 1.25rem 0.75rem 1.25rem;
