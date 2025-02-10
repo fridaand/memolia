@@ -15,7 +15,7 @@
 
   <body>
     <div class="background-container">
-      <div class="section_environment_crop hide_animated_game_bg">
+      <!-- <div class="section_environment_crop hide_animated_game_bg">
         <script
           type="module"
           src="https://unpkg.com/@splinetool/viewer@1.9.58/build/spline-viewer.js"
@@ -28,7 +28,7 @@
             <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="site-wrapper">
         <header>
@@ -56,7 +56,9 @@
                     <span class="score container-direction"></span> DRAG
                   </div>
                   <div class="wrapper_text-min">
-                    <span class="info-seconds container-direction"></span>
+                    <span
+                      class="info-seconds position_right container-direction"
+                    ></span>
                     SEKUNDER
                   </div>
                 </div>
@@ -115,9 +117,9 @@
     <div id="popUpId" class="popup_bg">
       <div class="popup_styling">
         <div class="wrapper_justify-end">
-          <div class="hitbox_tl">
+          <div class="hitbox_tr">
             <img
-              class="button_close"
+              class="button_close clickable"
               src="./icons/nav/cross_s.svg"
               alt="close dialog box to return to game"
             />
