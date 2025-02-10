@@ -12,40 +12,73 @@ function loadAndDisplayWordList(category, language) {
       // Sort words A-Ö
       data.sort((a, b) => a.language.swedish.localeCompare(b.language.swedish));
 
-      // Creating <p> for each element i data-list
+      // Creating DOM-element (<p>) for each element i data-list
       data.forEach((wordData) => {
         const wordDiv = document.createElement("div");
         wordDiv.className = "list-word";
 
+        wordDiv.dataset.audioSwedish = wordData.audio.swedish || "";
+        wordDiv.dataset.audioTranslation = wordData.audio[language] || "";
+
         const swedishP = document.createElement("p");
-        swedishP.className = "swedish";
-        swedishP.textContent = wordData.language.swedish;
+        const swedishSpan = document.createElement("span");
+
+        swedishSpan.textContent = wordData.language.swedish;
+        swedishSpan.classList.add("swedish");
+        swedishP.appendChild(swedishSpan);
         wordDiv.appendChild(swedishP);
 
         const translationP = document.createElement("p");
-        translationP.className = "translation";
-        translationP.textContent = wordData.language[language]; // Use right language in the dictionary
+        const translationSpan = document.createElement("span");
+
+        translationSpan.textContent = wordData.language[language];
+        translationSpan.classList.add("translation");
+        translationP.appendChild(translationSpan);
         wordDiv.appendChild(translationP);
 
         // Click event for words in dictionary list
-        wordDiv.addEventListener("click", (event) => {
+        let isAudioPlaying = false;
+
+        // Function for playing audio for words
+        function playAudio(audioSrc) {
+          if (isAudioPlaying || !audioSrc) return;
+
+          const audio = new Audio(audioSrc);
+          isAudioPlaying = true;
+
+          audio.play().catch((error) => {
+            console.warn("Ljudet kunde inte spelas:", error);
+          });
+
+          audio.onended = () => {
+            isAudioPlaying = false;
+          };
+        }
+
+        // Event listener för mouseover
+        wordDiv.addEventListener("mouseover", (event) => {
+          let audioSrc = null;
+
           if (event.target.classList.contains("swedish")) {
-            // Play swedish audio in the list
-            const audioSrc = wordData.audio.swedish;
-            if (audioSrc) {
-              const audio = new Audio(audioSrc);
-              audio.play();
-            } else {
-            }
+            audioSrc = wordData.audio.swedish;
           } else if (event.target.classList.contains("translation")) {
-            // Play audio in the list for current langauge
-            const audioSrc = wordData.audio[language];
-            if (audioSrc) {
-              const audio = new Audio(audioSrc);
-              audio.play();
-            } else {
-            }
+            audioSrc = wordData.audio[language];
           }
+
+          playAudio(audioSrc);
+        });
+
+        // Event listener för click
+        wordDiv.addEventListener("click", (event) => {
+          let audioSrc = null;
+
+          if (event.target.classList.contains("swedish")) {
+            audioSrc = wordData.audio.swedish;
+          } else if (event.target.classList.contains("translation")) {
+            audioSrc = wordData.audio[language];
+          }
+
+          playAudio(audioSrc);
         });
 
         wordList.appendChild(wordDiv);
@@ -60,7 +93,7 @@ function loadAndDisplayWordList(category, language) {
 }
 
 // LISTEN TO CLICK - DROPDOWN
-const dropdownButtons = document.querySelectorAll(".dropdown-button");
+const dropdownButtons = document.querySelectorAll(".wrapper_category");
 
 dropdownButtons.forEach((button) => {
   button.addEventListener("click", function () {
