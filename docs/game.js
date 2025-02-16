@@ -71,7 +71,7 @@ function generateCardDiv(card) {
   const language = currentLanguage === "french" ? "french" : "english";
   return `
   <div class="front">
-  <img class="front-image" src=${card.image} />
+  <img class="front-image" alt="" aria-hidden="true" src=${card.image} />
   <p class="card-text">${card.language[currentLanguage]}</p>
 </div>
 <div class="back"></div>
