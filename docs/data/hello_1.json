@@ -1,0 +1,164 @@
+[
+  {
+    "name": "bad",
+    "image": "images/hello_1/bad.svg",
+    "language": {
+      "english": "bad",
+      "french": "mal",
+      "swedish": "dåligt",
+      "portuguese-br": "mal"
+    },
+    "audio": {
+      "english": "sound/hello_1/bad.mp3",
+      "french": "sound/hello_1/bad_fr.mp3",
+      "swedish": "sound/hello_1/bad_sw.mp3",
+      "portuguese-br": "sound/hello_1/bad_po-br.mp3"
+    }
+  },
+  {
+    "name": "good",
+    "image": "images/hello_1/good.svg",
+    "language": {
+      "english": "good",
+      "french": "bien",
+      "swedish": "bra",
+      "portuguese-br": "bem"
+    },
+    "audio": {
+      "english": "sound/hello_1/good.mp3",
+      "french": "sound/hello_1/good_fr.mp3",
+      "swedish": "sound/hello_1/good_sw.mp3",
+      "portuguese-br": "sound/hello_1/good_po-br.mp3"
+    }
+  },
+  {
+    "name": "goodbye",
+    "image": "images/hello_1/goodbye.svg",
+    "language": {
+      "english": "goodbye",
+      "french": "au revoir",
+      "swedish": "hej då",
+      "portuguese-br": "tchau"
+    },
+    "audio": {
+      "english": "sound/hello_1/goodbye.mp3",
+      "french": "sound/hello_1/goodbye_fr.mp3",
+      "swedish": "sound/hello_1/goodbye_sw.mp3",
+      "portuguese-br": "sound/hello_1/goodbye_po-br.mp3"
+    }
+  },
+
+  {
+    "name": "hello",
+    "image": "images/hello_1/hello.svg",
+    "language": {
+      "english": "hello",
+      "french": "bonjour",
+      "swedish": "hej",
+      "portuguese-br": "olá"
+    },
+    "audio": {
+      "english": "sound/hello_1/hello.mp3",
+      "french": "sound/hello_1/hello_fr.mp3",
+      "swedish": "sound/hello_1/hello_sw.mp3",
+      "portuguese-br": "sound/hello_1/hello_po-br.mp3"
+    }
+  },
+  {
+    "name": "how are you",
+    "image": "images/hello_1/how_are_you.svg",
+    "language": {
+      "english": "how are you?",
+      "french": "ça va?",
+      "swedish": "hur mår du?",
+      "portuguese-br": "como vai?"
+    },
+    "audio": {
+      "english": "sound/hello_1/how_are_you.mp3",
+      "french": "sound/hello_1/how_are_you_fr.mp3",
+      "swedish": "sound/hello_1/how_are_you_sw.mp3",
+      "portuguese-br": "sound/hello_1/how_are_you_po-br.mp3"
+    }
+  },
+
+  {
+    "name": "I don't know",
+    "image": "images/hello_1/i_dont_know.svg",
+    "language": {
+      "english": "I don't know",
+      "french": "je ne sais pas",
+      "swedish": "jag vet inte",
+      "portuguese-br": "não sei"
+    },
+    "audio": {
+      "english": "sound/hello_1/i_dont_know.mp3",
+      "french": "sound/hello_1/i_dont_know_fr.mp3",
+      "swedish": "sound/hello_1/i_dont_know_sw.mp3",
+      "portuguese-br": "sound/hello_1/i_dont_know_po-br.mp3"
+    }
+  },
+  {
+    "name": "no",
+    "image": "images/hello_1/no.svg",
+    "language": {
+      "english": "no",
+      "french": "non",
+      "swedish": "nej",
+      "portuguese-br": "não"
+    },
+    "audio": {
+      "english": "sound/hello_1/no.mp3",
+      "french": "sound/hello_1/no_fr.mp3",
+      "swedish": "sound/hello_1/no_sw.mp3",
+      "portuguese-br": "sound/hello_1/no_po-br.mp3"
+    }
+  },
+  {
+    "name": "thanks",
+    "image": "images/hello_1/thanks.svg",
+    "language": {
+      "english": "thanks",
+      "french": "merci",
+      "swedish": "tack",
+      "portuguese-br": "obrigado"
+    },
+    "audio": {
+      "english": "sound/hello_1/thanks.mp3",
+      "french": "sound/hello_1/thanks_fr.mp3",
+      "swedish": "sound/hello_1/thanks_sw.mp3",
+      "portuguese-br": "sound/hello_1/thanks_po-br.mp3"
+    }
+  },
+  {
+    "name": "yes",
+    "image": "images/hello_1/yes.svg",
+    "language": {
+      "english": "yes",
+      "french": "oui",
+      "swedish": "ja",
+      "portuguese-br": "sim"
+    },
+    "audio": {
+      "english": "sound/hello_1/yes.mp3",
+      "french": "sound/hello_1/yes_fr.mp3",
+      "swedish": "sound/hello_1/yes_sw.mp3",
+      "portuguese-br": "sound/hello_1/yes_po-br.mp3"
+    }
+  },
+  {
+    "name": "you're welcome",
+    "image": "images/hello_1/youre_welcome.svg",
+    "language": {
+      "english": "you're welcome",
+      "french": "de rien",
+      "swedish": "varsågod",
+      "portuguese-br": "de nada"
+    },
+    "audio": {
+      "english": "sound/hello_1/youre_welcome.mp3",
+      "french": "sound/hello_1/youre_welcome_fr.mp3",
+      "swedish": "sound/hello_1/youre_welcome_sw.mp3",
+      "portuguese-br": "sound/hello_1/youre_welcome_po-br.mp3"
+    }
+  }
+]

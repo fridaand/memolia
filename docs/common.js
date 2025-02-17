@@ -9,6 +9,8 @@ let customCursor = document.querySelector("#custom-cursor");
 
 // ARRAY WITH CATEGORIES
 const categories = [
+  { id: "hello-game_1", name: "hello_1" },
+  { id: "fruits-game_mini", name: "fruits_mini" },
   { id: "fruits-game_1", name: "fruits_1" },
   { id: "vegetables-game_1", name: "vegetables_1" },
   { id: "animals-game_1", name: "animals_1" },

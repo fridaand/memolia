@@ -1,0 +1,162 @@
+[
+  {
+    "name": "basil",
+    "image": "images/herbs_1/basil.svg",
+    "language": {
+      "english": "basil",
+      "french": "le basilic",
+      "swedish": "basilika",
+      "portuguese-br": "o manjericão"
+    },
+    "audio": {
+      "english": "sound/herbs_1/basil.mp3",
+      "french": "sound/herbs_1/basil_fr.mp3",
+      "swedish": "sound/herbs_1/basil_sw.mp3",
+      "portuguese-br": "sound/herbs_1/basil_po-br.mp3"
+    }
+  },
+  {
+    "name": "chili",
+    "image": "images/herbs_1/chili.svg",
+    "language": {
+      "english": "chili",
+      "french": "le piment",
+      "swedish": "chili",
+      "portuguese-br": "o chili"
+    },
+    "audio": {
+      "english": "sound/herbs_1/chili.mp3",
+      "french": "sound/herbs_1/chili_fr.mp3",
+      "swedish": "sound/herbs_1/chili_sw.mp3",
+      "portuguese-br": "sound/herbs_1/chili_po-br.mp3"
+    }
+  },
+  {
+    "name": "coriander",
+    "image": "images/herbs_1/coriander.svg",
+    "language": {
+      "english": "coriander",
+      "french": "la coriandre",
+      "swedish": "koriander",
+      "portuguese-br": "o coentro"
+    },
+    "audio": {
+      "english": "sound/herbs_1/coriander.mp3",
+      "french": "sound/herbs_1/coriander_fr.mp3",
+      "swedish": "sound/herbs_1/coriander_sw.mp3",
+      "portuguese-br": "sound/herbs_1/coriander_po-br.mp3"
+    }
+  },
+  {
+    "name": "garlic",
+    "image": "images/herbs_1/garlic.svg",
+    "language": {
+      "english": "garlic",
+      "french": "l’ail",
+      "swedish": "vitlök",
+      "portuguese-br": "o alho"
+    },
+    "audio": {
+      "english": "sound/herbs_1/garlic.mp3",
+      "french": "sound/herbs_1/garlic_fr.mp3",
+      "swedish": "sound/herbs_1/garlic_sw.mp3",
+      "portuguese-br": "sound/herbs_1/garlic_po-br.mp3"
+    }
+  },
+  {
+    "name": "ginger",
+    "image": "images/herbs_1/ginger.svg",
+    "language": {
+      "english": "ginger",
+      "french": "le gingembre",
+      "swedish": "ingefära",
+      "portuguese-br": "o gengibre"
+    },
+    "audio": {
+      "english": "sound/herbs_1/ginger.mp3",
+      "french": "sound/herbs_1/ginger_fr.mp3",
+      "swedish": "sound/herbs_1/ginger_sw.mp3",
+      "portuguese-br": "sound/herbs_1/ginger_po-br.mp3"
+    }
+  },
+  {
+    "name": "oregano",
+    "image": "images/herbs_1/oregano.svg",
+    "language": {
+      "english": "oregano",
+      "french": "l’origan",
+      "swedish": "oregano",
+      "portuguese-br": "o orégano"
+    },
+    "audio": {
+      "english": "sound/herbs_1/oregano.mp3",
+      "french": "sound/herbs_1/oregano_fr.mp3",
+      "swedish": "sound/herbs_1/oregano_sw.mp3",
+      "portuguese-br": "sound/herbs_1/oregano_po-br.mp3"
+    }
+  },
+  {
+    "name": "pepper",
+    "image": "images/herbs_1/pepper.svg",
+    "language": {
+      "english": "pepper",
+      "french": "le poivre",
+      "swedish": "peppar",
+      "portuguese-br": "a pimenta"
+    },
+    "audio": {
+      "english": "sound/herbs_1/pepper.mp3",
+      "french": "sound/herbs_1/pepper_fr.mp3",
+      "swedish": "sound/herbs_1/pepper_sw.mp3",
+      "portuguese-br": "sound/herbs_1/pepper_po-br.mp3"
+    }
+  },
+  {
+    "name": "salt",
+    "image": "images/herbs_1/salt.svg",
+    "language": {
+      "english": "salt",
+      "french": "le sel",
+      "swedish": "salt",
+      "portuguese-br": "o sal"
+    },
+    "audio": {
+      "english": "sound/herbs_1/salt.mp3",
+      "french": "sound/herbs_1/salt_fr.mp3",
+      "swedish": "sound/herbs_1/salt_sw.mp3",
+      "portuguese-br": "sound/herbs_1/salt_po-br.mp3"
+    }
+  },
+  {
+    "name": "sugar",
+    "image": "images/herbs_1/sugar.svg",
+    "language": {
+      "english": "sugar",
+      "french": "le sucre",
+      "swedish": "socker",
+      "portuguese-br": "o açúcar"
+    },
+    "audio": {
+      "english": "sound/herbs_1/sugar.mp3",
+      "french": "sound/herbs_1/sugar_fr.mp3",
+      "swedish": "sound/herbs_1/sugar_sw.mp3",
+      "portuguese-br": "sound/herbs_1/sugar_po-br.mp3"
+    }
+  },
+  {
+    "name": "thyme",
+    "image": "images/herbs_1/thyme.svg",
+    "language": {
+      "english": "thyme",
+      "french": "le thym",
+      "swedish": "timjan",
+      "portuguese-br": "o tomilho"
+    },
+    "audio": {
+      "english": "sound/herbs_1/thyme.mp3",
+      "french": "sound/herbs_1/thyme_fr.mp3",
+      "swedish": "sound/herbs_1/thyme_sw.mp3",
+      "portuguese-br": "sound/herbs_1/thyme_po-br.mp3"
+    }
+  }
+]

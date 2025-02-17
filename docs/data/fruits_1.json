@@ -16,6 +16,70 @@
     }
   },
   {
+    "name": "banana",
+    "image": "images/fruits_1/banana.svg",
+    "language": {
+      "english": "banana",
+      "french": "la banane",
+      "swedish": "banan",
+      "portuguese-br": "banana"
+    },
+    "audio": {
+      "english": "sound/fruits_1/banana.mp3",
+      "french": "sound/fruits_1/banana_fr.mp3",
+      "swedish": "sound/fruits_1/banana_sw.mp3",
+      "portuguese-br": "sound/fruits_1/banana_po-br.mp3"
+    }
+  },
+  {
+    "name": "cherry",
+    "image": "images/fruits_1/cherry.svg",
+    "language": {
+      "english": "cherry",
+      "french": "la cerise",
+      "swedish": "körsbär",
+      "portuguese-br": "cereja"
+    },
+    "audio": {
+      "english": "sound/fruits_1/cherry.mp3",
+      "french": "sound/fruits_1/cherry_fr.mp3",
+      "swedish": "sound/fruits_1/cherry_sw.mp3",
+      "portuguese-br": "sound/fruits_1/cherry_po-br.mp3"
+    }
+  },
+  {
+    "name": "grape",
+    "image": "images/fruits_1/grape.svg",
+    "language": {
+      "english": "grape",
+      "french": "le raisin",
+      "swedish": "vindruvor",
+      "portuguese-br": "uva"
+    },
+    "audio": {
+      "english": "sound/fruits_1/grape.mp3",
+      "french": "sound/fruits_1/grape_fr.mp3",
+      "swedish": "sound/fruits_1/grape_sw.mp3",
+      "portuguese-br": "sound/fruits_1/grape_po-br.mp3"
+    }
+  },
+  {
+    "name": "kiwi",
+    "image": "images/fruits_1/kiwi.svg",
+    "language": {
+      "english": "kiwi",
+      "french": "le kiwi",
+      "swedish": "kiwi",
+      "portuguese-br": "kiwi"
+    },
+    "audio": {
+      "english": "sound/fruits_1/kiwi.mp3",
+      "french": "sound/fruits_1/kiwi_fr.mp3",
+      "swedish": "sound/fruits_1/kiwi_sw.mp3",
+      "portuguese-br": "sound/fruits_1/kiwi_po-br.mp3"
+    }
+  },
+  {
     "name": "orange",
     "image": "images/fruits_1/orange.svg",
     "language": {
@@ -29,6 +93,70 @@
       "french": "sound/fruits_1/orange_fr.mp3",
       "swedish": "sound/fruits_1/orange_sw.mp3",
       "portuguese-br": "sound/fruits_1/orange_po-br.mp3"
+    }
+  },
+  {
+    "name": "peach",
+    "image": "images/fruits_1/peach.svg",
+    "language": {
+      "english": "peach",
+      "french": "la pêche",
+      "swedish": "persika",
+      "portuguese-br": "pêssego"
+    },
+    "audio": {
+      "english": "sound/fruits_1/peach.mp3",
+      "french": "sound/fruits_1/peach_fr.mp3",
+      "swedish": "sound/fruits_1/peach_sw.mp3",
+      "portuguese-br": "sound/fruits_1/peach_po-br.mp3"
+    }
+  },
+  {
+    "name": "pineapple",
+    "image": "images/fruits_1/pineapple.svg",
+    "language": {
+      "english": "pineapple",
+      "french": "l'ananas",
+      "swedish": "ananas",
+      "portuguese-br": "abacaxi"
+    },
+    "audio": {
+      "english": "sound/fruits_1/pineapple.mp3",
+      "french": "sound/fruits_1/pineapple_fr.mp3",
+      "swedish": "sound/fruits_1/pineapple_sw.mp3",
+      "portuguese-br": "sound/fruits_1/pineapple_po-br.mp3"
+    }
+  },
+  {
+    "name": "pear",
+    "image": "images/fruits_1/pear.svg",
+    "language": {
+      "english": "pear",
+      "french": "la poire",
+      "swedish": "päron",
+      "portuguese-br": "pêra"
+    },
+    "audio": {
+      "english": "sound/fruits_1/pear.mp3",
+      "french": "sound/fruits_1/pear_fr.mp3",
+      "swedish": "sound/fruits_1/pear_sw.mp3",
+      "portuguese-br": "sound/fruits_1/pear_po-br.mp3"
+    }
+  },
+  {
+    "name": "strawberry",
+    "image": "images/fruits_1/strawberry.svg",
+    "language": {
+      "english": "strawberry",
+      "french": "la fraise",
+      "swedish": "jordgubbe",
+      "portuguese-br": "morango"
+    },
+    "audio": {
+      "english": "sound/fruits_1/strawberry.mp3",
+      "french": "sound/fruits_1/strawberry_fr.mp3",
+      "swedish": "sound/fruits_1/strawberry_sw.mp3",
+      "portuguese-br": "sound/fruits_1/strawberry_po-br.mp3"
     }
   }
 ]

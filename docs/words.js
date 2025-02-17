@@ -55,19 +55,6 @@ function loadAndDisplayWordList(category, language) {
           };
         }
 
-        // Event listener för mouseover
-        wordDiv.addEventListener("mouseover", (event) => {
-          let audioSrc = null;
-
-          if (event.target.classList.contains("swedish")) {
-            audioSrc = wordData.audio.swedish;
-          } else if (event.target.classList.contains("translation")) {
-            audioSrc = wordData.audio[language];
-          }
-
-          playAudio(audioSrc);
-        });
-
         // Event listener för click
         wordDiv.addEventListener("click", (event) => {
           let audioSrc = null;
@@ -76,6 +63,12 @@ function loadAndDisplayWordList(category, language) {
             audioSrc = wordData.audio.swedish;
           } else if (event.target.classList.contains("translation")) {
             audioSrc = wordData.audio[language];
+            event.target.classList.add("clicked");
+
+            // Ta bort 'clicked' klass efter en viss tid (300ms, samma som animationens längd)
+            setTimeout(() => {
+              event.target.classList.remove("clicked");
+            }, 1000);
           }
 
           playAudio(audioSrc);
