@@ -243,40 +243,19 @@ a:hover ~ #custom-cursor,
   background-color: var(--green1);
   background-image: var(--shadow_round);
 }
-
 .bg_green2 {
   background-color: #8bccad;
   background-color: var(--green2);
   background-image: var(--shadow_round);
 }
-
+.bg_green2b {
+  background: var(--green2b);
+}
 .bg_green3 {
-  background-color: #deeac4;
+  background: var(--green3);
   background-image: var(--shadow_round);
 }
 
-.bg_petrol1 {
-  background-color: #73a58d;
-  background-color: var(--petrol1);
-
-  background-image: var(--shadow_round);
-}
-
-.bg_petrol2 {
-  background-color: #3e8882;
-  background-color: var(--petrol2);
-
-  background-image: var(--shadow_round);
-}
-
-.bg_petrol3 {
-  background: #006058;
-  background-color: var(--petrol3);
-}
-.bg_petrol4 {
-  background: #07322f;
-  background-color: var(--petrol4);
-}
 .bg_orange1 {
   background-color: #fec584;
   background-color: #d48a51;
@@ -288,6 +267,27 @@ a:hover ~ #custom-cursor,
   background-color: #ffab86;
   background-color: var(--orange2);
   background-image: var(--shadow_round);
+}
+
+.bg_petrol1 {
+  background-color: #73a58d;
+  background-color: var(--petrol1);
+
+  background-image: var(--shadow_round);
+}
+.bg_petrol2 {
+  background-color: #3e8882;
+  background-color: var(--petrol2);
+
+  background-image: var(--shadow_round);
+}
+.bg_petrol3 {
+  background: #006058;
+  background-color: var(--petrol3);
+}
+.bg_petrol4 {
+  background: #07322f;
+  background-color: var(--petrol4);
 }
 
 .bg_white1 {
@@ -323,11 +323,9 @@ a:hover ~ #custom-cursor,
 /* .bg_yellow5 {
   background: var(--yellow5);
 } */
-.bg_green2b {
-  background: var(--green2b);
-}
-.bg_green3 {
-  background: var(--green3);
+
+.bg_pink0 {
+  background: var(--pink0);
 }
 .bg_pink1 {
   background-color: var(--pink1);
@@ -1679,6 +1677,7 @@ footer {
   .front,
   .back {
     border-radius: 0.75rem;
+    gap: 0.125rem;
   }
   .card-text {
     margin: 0.25rem;

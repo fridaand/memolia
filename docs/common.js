@@ -9,15 +9,17 @@ let customCursor = document.querySelector("#custom-cursor");
 
 // ARRAY WITH CATEGORIES
 const categories = [
-  { id: "hello-game_1", name: "hello_1" },
-  { id: "fruits-game_mini", name: "fruits_mini" },
+  /*   { id: "fruits-game_mini", name: "fruits_mini" },
+   */ { id: "hello-game_1", name: "hello_1" },
   { id: "fruits-game_1", name: "fruits_1" },
   { id: "vegetables-game_1", name: "vegetables_1" },
   { id: "animals-game_1", name: "animals_1" },
   { id: "dishes-game_1", name: "dishes_1" },
   { id: "drinks-game_1", name: "drinks_1" },
   { id: "colours-game_1", name: "colours_1" },
-  { id: "fruits-game_2", name: "fruits_2" },
+  { id: "people-game_1", name: "people_1" },
+  /*   { id: "fruits-game_2", name: "fruits_2" },
+   */
 ];
 
 /* HIDE CURSOR FOR IPAD ETC */

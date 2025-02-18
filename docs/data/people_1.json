@@ -1,0 +1,163 @@
+[
+  {
+    "name": "baby",
+    "image": "images/people_1/baby.svg",
+    "language": {
+      "english": "baby",
+      "french": "le bébé",
+      "swedish": "bebis",
+      "portuguese-br": "o bebê"
+    },
+    "audio": {
+      "english": "sound/people_1/baby.mp3",
+      "french": "sound/people_1/baby_fr.mp3",
+      "swedish": "sound/people_1/baby_sw.mp3",
+      "portuguese-br": "sound/people_1/baby_po-br.mp3"
+    }
+  },
+  {
+    "name": "family",
+    "image": "images/people_1/family.svg",
+    "language": {
+      "english": "family",
+      "french": "la famille",
+      "swedish": "familj",
+      "portuguese-br": "a família"
+    },
+    "audio": {
+      "english": "sound/people_1/family.mp3",
+      "french": "sound/people_1/family_fr.mp3",
+      "swedish": "sound/people_1/family_sw.mp3",
+      "portuguese-br": "sound/people_1/family_po-br.mp3"
+    }
+  },
+  {
+    "name": "friend",
+    "image": "images/people_1/friend.svg",
+    "language": {
+      "english": "friend",
+      "french": "l'ami /l'amie",
+      "swedish": "vän",
+      "portuguese-br": "e amigue (o amigo/a amiga)"
+    },
+    "audio": {
+      "english": "sound/people_1/friend.mp3",
+      "french": "sound/people_1/friend_fr.mp3",
+      "swedish": "sound/people_1/friend_sw.mp3",
+      "portuguese-br": "sound/people_1/friend_po-br.mp3"
+    }
+  },
+  {
+    "name": "he",
+    "image": "images/people_1/he.svg",
+    "language": {
+      "english": "he",
+      "french": "il",
+      "swedish": "han",
+      "portuguese-br": "ele"
+    },
+    "audio": {
+      "english": "sound/people_1/he.mp3",
+      "french": "sound/people_1/he_fr.mp3",
+      "swedish": "sound/people_1/he_sw.mp3",
+      "portuguese-br": "sound/people_1/he_po-br.mp3"
+    }
+  },
+  {
+    "name": "they (neutral)",
+    "image": "images/people_1/they.svg",
+    "language": {
+      "english": "they (neutral)",
+      "french": "iel",
+      "swedish": "hen",
+      "portuguese-br": "elu"
+    },
+    "audio": {
+      "english": "sound/people_1/they.mp3",
+      "french": "sound/people_1/they_fr.mp3",
+      "swedish": "sound/people_1/they_sw.mp3",
+      "portuguese-br": "sound/people_1/they_po-br.mp3"
+    }
+  },
+  {
+    "name": "I",
+    "image": "images/people_1/i.svg",
+    "language": {
+      "english": "I",
+      "french": "je",
+      "swedish": "jag",
+      "portuguese-br": "eu"
+    },
+    "audio": {
+      "english": "sound/people_1/i.mp3",
+      "french": "sound/people_1/i_fr.mp3",
+      "swedish": "sound/people_1/i_sw.mp3",
+      "portuguese-br": "sound/people_1/i_po-br.mp3"
+    }
+  },
+  {
+    "name": "partner",
+    "image": "images/people_1/partner.svg",
+    "language": {
+      "english": "partner",
+      "french": "le partenaire",
+      "swedish": "partner",
+      "portuguese-br": "une parceire (o parceiro/a parceira)"
+    },
+    "audio": {
+      "english": "sound/people_1/partner.mp3",
+      "french": "sound/people_1/partner_fr.mp3",
+      "swedish": "sound/people_1/partner_sw.mp3",
+      "portuguese-br": "sound/people_1/partner_po-br.mp3"
+    }
+  },
+  {
+    "name": "she",
+    "image": "images/people_1/she.svg",
+    "language": {
+      "english": "she",
+      "french": "elle",
+      "swedish": "hon",
+      "portuguese-br": "ela"
+    },
+    "audio": {
+      "english": "sound/people_1/she.mp3",
+      "french": "sound/people_1/she_fr.mp3",
+      "swedish": "sound/people_1/she_sw.mp3",
+      "portuguese-br": "sound/people_1/she_po-br.mp3"
+    }
+  },
+
+  {
+    "name": "we",
+    "image": "images/people_1/we.svg",
+    "language": {
+      "english": "we",
+      "french": "nous",
+      "swedish": "vi",
+      "portuguese-br": "nós"
+    },
+    "audio": {
+      "english": "sound/people_1/we.mp3",
+      "french": "sound/people_1/we_fr.mp3",
+      "swedish": "sound/people_1/we_sw.mp3",
+      "portuguese-br": "sound/people_1/we_po-br.mp3"
+    }
+  },
+  {
+    "name": "you",
+    "image": "images/people_1/you.svg",
+    "language": {
+      "english": "you",
+      "french": "vous",
+      "swedish": "ni",
+      "portuguese-br": "você"
+    },
+    "audio": {
+      "english": "sound/people_1/you.mp3",
+      "french": "sound/people_1/you_fr.mp3",
+      "swedish": "sound/people_1/you_sw.mp3",
+      "portuguese-br": "sound/people_1/you_po-br.mp3"
+    }
+  }
+]
