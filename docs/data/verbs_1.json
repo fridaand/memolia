@@ -1,0 +1,162 @@
+[
+  {
+    "name": "eat",
+    "image": "images/verbs_1/eat.svg",
+    "language": {
+      "english": "eat",
+      "french": "manger",
+      "swedish": "äta",
+      "portuguese-br": "comer"
+    },
+    "audio": {
+      "english": "sound/verbs_1/eat.mp3",
+      "french": "sound/verbs_1/eat_fr.mp3",
+      "swedish": "sound/verbs_1/eat_sw.mp3",
+      "portuguese-br": "sound/verbs_1/eat_po-br.mp3"
+    }
+  },
+  {
+    "name": "help",
+    "image": "images/verbs_1/help.svg",
+    "language": {
+      "english": "help",
+      "french": "aider",
+      "swedish": "hjälpa",
+      "portuguese-br": "ajudar"
+    },
+    "audio": {
+      "english": "sound/verbs_1/help.mp3",
+      "french": "sound/verbs_1/help_fr.mp3",
+      "swedish": "sound/verbs_1/help_sw.mp3",
+      "portuguese-br": "sound/verbs_1/help_po-br.mp3"
+    }
+  },
+  {
+    "name": "hear",
+    "image": "images/verbs_1/hear.svg",
+    "language": {
+      "english": "hear",
+      "french": "entendre",
+      "swedish": "höra",
+      "portuguese-br": "ouvir"
+    },
+    "audio": {
+      "english": "sound/verbs_1/hear.mp3",
+      "french": "sound/verbs_1/hear_fr.mp3",
+      "swedish": "sound/verbs_1/hear_sw.mp3",
+      "portuguese-br": "sound/verbs_1/hear_po-br.mp3"
+    }
+  },
+  {
+    "name": "like",
+    "image": "images/verbs_1/like.svg",
+    "language": {
+      "english": "like",
+      "french": "aimer",
+      "swedish": "tycka om",
+      "portuguese-br": "gostar"
+    },
+    "audio": {
+      "english": "sound/verbs_1/like.mp3",
+      "french": "sound/verbs_1/like_fr.mp3",
+      "swedish": "sound/verbs_1/like_sw.mp3",
+      "portuguese-br": "sound/verbs_1/like_po-br.mp3"
+    }
+  },
+  {
+    "name": "see",
+    "image": "images/verbs_1/see.svg",
+    "language": {
+      "english": "see",
+      "french": "voir",
+      "swedish": "se",
+      "portuguese-br": "ver"
+    },
+    "audio": {
+      "english": "sound/verbs_1/see.mp3",
+      "french": "sound/verbs_1/see_fr.mp3",
+      "swedish": "sound/verbs_1/see_sw.mp3",
+      "portuguese-br": "sound/verbs_1/see_po-br.mp3"
+    }
+  },
+  {
+    "name": "sleep",
+    "image": "images/verbs_1/sleep.svg",
+    "language": {
+      "english": "sleep",
+      "french": "dormir",
+      "swedish": "sova",
+      "portuguese-br": "dormir"
+    },
+    "audio": {
+      "english": "sound/verbs_1/sleep.mp3",
+      "french": "sound/verbs_1/sleep_fr.mp3",
+      "swedish": "sound/verbs_1/sleep_sw.mp3",
+      "portuguese-br": "sound/verbs_1/sleep_po-br.mp3"
+    }
+  },
+  {
+    "name": "say",
+    "image": "images/verbs_1/say.svg",
+    "language": {
+      "english": "say",
+      "french": "dire",
+      "swedish": "säga",
+      "portuguese-br": "dizer"
+    },
+    "audio": {
+      "english": "sound/verbs_1/say.mp3",
+      "french": "sound/verbs_1/say_fr.mp3",
+      "swedish": "sound/verbs_1/say_sw.mp3",
+      "portuguese-br": "sound/verbs_1/say_po-br.mp3"
+    }
+  },
+  {
+    "name": "understand",
+    "image": "images/verbs_1/understand.svg",
+    "language": {
+      "english": "understand",
+      "french": "comprendre",
+      "swedish": "förstå",
+      "portuguese-br": "entender"
+    },
+    "audio": {
+      "english": "sound/verbs_1/understand.mp3",
+      "french": "sound/verbs_1/understand_fr.mp3",
+      "swedish": "sound/verbs_1/understand_sw.mp3",
+      "portuguese-br": "sound/verbs_1/understand_po-br.mp3"
+    }
+  },
+  {
+    "name": "be",
+    "image": "images/verbs_1/be.svg",
+    "language": {
+      "english": "be",
+      "french": "être",
+      "swedish": "vara",
+      "portuguese-br": "ser"
+    },
+    "audio": {
+      "english": "sound/verbs_1/be.mp3",
+      "french": "sound/verbs_1/be_fr.mp3",
+      "swedish": "sound/verbs_1/be_sw.mp3",
+      "portuguese-br": "sound/verbs_1/be_po-br.mp3"
+    }
+  },
+  {
+    "name": "walk",
+    "image": "images/verbs_1/walk.svg",
+    "language": {
+      "english": "walk",
+      "french": "aller",
+      "swedish": "gå",
+      "portuguese-br": "ir"
+    },
+    "audio": {
+      "english": "sound/verbs_1/walk.mp3",
+      "french": "sound/verbs_1/walk_fr.mp3",
+      "swedish": "sound/verbs_1/walk_sw.mp3",
+      "portuguese-br": "sound/verbs_1/walk_po-br.mp3"
+    }
+  }
+]

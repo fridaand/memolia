@@ -4,7 +4,7 @@
     "image": "images/fruits_2/acai.svg",
     "language": {
       "english": "acai",
-      "french": "l’açaï",
+      "french": "l'açaï",
       "swedish": "acai",
       "portuguese-br": "o açaí"
     },
@@ -20,7 +20,7 @@
     "image": "images/fruits_2/apricot.svg",
     "language": {
       "english": "apricot",
-      "french": "l’abricot",
+      "french": "l'abricot",
       "swedish": "aprikos",
       "portuguese-br": "o damasco"
     },
@@ -96,19 +96,19 @@
     }
   },
   {
-    "name": "pineapple",
-    "image": "images/fruits_2/pineapple.svg",
+    "name": "passionfruit",
+    "image": "images/fruits_2/passionfruit.svg",
     "language": {
-      "english": "pineapple",
-      "french": "l’ananas",
-      "swedish": "ananas",
-      "portuguese-br": "o abacaxi"
+      "english": "passion fruit",
+      "french": "le fruit de la passion",
+      "swedish": "passionsfrukt",
+      "portuguese-br": "o maracujá"
     },
     "audio": {
-      "english": "sound/fruits_2/pineapple.mp3",
-      "french": "sound/fruits_2/pineapple_fr.mp3",
-      "swedish": "sound/fruits_2/pineapple_sw.mp3",
-      "portuguese-br": "sound/fruits_2/pineapple_po-br.mp3"
+      "english": "sound/fruits_2/passionfruit.mp3",
+      "french": "sound/fruits_2/passionfruit_fr.mp3",
+      "swedish": "sound/fruits_2/passionfruit_sw.mp3",
+      "portuguese-br": "sound/fruits_2/passionfruit_po-br.mp3"
     }
   },
   {
@@ -128,19 +128,19 @@
     }
   },
   {
-    "name": "rhubarb",
-    "image": "images/fruits_2/rhubarb.svg",
+    "name": "coconut",
+    "image": "images/fruits_2/coconut.svg",
     "language": {
-      "english": "rhubarb",
-      "french": "la rhubarbe",
-      "swedish": "rabarber",
-      "portuguese-br": "o ruibarbo"
+      "english": "coconut",
+      "french": "la noix de coco",
+      "swedish": "kokosnöt",
+      "portuguese-br": "o coco"
     },
     "audio": {
-      "english": "sound/fruits_2/rhubarb.mp3",
-      "french": "sound/fruits_2/rhubarb_fr.mp3",
-      "swedish": "sound/fruits_2/rhubarb_sw.mp3",
-      "portuguese-br": "sound/fruits_2/rhubarb_po-br.mp3"
+      "english": "sound/fruits_2/coconut.mp3",
+      "french": "sound/fruits_2/coconut_fr.mp3",
+      "swedish": "sound/fruits_2/coconut_sw.mp3",
+      "portuguese-br": "sound/fruits_2/coconut_po-br.mp3"
     }
   },
   {

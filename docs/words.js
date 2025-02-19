@@ -10,7 +10,98 @@ function loadAndDisplayWordList(category, language) {
       wordList.innerHTML = ""; // Clean content in list before adding new
 
       // Sort words A-Ö
-      data.sort((a, b) => a.language.swedish.localeCompare(b.language.swedish));
+
+      function parseSwedishNumber(word) {
+        const units = {
+          noll: 0,
+          ett: 1,
+          två: 2,
+          tre: 3,
+          fyra: 4,
+          fem: 5,
+          sex: 6,
+          sju: 7,
+          åtta: 8,
+          nio: 9,
+        };
+        const teens = {
+          tio: 10,
+          elva: 11,
+          tolv: 12,
+          tretton: 13,
+          fjorton: 14,
+          femton: 15,
+          sexton: 16,
+          sjutton: 17,
+          arton: 18,
+          nitton: 19,
+        };
+        const tens = {
+          tjugo: 20,
+          trettio: 30,
+          fyrtio: 40,
+          femtio: 50,
+          sextio: 60,
+          sjuttio: 70,
+          åttio: 80,
+          nittio: 90,
+        };
+        const hundreds = {
+          hundra: 100,
+        };
+        const thousands = {
+          tusen: 1000,
+        };
+        const millions = {
+          miljon: 1000000,
+          "en miljon": 1000000,
+        };
+
+        word = word.toLowerCase().trim(); // Standardisera input
+
+        // Om ordet finns direkt i en av tabellerna
+        if (units[word] !== undefined) return units[word];
+        if (teens[word] !== undefined) return teens[word];
+        if (tens[word] !== undefined) return tens[word];
+        if (hundreds[word] !== undefined) return hundreds[word];
+        if (thousands[word] !== undefined) return thousands[word];
+        if (millions[word] !== undefined) return millions[word];
+
+        // Hantera "hundrafemtio", "trehundra", "femtusentvå", "två miljoner"
+        let num = 0;
+        let parts = word.split(" "); // Dela upp på mellanslag, t.ex. "två miljoner"
+
+        parts.forEach((part) => {
+          if (units[part] !== undefined) num += units[part];
+          else if (teens[part] !== undefined) num += teens[part];
+          else if (tens[part] !== undefined) num += tens[part];
+          else if (hundreds[part] !== undefined) num *= 100; // Ex: "tre hundra"
+          else if (thousands[part] !== undefined)
+            num *= 1000; // Ex: "två tusen"
+          else if (millions[part] !== undefined) num *= 1000000; // Ex: "en miljon"
+        });
+
+        return num > 0 ? num : null; // Returnera num om något hittades, annars null
+      }
+
+      // Anpassad sortering
+      data.sort((a, b) => {
+        let wordA = a.language.swedish.toLowerCase();
+        let wordB = b.language.swedish.toLowerCase();
+
+        let numA = parseSwedishNumber(wordA);
+        let numB = parseSwedishNumber(wordB);
+
+        if (numA !== null && numB !== null) {
+          return numA - numB; // Sortera numeriskt om båda är siffror
+        } else if (numA !== null) {
+          return -1; // Om A är en siffra men inte B, placera A före
+        } else if (numB !== null) {
+          return 1; // Om B är en siffra men inte A, placera B före
+        }
+
+        return wordA.localeCompare(wordB, "sv", { sensitivity: "base" }); // Annars alfabetisk sortering
+      });
 
       // Creating DOM-element (<p>) for each element i data-list
       data.forEach((wordData) => {

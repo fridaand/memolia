@@ -138,9 +138,10 @@ a:hover ~ #custom-cursor,
   /*   --yellow5: #36230b; */
   --orange1: #f0a35e;
   --orange2: #e39559;
-  --pink0: #ff9485;
-  --pink1: #fd8674;
-  --pink2: #eb675e;
+  --pink0: #ffada2;
+  --pink1: #f47e7e;
+  --pink2: #fd8674;
+  --pink3: #eb675e;
   --green1: #9fcca8;
   --green2: #6b9984;
   --green2b: #1d594e;
@@ -290,6 +291,21 @@ a:hover ~ #custom-cursor,
   background-color: var(--petrol4);
 }
 
+.bg_pink0 {
+  background: var(--pink0);
+}
+.bg_pink0 {
+  background-color: var(--pink0);
+  background-image: var(--shadow_round);
+}
+.bg_pink1 {
+  background-color: var(--pink1);
+  background-image: var(--shadow_round);
+}
+.bg_pink2 {
+  background-color: var(--pink2);
+  background-image: var(--shadow_round);
+}
 .bg_white1 {
   background-color: #ffe4c5;
   background-image: var(--shadow_round);
@@ -324,17 +340,6 @@ a:hover ~ #custom-cursor,
   background: var(--yellow5);
 } */
 
-.bg_pink0 {
-  background: var(--pink0);
-}
-.bg_pink1 {
-  background-color: var(--pink1);
-  background-image: var(--shadow_round);
-}
-.bg_pink2 {
-  background-color: var(--pink2);
-  background-image: var(--shadow_round);
-}
 .bg_brown2 {
   background-color: var(--brown2);
 }
@@ -506,6 +511,7 @@ h3 {
 .h3_menu-card-label {
   color: var(--brown2);
   letter-spacing: 0.06rem;
+  text-align: center;
 }
 
 .dark {

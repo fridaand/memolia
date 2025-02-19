@@ -1,0 +1,162 @@
+[
+  {
+    "name": "zero",
+    "image": "images/numbers_1/zero.svg",
+    "language": {
+      "english": "zero",
+      "french": "zéro",
+      "swedish": "noll",
+      "portuguese-br": "zero"
+    },
+    "audio": {
+      "english": "sound/numbers_1/zero.mp3",
+      "french": "sound/numbers_1/zero_fr.mp3",
+      "swedish": "sound/numbers_1/zero_sw.mp3",
+      "portuguese-br": "sound/numbers_1/zero_po-br.mp3"
+    }
+  },
+  {
+    "name": "one",
+    "image": "images/numbers_1/one.svg",
+    "language": {
+      "english": "one",
+      "french": "un",
+      "swedish": "ett",
+      "portuguese-br": "um"
+    },
+    "audio": {
+      "english": "sound/numbers_1/one.mp3",
+      "french": "sound/numbers_1/one_fr.mp3",
+      "swedish": "sound/numbers_1/one_sw.mp3",
+      "portuguese-br": "sound/numbers_1/one_po-br.mp3"
+    }
+  },
+  {
+    "name": "two",
+    "image": "images/numbers_1/two.svg",
+    "language": {
+      "english": "two",
+      "french": "deux",
+      "swedish": "två",
+      "portuguese-br": "dois"
+    },
+    "audio": {
+      "english": "sound/numbers_1/two.mp3",
+      "french": "sound/numbers_1/two_fr.mp3",
+      "swedish": "sound/numbers_1/two_sw.mp3",
+      "portuguese-br": "sound/numbers_1/two_po-br.mp3"
+    }
+  },
+  {
+    "name": "three",
+    "image": "images/numbers_1/three.svg",
+    "language": {
+      "english": "three",
+      "french": "trois",
+      "swedish": "tre",
+      "portuguese-br": "três"
+    },
+    "audio": {
+      "english": "sound/numbers_1/three.mp3",
+      "french": "sound/numbers_1/three_fr.mp3",
+      "swedish": "sound/numbers_1/three_sw.mp3",
+      "portuguese-br": "sound/numbers_1/three_po-br.mp3"
+    }
+  },
+  {
+    "name": "four",
+    "image": "images/numbers_1/four.svg",
+    "language": {
+      "english": "four",
+      "french": "quatre",
+      "swedish": "fyra",
+      "portuguese-br": "quatro"
+    },
+    "audio": {
+      "english": "sound/numbers_1/four.mp3",
+      "french": "sound/numbers_1/four_fr.mp3",
+      "swedish": "sound/numbers_1/four_sw.mp3",
+      "portuguese-br": "sound/numbers_1/four_po-br.mp3"
+    }
+  },
+  {
+    "name": "five",
+    "image": "images/numbers_1/five.svg",
+    "language": {
+      "english": "five",
+      "french": "cinq",
+      "swedish": "fem",
+      "portuguese-br": "cinco"
+    },
+    "audio": {
+      "english": "sound/numbers_1/five.mp3",
+      "french": "sound/numbers_1/five_fr.mp3",
+      "swedish": "sound/numbers_1/five_sw.mp3",
+      "portuguese-br": "sound/numbers_1/five_po-br.mp3"
+    }
+  },
+  {
+    "name": "six",
+    "image": "images/numbers_1/six.svg",
+    "language": {
+      "english": "six",
+      "french": "six",
+      "swedish": "sex",
+      "portuguese-br": "seis"
+    },
+    "audio": {
+      "english": "sound/numbers_1/six.mp3",
+      "french": "sound/numbers_1/six_fr.mp3",
+      "swedish": "sound/numbers_1/six_sw.mp3",
+      "portuguese-br": "sound/numbers_1/six_po-br.mp3"
+    }
+  },
+  {
+    "name": "seven",
+    "image": "images/numbers_1/seven.svg",
+    "language": {
+      "english": "seven",
+      "french": "sept",
+      "swedish": "sju",
+      "portuguese-br": "sete"
+    },
+    "audio": {
+      "english": "sound/numbers_1/seven.mp3",
+      "french": "sound/numbers_1/seven_fr.mp3",
+      "swedish": "sound/numbers_1/seven_sw.mp3",
+      "portuguese-br": "sound/numbers_1/seven_po-br.mp3"
+    }
+  },
+  {
+    "name": "eight",
+    "image": "images/numbers_1/eight.svg",
+    "language": {
+      "english": "eight",
+      "french": "huit",
+      "swedish": "åtta",
+      "portuguese-br": "oito"
+    },
+    "audio": {
+      "english": "sound/numbers_1/eight.mp3",
+      "french": "sound/numbers_1/eight_fr.mp3",
+      "swedish": "sound/numbers_1/eight_sw.mp3",
+      "portuguese-br": "sound/numbers_1/eight_po-br.mp3"
+    }
+  },
+  {
+    "name": "nine",
+    "image": "images/numbers_1/nine.svg",
+    "language": {
+      "english": "nine",
+      "french": "neuf",
+      "swedish": "nio",
+      "portuguese-br": "nove"
+    },
+    "audio": {
+      "english": "sound/numbers_1/nine.mp3",
+      "french": "sound/numbers_1/nine_fr.mp3",
+      "swedish": "sound/numbers_1/nine_sw.mp3",
+      "portuguese-br": "sound/numbers_1/nine_po-br.mp3"
+    }
+  }
+]
