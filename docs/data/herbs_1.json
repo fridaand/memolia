@@ -22,7 +22,7 @@
       "english": "chili",
       "french": "le piment",
       "swedish": "chili",
-      "portuguese-br": "o chili"
+      "portuguese-br": "a pimenta"
     },
     "audio": {
       "english": "sound/herbs_1/chili.mp3",
@@ -52,7 +52,7 @@
     "image": "images/herbs_1/garlic.svg",
     "language": {
       "english": "garlic",
-      "french": "l’ail",
+      "french": "l'ail",
       "swedish": "vitlök",
       "portuguese-br": "o alho"
     },
@@ -84,7 +84,7 @@
     "image": "images/herbs_1/oregano.svg",
     "language": {
       "english": "oregano",
-      "french": "l’origan",
+      "french": "l'origan",
       "swedish": "oregano",
       "portuguese-br": "o orégano"
     },
@@ -102,7 +102,7 @@
       "english": "pepper",
       "french": "le poivre",
       "swedish": "peppar",
-      "portuguese-br": "a pimenta"
+      "portuguese-br": "a pimenta-do-reino"
     },
     "audio": {
       "english": "sound/herbs_1/pepper.mp3",

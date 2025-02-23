@@ -22,6 +22,9 @@ const categories = [
   { id: "colours-game_1", name: "colours_1" },
   { id: "animals-game_1", name: "animals_1" },
   { id: "fruits-game_2", name: "fruits_2" },
+  { id: "adjectives-game_1", name: "adjectives_1" },
+  { id: "herbs-game_1", name: "herbs_1" },
+  { id: "nature-game_1", name: "nature_1" },
 ];
 
 /* HIDE CURSOR FOR IPAD ETC */
@@ -191,7 +194,7 @@ function updateStars() {
     starsElement.innerHTML = "";
 
     for (let i = 0; i < numberOfStars; i++) {
-      starsElement.innerHTML += `<img class="star" src="./icons/star_full.png" alt="Star for points"/>`;
+      starsElement.innerHTML += `<img class="star" src="./icons/star_2.svg" alt="Star for points"/>`;
     }
   });
 }

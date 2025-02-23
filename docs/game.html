@@ -7,10 +7,11 @@
     <title>memolia - lingo memory game</title>
     <link
       rel="icon"
-      href="icons/favicon/favicon_gold.png"
+      href="icons/favicon/memolia_tree_thumbnail.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
   </head>
 
   <body>
@@ -84,7 +85,7 @@
             <article class="article_game-info">
               <div class="wrapper_spel-min">
                 <div class="wrapper_text-min">
-                  <span id="info-rounds"></span>SPEL
+                  <span id="info-rounds"></span><SPEL>
                 </div>
                 <div class="wrapper_text-min">
                   <span id="info-totaltime"></span>MINUTER
@@ -131,9 +132,11 @@
     <!-- POPUP GAME ENDS-->
 
     <div class="popup_bg section_end-game">
+      <div class="lottie-container"></div>
+
       <div class="container_end-game popup_styling">
         <div class="wrapper_h2-text">
-          <h2>BRA GJORT!</h2>
+          <h2 id="popupText">BRA GJORT!</h2>
           <div class="p-gap">
             <p>
               Du klarade spelet med <span class="score"></span> drag på

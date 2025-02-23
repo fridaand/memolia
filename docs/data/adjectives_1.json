@@ -1,0 +1,162 @@
+[
+  {
+    "name": "big",
+    "image": "images/adjectives_1/big.svg",
+    "language": {
+      "english": "big",
+      "french": "gros",
+      "swedish": "stor",
+      "portuguese-br": "grande"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/big.mp3",
+      "french": "sound/adjectives_1/big_fr.mp3",
+      "swedish": "sound/adjectives_1/big_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/big_po-br.mp3"
+    }
+  },
+  {
+    "name": "cold",
+    "image": "images/adjectives_1/cold.svg",
+    "language": {
+      "english": "cold",
+      "french": "froid",
+      "swedish": "kall",
+      "portuguese-br": "frio"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/cold.mp3",
+      "french": "sound/adjectives_1/cold_fr.mp3",
+      "swedish": "sound/adjectives_1/cold_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/cold_po-br.mp3"
+    }
+  },
+  {
+    "name": "fast",
+    "image": "images/adjectives_1/fast.svg",
+    "language": {
+      "english": "fast",
+      "french": "rapide",
+      "swedish": "snabb",
+      "portuguese-br": "rápido"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/fast.mp3",
+      "french": "sound/adjectives_1/fast_fr.mp3",
+      "swedish": "sound/adjectives_1/fast_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/fast_po-br.mp3"
+    }
+  },
+  {
+    "name": "hard",
+    "image": "images/adjectives_1/hard.svg",
+    "language": {
+      "english": "hard",
+      "french": "dur",
+      "swedish": "hård",
+      "portuguese-br": "duro"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/hard.mp3",
+      "french": "sound/adjectives_1/hard_fr.mp3",
+      "swedish": "sound/adjectives_1/hard_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/hard_po-br.mp3"
+    }
+  },
+  {
+    "name": "tall",
+    "image": "images/adjectives_1/tall.svg",
+    "language": {
+      "english": "tall",
+      "french": "grand",
+      "swedish": "lång",
+      "portuguese-br": "alto"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/tall.mp3",
+      "french": "sound/adjectives_1/tall_fr.mp3",
+      "swedish": "sound/adjectives_1/tall_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/tall_po-br.mp3"
+    }
+  },
+  {
+    "name": "short",
+    "image": "images/adjectives_1/short.svg",
+    "language": {
+      "english": "short",
+      "french": "court",
+      "swedish": "kort",
+      "portuguese-br": "curto"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/short.mp3",
+      "french": "sound/adjectives_1/short_fr.mp3",
+      "swedish": "sound/adjectives_1/short_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/short_po-br.mp3"
+    }
+  },
+  {
+    "name": "slow",
+    "image": "images/adjectives_1/slow.svg",
+    "language": {
+      "english": "slow",
+      "french": "lent",
+      "swedish": "långsam",
+      "portuguese-br": "lento"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/slow.mp3",
+      "french": "sound/adjectives_1/slow_fr.mp3",
+      "swedish": "sound/adjectives_1/slow_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/slow_po-br.mp3"
+    }
+  },
+  {
+    "name": "small",
+    "image": "images/adjectives_1/small.svg",
+    "language": {
+      "english": "small",
+      "french": "petit",
+      "swedish": "liten",
+      "portuguese-br": "pequeno"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/small.mp3",
+      "french": "sound/adjectives_1/small_fr.mp3",
+      "swedish": "sound/adjectives_1/small_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/small_po-br.mp3"
+    }
+  },
+  {
+    "name": "soft",
+    "image": "images/adjectives_1/soft.svg",
+    "language": {
+      "english": "soft",
+      "french": "doux",
+      "swedish": "mjuk",
+      "portuguese-br": "macio"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/soft.mp3",
+      "french": "sound/adjectives_1/soft_fr.mp3",
+      "swedish": "sound/adjectives_1/soft_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/soft_po-br.mp3"
+    }
+  },
+  {
+    "name": "hot",
+    "image": "images/adjectives_1/hot.svg",
+    "language": {
+      "english": "hot",
+      "french": "chaud",
+      "swedish": "varm",
+      "portuguese-br": "quente"
+    },
+    "audio": {
+      "english": "sound/adjectives_1/hot.mp3",
+      "french": "sound/adjectives_1/hot_fr.mp3",
+      "swedish": "sound/adjectives_1/hot_sw.mp3",
+      "portuguese-br": "sound/adjectives_1/hot_po-br.mp3"
+    }
+  }
+]

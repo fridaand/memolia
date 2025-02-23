@@ -1,0 +1,162 @@
+[
+  {
+    "name": "animals",
+    "image": "images/nature_1/animals.svg",
+    "language": {
+      "english": "animals",
+      "french": "les animaux",
+      "swedish": "djur",
+      "portuguese-br": "os animais"
+    },
+    "audio": {
+      "english": "sound/nature_1/animals.mp3",
+      "french": "sound/nature_1/animals_fr.mp3",
+      "swedish": "sound/nature_1/animals_sw.mp3",
+      "portuguese-br": "sound/nature_1/animals_po-br.mp3"
+    }
+  },
+  {
+    "name": "flower",
+    "image": "images/nature_1/flower.svg",
+    "language": {
+      "english": "flower",
+      "french": "la fleur",
+      "swedish": "blomma",
+      "portuguese-br": "a flor"
+    },
+    "audio": {
+      "english": "sound/nature_1/flower.mp3",
+      "french": "sound/nature_1/flower_fr.mp3",
+      "swedish": "sound/nature_1/flower_sw.mp3",
+      "portuguese-br": "sound/nature_1/flower_po-br.mp3"
+    }
+  },
+  {
+    "name": "forest",
+    "image": "images/nature_1/forest.svg",
+    "language": {
+      "english": "forest",
+      "french": "la forêt",
+      "swedish": "skog",
+      "portuguese-br": "a floresta"
+    },
+    "audio": {
+      "english": "sound/nature_1/forest.mp3",
+      "french": "sound/nature_1/forest_fr.mp3",
+      "swedish": "sound/nature_1/forest_sw.mp3",
+      "portuguese-br": "sound/nature_1/forest_po-br.mp3"
+    }
+  },
+  {
+    "name": "lake",
+    "image": "images/nature_1/lake.svg",
+    "language": {
+      "english": "lake",
+      "french": "le lac",
+      "swedish": "sjö",
+      "portuguese-br": "o lago"
+    },
+    "audio": {
+      "english": "sound/nature_1/lake.mp3",
+      "french": "sound/nature_1/lake_fr.mp3",
+      "swedish": "sound/nature_1/lake_sw.mp3",
+      "portuguese-br": "sound/nature_1/lake_po-br.mp3"
+    }
+  },
+  {
+    "name": "mountain",
+    "image": "images/nature_1/mountain.svg",
+    "language": {
+      "english": "mountain",
+      "french": "la montagne",
+      "swedish": "berg",
+      "portuguese-br": "a montanha"
+    },
+    "audio": {
+      "english": "sound/nature_1/mountain.mp3",
+      "french": "sound/nature_1/mountain_fr.mp3",
+      "swedish": "sound/nature_1/mountain_sw.mp3",
+      "portuguese-br": "sound/nature_1/mountain_po-br.mp3"
+    }
+  },
+  {
+    "name": "path",
+    "image": "images/nature_1/path.svg",
+    "language": {
+      "english": "path",
+      "french": "le chemin",
+      "swedish": "stig",
+      "portuguese-br": "o caminho"
+    },
+    "audio": {
+      "english": "sound/nature_1/path.mp3",
+      "french": "sound/nature_1/path_fr.mp3",
+      "swedish": "sound/nature_1/path_sw.mp3",
+      "portuguese-br": "sound/nature_1/path_po-br.mp3"
+    }
+  },
+  {
+    "name": "river",
+    "image": "images/nature_1/river.svg",
+    "language": {
+      "english": "river",
+      "french": "la rivière",
+      "swedish": "flod",
+      "portuguese-br": "o rio"
+    },
+    "audio": {
+      "english": "sound/nature_1/river.mp3",
+      "french": "sound/nature_1/river_fr.mp3",
+      "swedish": "sound/nature_1/river_sw.mp3",
+      "portuguese-br": "sound/nature_1/river_po-br.mp3"
+    }
+  },
+  {
+    "name": "sea",
+    "image": "images/nature_1/sea.svg",
+    "language": {
+      "english": "sea",
+      "french": "la mer",
+      "swedish": "hav",
+      "portuguese-br": "o mar"
+    },
+    "audio": {
+      "english": "sound/nature_1/sea.mp3",
+      "french": "sound/nature_1/sea_fr.mp3",
+      "swedish": "sound/nature_1/sea_sw.mp3",
+      "portuguese-br": "sound/nature_1/sea_po-br.mp3"
+    }
+  },
+  {
+    "name": "sky",
+    "image": "images/nature_1/sky.svg",
+    "language": {
+      "english": "sky",
+      "french": "le ciel",
+      "swedish": "himmel",
+      "portuguese-br": "o céu"
+    },
+    "audio": {
+      "english": "sound/nature_1/sky.mp3",
+      "french": "sound/nature_1/sky_fr.mp3",
+      "swedish": "sound/nature_1/sky_sw.mp3",
+      "portuguese-br": "sound/nature_1/sky_po-br.mp3"
+    }
+  },
+  {
+    "name": "tree",
+    "image": "images/nature_1/tree.svg",
+    "language": {
+      "english": "tree",
+      "french": "l'arbre",
+      "swedish": "träd",
+      "portuguese-br": "a árvore"
+    },
+    "audio": {
+      "english": "sound/nature_1/tree.mp3",
+      "french": "sound/nature_1/tree_fr.mp3",
+      "swedish": "sound/nature_1/tree_sw.mp3",
+      "portuguese-br": "sound/nature_1/tree_po-br.mp3"
+    }
+  }
+]

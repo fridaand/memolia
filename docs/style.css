@@ -66,7 +66,7 @@ a:hover ~ #custom-cursor,
 :root {
   /* COLORS */
   --primary: #0b3735;
-  --primary-light: #f7ebdb; /*  aececc*/
+  --primary-light: #fff5e8; /* #f7ebdb;  aececc*/
   --secondary: #f4e8c6; /* fbe0b7 text on dark bg */
   --accent: #a16920; /* cursor */
   --gold2: #53451f;
@@ -389,7 +389,7 @@ main {
 .site-wrapper {
   min-width: 360px;
   width: 780px;
-  height: 96.5%;
+  max-height: 96.5%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -400,7 +400,7 @@ main {
 
   box-shadow: 0rem 0rem 2rem 1rem rgba(0, 0, 0, 0.1);
   overflow: auto;
-  margin: 1rem;
+  margin: 1rem 1rem auto 1rem;
 }
 
 .section_environment_crop {
@@ -492,6 +492,12 @@ h2 {
   line-height: 100%;
   margin: 0;
   word-wrap: break-word;
+}
+
+#popupText {
+  scale: 1;
+  text-transform: uppercase;
+  line-height: 125%;
 }
 
 .h3_animated_path {
@@ -940,7 +946,7 @@ header {
 footer {
   width: auto;
   height: auto;
-  padding: 0.75rem 2rem;
+  padding: 0.25rem 2rem;
   box-shadow: 0px -0px 16px 2px rgba(0, 0, 0, 0.5) inset;
 }
 
@@ -966,7 +972,7 @@ footer {
   display: flex;
   width: auto;
   height: auto;
-  /*   padding: 0.5rem 0; */
+  padding: 0.5rem 0;
   justify-content: space-between;
   align-items: end;
   gap: 1.25rem;
@@ -985,7 +991,7 @@ footer {
 
 .wrapper_text-min {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--spacing-gap-s, 8px);
 }
 .wrapper_text {
@@ -1020,6 +1026,7 @@ footer {
   min-width: var(--measure-total-width-s, 320px);
   flex-wrap: wrap;
   height: 100%;
+  max-height: 100vh;
   padding: 40px 0 200px 0;
   align-content: center;
   margin-bottom: 220px;
@@ -1042,8 +1049,9 @@ footer {
   width: 200px;
   height: 200px;
   flex-direction: column;
-  justify-content: top;
-  padding: 27%;
+  justify-content: center;
+  /*   padding: 20%;
+ */
   align-items: center;
   flex-shrink: 0;
   border-radius: 99rem;
@@ -1167,7 +1175,13 @@ footer {
 .star {
   width: 1rem;
   object-fit: contain;
-  filter: contrast(125%) hue-rotate(350deg);
+  /*  filter: contrast(125%) hue-rotate(350deg); */
+  filter: contrast(80%) hue-rotate(325deg) brightness(40%);
+}
+.star-big {
+  width: 1.25rem;
+  /*   filter: contrast(125%) hue-rotate(350deg);
+ */
 }
 
 #flag {
@@ -1536,11 +1550,12 @@ footer {
   position: relative;
   display: inline-flex;
   height: auto;
-  max-width: 500px;
+  max-width: 540px;
   padding: 2.5rem;
+  bottom: 0;
   gap: 2rem;
   flex-direction: column;
-  z-index: 20;
+  z-index: 101;
   border-radius: var(--radius-popup, 16px);
   background: var(
     --fade_forest_footer,
@@ -1557,8 +1572,16 @@ footer {
   animation-timing-function: ease-out;
 }
 
+.lottie-container {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  opacity: 0.8;
+  z-index: 100;
+}
+
 .container_end-game {
-  padding: 3rem 2rem;
+  padding: 3.75rem 2rem;
 }
 
 .wrapper_justify-end {
@@ -1596,7 +1619,8 @@ footer {
     padding: 0.5rem 1.25rem;
   }
   .popup_styling {
-    padding: 2.25rem;
+    max-width: 500px;
+    padding: 2.75rem 2.25rem 2.75rem 2.25rem;
   }
 }
 
@@ -1614,7 +1638,10 @@ footer {
     font-size: 1rem;
   }
   header {
-    padding: 0.75rem 1.75rem;
+    padding: 1.75rem 1.75rem 0.75rem 1.75rem;
+  }
+  footer {
+    padding: 0.25rem 2rem;
   }
   .site-wrapper {
     max-width: 532px;
@@ -1637,8 +1664,8 @@ footer {
     gap: 1.75rem;
   }
   .button_primary {
-    min-width: 1.5rem;
-    min-height: 1.5rem;
+    min-width: 1.75rem;
+    min-height: 1.75rem;
   }
   .button_icon-text {
     width: 2.5rem;
@@ -1650,7 +1677,7 @@ footer {
     height: 1.25rem;
   }
   .button_text {
-    padding: 0.75rem 1rem;
+    padding: 1rem 1.25rem;
     min-width: 120px;
   }
   .button_mini {
@@ -1699,7 +1726,9 @@ footer {
     gap: 2.5rem;
   }
   .popup_styling {
-    padding: 2rem;
+    max-width: 440px;
+    padding: 3rem 2rem;
+    gap: 1.75rem;
   }
 }
 
@@ -1712,11 +1741,12 @@ footer {
   h2 {
     font-size: 2rem;
   }
+
   .site-wrapper {
     width: 600px;
   }
   .navbar {
-    height: 3.25rem;
+    height: 2.75rem;
   }
   .card {
     width: 19.25vw;
@@ -1747,7 +1777,7 @@ footer {
     font-size: 1rem;
   }
   .site-wrapper {
-    margin: 0;
+    margin: 0 0 auto 0;
     border-radius: 0 0 1.25rem 1.25rem;
   }
   .hide_animated_game_bg {

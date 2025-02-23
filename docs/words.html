@@ -7,7 +7,7 @@
     <title>memolia - lingo memory game</title>
     <link
       rel="icon"
-      href="icons/favicon/favicon_gold.png"
+      href="icons/favicon/memolia_tree_thumbnail.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -109,7 +109,8 @@
             <article class="article_game-info">
               <div class="wrapper_spel-min">
                 <div class="wrapper_text-min">
-                  <span id="info-rounds"></span>SPEL
+                  <span id="info-rounds"></span
+                  ><img class="star-big" src="/docs/icons/star_1.svg" />
                 </div>
                 <div class="wrapper_text-min">
                   <span id="info-totaltime"></span>MINUTER
@@ -133,7 +134,7 @@
         <!-- SECTION SCROLL AREA WITH GAME BUTTONS & WORDS -->
         <main class="scroll-area" id="scroll-area">
           <div class="container_categories clickable">
-            <div class="category_label_dd bg_petrol1">
+            <div class="category_label_dd bg_petrol2">
               <div class="dd-category_label">
                 <div class="wrapper_category">
                   <div class="button_category">
@@ -169,35 +170,146 @@
           </div>
 
           <div class="container_categories clickable">
-            <div class="category_label_dd bg_green1">
+            <div class="category_label_dd bg_yellow2">
               <div class="dd-category_label">
                 <div class="wrapper_category">
                   <div class="button_category">
                     <img
                       class="image_cate_icon"
-                      src="./images/fruits_1/orange.svg"
+                      src="./images/verbs_1/understand.svg"
                       alt=""
                     />
-                    <h3 class="dark" id="cate-fruits_1" class="h3_label_s">
-                      Frukter
+                    <h3 class="dark" id="cate-verbs_1" class="h3_label_s">
+                      Vanliga verb
                     </h3>
                   </div>
 
                   <div class="wrapper_stars-hitbox">
-                    <div id="stars-fruits_1" class="wrapper_total-stars"></div>
+                    <div id="stars-verbs_1" class="wrapper_total-stars"></div>
+
                     <div class="dropdown-button">
                       <div class="dd-arrow">
                         <img
                           class="arrow"
                           src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game fruits 1"
+                          alt="open dictionary for the game verbs 1"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="dd-category_words" data-dropdown="dd-fruits_1">
+              <div class="dd-category_words" data-dropdown="dd-verbs_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_pink1">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/people_1/you.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-people_1" class="h3_label_s">
+                      Personer
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-people_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game people 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-people_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_orange2">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/dishes_1/wok.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-dishes_1" class="h3_label_s">
+                      Maträtter
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-dishes_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game dishes 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-dishes_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_petrol1">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/drinks_1/cocktail.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-drinks_1" class="h3_label_s">
+                      Dryck
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-drinks_1" class="wrapper_total-stars"></div>
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game drinks 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-drinks_1">
                 <!-- JS words -->
                 <div class="wrapper-word"></div>
               </div>
@@ -245,220 +357,35 @@
           </div>
 
           <div class="container_categories clickable">
-            <div class="category_label_dd bg_orange2">
+            <div class="category_label_dd bg_green1">
               <div class="dd-category_label">
                 <div class="wrapper_category">
                   <div class="button_category">
                     <img
                       class="image_cate_icon"
-                      src="./images/dishes_1/wok.svg"
+                      src="./images/fruits_1/orange.svg"
                       alt=""
                     />
-                    <h3 class="dark" id="cate-dishes_1" class="h3_label_s">
-                      Maträtter
+                    <h3 class="dark" id="cate-fruits_1" class="h3_label_s">
+                      Frukter
                     </h3>
                   </div>
 
                   <div class="wrapper_stars-hitbox">
-                    <div id="stars-dishes_1" class="wrapper_total-stars"></div>
-
+                    <div id="stars-fruits_1" class="wrapper_total-stars"></div>
                     <div class="dropdown-button">
                       <div class="dd-arrow">
                         <img
                           class="arrow"
                           src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game dishes 1"
+                          alt="open dictionary for the game fruits 1"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="dd-category_words" data-dropdown="dd-dishes_1">
-                <!-- JS words -->
-                <div class="wrapper-word"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container_categories clickable">
-            <div class="category_label_dd bg_petrol2">
-              <div class="dd-category_label">
-                <div class="wrapper_category">
-                  <div class="button_category">
-                    <img
-                      class="image_cate_icon"
-                      src="./images/drinks_1/cocktail.svg"
-                      alt=""
-                    />
-                    <h3 class="dark" id="cate-drinks_1" class="h3_label_s">
-                      Dryck
-                    </h3>
-                  </div>
-
-                  <div class="wrapper_stars-hitbox">
-                    <div id="stars-drinks_1" class="wrapper_total-stars"></div>
-                    <div class="dropdown-button">
-                      <div class="dd-arrow">
-                        <img
-                          class="arrow"
-                          src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game drinks 1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dd-category_words" data-dropdown="dd-drinks_1">
-                <!-- JS words -->
-                <div class="wrapper-word"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container_categories clickable">
-            <div class="category_label_dd bg_cream2">
-              <div class="dd-category_label">
-                <div class="wrapper_category">
-                  <div class="button_category">
-                    <img
-                      class="image_cate_icon"
-                      src="./images/people_1/you.svg"
-                      alt=""
-                    />
-                    <h3 class="dark" id="cate-people_1" class="h3_label_s">
-                      Personer
-                    </h3>
-                  </div>
-
-                  <div class="wrapper_stars-hitbox">
-                    <div id="stars-people_1" class="wrapper_total-stars"></div>
-
-                    <div class="dropdown-button">
-                      <div class="dd-arrow">
-                        <img
-                          class="arrow"
-                          src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game people 1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dd-category_words" data-dropdown="dd-people_1">
-                <!-- JS words -->
-                <div class="wrapper-word"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container_categories clickable">
-            <div class="category_label_dd bg_yellow1">
-              <div class="dd-category_label">
-                <div class="wrapper_category">
-                  <div class="button_category">
-                    <img
-                      class="image_cate_icon"
-                      src="./images/verbs_1/understand.svg"
-                      alt=""
-                    />
-                    <h3 class="dark" id="cate-verbs_1" class="h3_label_s">
-                      Vanliga verb
-                    </h3>
-                  </div>
-
-                  <div class="wrapper_stars-hitbox">
-                    <div id="stars-verbs_1" class="wrapper_total-stars"></div>
-
-                    <div class="dropdown-button">
-                      <div class="dd-arrow">
-                        <img
-                          class="arrow"
-                          src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game verbs 1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dd-category_words" data-dropdown="dd-verbs_1">
-                <!-- JS words -->
-                <div class="wrapper-word"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container_categories clickable">
-            <div class="category_label_dd bg_pink1">
-              <div class="dd-category_label">
-                <div class="wrapper_category">
-                  <div class="button_category">
-                    <img
-                      class="image_cate_icon"
-                      src="./images/numbers_1/numbers.svg"
-                      alt=""
-                    />
-                    <h3 class="dark" id="cate-numbers_1" class="h3_label_s">
-                      Siffror
-                    </h3>
-                  </div>
-
-                  <div class="wrapper_stars-hitbox">
-                    <div id="stars-numbers_1" class="wrapper_total-stars"></div>
-
-                    <div class="dropdown-button">
-                      <div class="dd-arrow">
-                        <img
-                          class="arrow"
-                          src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game numbers 1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dd-category_words" data-dropdown="dd-numbers_1">
-                <!-- JS words -->
-                <div class="wrapper-word"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container_categories clickable">
-            <div class="category_label_dd bg_cream1">
-              <div class="dd-category_label">
-                <div class="wrapper_category">
-                  <div class="button_category">
-                    <img
-                      class="image_cate_icon"
-                      src="./images/colours_1/colour-icon.svg"
-                      alt=""
-                    />
-                    <h3 class="dark" id="cate-colours_1" class="h3_label_s">
-                      Färger
-                    </h3>
-                  </div>
-
-                  <div class="wrapper_stars-hitbox">
-                    <div id="stars-colours_1" class="wrapper_total-stars"></div>
-
-                    <div class="dropdown-button">
-                      <div class="dd-arrow">
-                        <img
-                          class="arrow"
-                          src="./icons/nav/arrow.png"
-                          alt="open dictionary for the game colours 1"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dd-category_words" data-dropdown="dd-colours_1">
+              <div class="dd-category_words" data-dropdown="dd-fruits_1">
                 <!-- JS words -->
                 <div class="wrapper-word"></div>
               </div>
@@ -503,6 +430,194 @@
           </div>
 
           <div class="container_categories clickable">
+            <div class="category_label_dd bg_yellow1">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/numbers_1/numbers.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-numbers_1" class="h3_label_s">
+                      Siffror
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-numbers_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game numbers 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-numbers_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_petrol2">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/nature_1/nature.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-nature_1" class="h3_label_s">
+                      Naturen
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-nature_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game nature 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-nature_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_cream1">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/colours_1/colour-icon.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-colours_1" class="h3_label_s">
+                      Färger
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-colours_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game colours 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-colours_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_pink1">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/adjectives_1/slow.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-adjectives_1" class="h3_label_s">
+                      Hur?
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div
+                      id="stars-adjectives_1"
+                      class="wrapper_total-stars"
+                    ></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game adjectives 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-adjectives_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
+            <div class="category_label_dd bg_green2">
+              <div class="dd-category_label">
+                <div class="wrapper_category">
+                  <div class="button_category">
+                    <img
+                      class="image_cate_icon"
+                      src="./images/herbs_1/thyme.svg"
+                      alt=""
+                    />
+                    <h3 class="dark" id="cate-herbs_1" class="h3_label_s">
+                      Kryddhyllan
+                    </h3>
+                  </div>
+
+                  <div class="wrapper_stars-hitbox">
+                    <div id="stars-herbs_1" class="wrapper_total-stars"></div>
+
+                    <div class="dropdown-button">
+                      <div class="dd-arrow">
+                        <img
+                          class="arrow"
+                          src="./icons/nav/arrow.png"
+                          alt="open dictionary for the game herbs 1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dd-category_words" data-dropdown="dd-herbs_1">
+                <!-- JS words -->
+                <div class="wrapper-word"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container_categories clickable">
             <div class="category_label_dd bg_green1">
               <div class="dd-category_label">
                 <div class="wrapper_category">
@@ -513,7 +628,7 @@
                       alt=""
                     />
                     <h3 class="dark" id="cate-fruits_2" class="h3_label_s">
-                      Frukt
+                      Frukter
                     </h3>
                   </div>
 

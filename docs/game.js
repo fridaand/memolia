@@ -229,6 +229,23 @@ function resetTimer() {
   timer = 0;
 }
 
+/* const message = getRandomMessage();
+ */
+const successMessagesSlow = [
+  "Det där gjorde du bra!",
+  "Helt fantastiskt!",
+  "Snyggt jobbat!",
+  "Grymt jobbat!",
+  "Strålande insats!",
+  "Vilket proffs du är!",
+];
+const successMessagesFast = [
+  "Helt otroligt! Snabbare än blixten!",
+  "Wow, det där var riktigt imponerande!",
+  "Du måste ha fotografiskt minne!? Det där var mästerligt!",
+  "Det här var nästan olagligt snabbt!",
+];
+
 function hideGameInfo() {
   document.querySelector(".article_game-info").style.display = "flex";
 }
@@ -237,11 +254,50 @@ function showGameInfo() {
   document.querySelector(".article_game-info").style.display = "flex";
 }
 
+function getRandomMessage() {
+  const timeTaken = parseInt(
+    document.querySelector(".info-seconds").textContent,
+    10
+  );
+
+  if (timeTaken < 45) {
+    return successMessagesFast[
+      Math.floor(Math.random() * successMessagesFast.length)
+    ];
+  } else {
+    return successMessagesSlow[
+      Math.floor(Math.random() * successMessagesSlow.length)
+    ];
+  }
+  /*   const randomIndex = Math.floor(Math.random() * successMessages.length);
+  return successMessages[randomIndex]; */
+}
+
 function hideEndGameInfo() {
   document.querySelector(".section_end-game").style.display = "none";
 }
+
+// POPUP WHEN GAME IS FINISHED (MESSAGE, ANIMATION)
 function showEndGameInfo() {
   document.querySelector(".section_end-game").style.display = "flex";
+
+  // GENERATE RANDOM MESSAGE
+  document.getElementById("popupText").textContent = getRandomMessage();
+
+  // PLAY ANIMATION
+  const animationContainer = document.querySelector(".lottie-container");
+
+  // "CLEAN"/RESET EARLIER ANIMATION
+  animationContainer.innerHTML = "";
+
+  // ADD & PLAY ANIMATION
+  lottie.loadAnimation({
+    container: animationContainer, // Var animationen ska visas
+    renderer: "svg", // Andra alternativ: "canvas" eller "html"
+    loop: 1, // Om animationen ska loopa
+    autoplay: true, // Spela automatiskt
+    path: "./animations/confetti_01.json", // Om du har en lokal JSON-fil
+  });
 }
 
 function resetScore() {
