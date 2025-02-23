@@ -197,8 +197,8 @@ function registerMuteButton() {
     isMuted = !isMuted;
 
     iconSound.src = isMuted
-      ? "icons/buttons/button_sound-off.png"
-      : "icons/buttons/button_sound-on.png";
+      ? "icons/buttons/button_sound_off.svg"
+      : "icons/buttons/button_sound_on.svg";
   });
 }
 
@@ -317,16 +317,54 @@ function resetCards() {
   gridContainer.innerHTML = "";
 }
 
-function pause() {
+/* function pause() {
   const playPause = document.getElementById("play-pause");
 
   if (isPaused) {
     isPaused = false;
-    playPause.src = "./icons/buttons/button_pause-primary.png";
+    playPause.src = "./icons/buttons/button_pause_default.svg";
   } else {
     isPaused = true;
 
-    playPause.src = "./icons/buttons/button_pause-w.png";
+    playPause.src = "./icons/buttons/button_pause_off.svg";
+  }
+} */
+
+function pause() {
+  const playPause = document.getElementById("play-pause");
+  const pauseButton = document.getElementById("button-pause");
+
+  if (isPaused) {
+    isPaused = false;
+    playPause.src = "./icons/buttons/button_pause_default.svg";
+
+    // Ta bort pulseringseffekt
+    pauseButton.classList.remove("pulse-effect");
+
+    // Ta bort event listener som lyssnar efter klick utanför knappen
+    document.removeEventListener("click", handleOutsideClick);
+  } else {
+    isPaused = true;
+    playPause.src = "./icons/buttons/button_pause_off.svg";
+
+    // Lägg till event listener som startar pulseringen vid klick utanför knappen
+    document.addEventListener("click", handleOutsideClick);
+  }
+}
+
+// Funktion som hanterar klick utanför pausknappen
+function handleOutsideClick(event) {
+  const pauseButton = document.getElementById("button-pause");
+
+  // Om det klickade elementet INTE är pausknappen
+  if (!pauseButton.contains(event.target) && isPaused) {
+    // Lägg till pulseringseffekt
+    pauseButton.classList.add("pulse-effect");
+
+    // Ta bort animationen efter 1500ms (3 loops)
+    setTimeout(() => {
+      pauseButton.classList.remove("pulse-effect");
+    }, 1500);
   }
 }
 

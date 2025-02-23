@@ -163,15 +163,15 @@ const clickableElements = document.querySelectorAll(
 // Lägg till hover-effekt för alla klickbara element
 clickableElements.forEach((el) => {
   el.addEventListener("mouseenter", () => {
-    cursor.style.width = "2.5rem";
-    cursor.style.height = "2.5rem";
+    cursor.style.width = "2rem";
+    cursor.style.height = "2rem";
     cursor.style.opacity = "0.9";
   });
 
   el.addEventListener("mouseleave", () => {
     cursor.style.width = "1.25rem";
     cursor.style.height = "1.25rem";
-    cursor.style.opacity = "0.95";
+    cursor.style.opacity = "0.97";
   });
 });
 // CURSOR ENDS

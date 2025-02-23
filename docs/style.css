@@ -20,13 +20,14 @@ html {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--petrol2);
+  background: var(--pink1);
   opacity: 0.98;
   pointer-events: none;
   transition: width 0.3s ease-out, height 0.3s ease-out;
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: normal;
+  outline: 8px solid var(--pink0);
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -52,8 +53,8 @@ a:hover ~ #custom-cursor,
 .dropdown-button ~ #custom-cursor,
 [onclick]:hover ~ #custom-cursor,
 .clickable:hover ~ #custom-cursor {
-  width: 2rem;
-  height: 2rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* CURSOR MARK */
@@ -463,9 +464,14 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
   color: rgba(29, 153, 145, 1);
+  opacity: 0.75;
+  /*   mix-blend-mode: destination-out;
+ */
+  color: var(--petrol1);
 }
 .text-effect:hover {
   color: var(--orange1);
+  opacity: 1;
 }
 
 .op75 {
@@ -503,6 +509,11 @@ h2 {
   line-height: 100%;
   margin: 0;
   word-wrap: break-word;
+  color: var(--yellow1);
+}
+
+.h2_color_game {
+  color: var(--cream1);
 }
 
 #popupText {
@@ -633,6 +644,7 @@ defs {
   position: relative;
   width: 100%;
   height: 0;
+  top: -20px;
 }
 
 .svg-path-container  {
@@ -838,6 +850,24 @@ header {
   background-color: var(--cream1);
 } */
 
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    border-radius: 999%;
+    outline: 1px solid var(--pink0);
+  }
+  50% {
+    transform: scale(1.1);
+    border-radius: 999%;
+    outline: 8px solid var(--pink0);
+  }
+}
+
+.pulse-effect {
+  animation: pulse 500ms ease-in-out 3;
+}
+
 .icon_s {
   width: 1.5rem;
   height: 1.5rem;
@@ -964,6 +994,7 @@ header {
   justify-content: space-between;
   align-self: stretch;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 /* BUTTONS - PAUS & PLAY */
@@ -1504,7 +1535,7 @@ footer {
       #b5a26f 95.24%
     )
   );
-  /* background: var(--yellow2); */
+  background: var(--fade_forest);
   background-position: center center;
   background-size: cover;
   backface-visibility: hidden;
@@ -1581,6 +1612,7 @@ footer {
     rgba(0, 0, 0, 0.5) 20% rgba(0, 0, 0, 0.2) 10%
   );
   z-index: 19;
+  padding: 15px;
 }
 
 .popup_styling {
@@ -1590,7 +1622,7 @@ footer {
   max-width: 540px;
   padding: 2.5rem;
   bottom: 0;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-direction: column;
   z-index: 101;
   border-radius: var(--radius-popup, 16px);
@@ -1611,7 +1643,7 @@ footer {
   /*  box-shadow: 0px 0px 64px 8px rgba(250, 250, 250, 0.1),
     0px -2px 4px 0px rgba(0, 0, 0, 0.15) inset,
     0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset; */
-  box-shadow: inset 0 0 1px 5px var(--orange1), 0 0 1px 15px var(--orange1);
+  box-shadow: 0 0 0 20px var(--orange1);
   background: var(--black_op90);
 }
 
@@ -1663,7 +1695,7 @@ footer {
   }
   .popup_styling {
     max-width: 520px;
-    padding: 2.75rem 2.25rem 2.75rem 2.25rem;
+    padding: 2.25rem;
   }
 }
 
@@ -1770,8 +1802,8 @@ footer {
   }
   .popup_styling {
     max-width: 468px;
-    padding: 3rem 2rem;
-    gap: 1.75rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 0 0 15px var(--orange1);
   }
   .lottie-container {
     width: 100%;
