@@ -28,7 +28,7 @@
 
               <div class="hitbox_tr clickable" id="button_trigger">
                 <img
-                  src="./icons/nav/cross_s.svg"
+                  src="./icons/nav/close.svg"
                   alt="opens a dialog box to exit the game"
                 />
               </div>
@@ -81,7 +81,7 @@
 
         <footer>
           <!-- SECTION TOTAL GAMES & MINUTES -->
-          <container class="container_total">
+          <container class="container_total hide">
             <article class="article_game-info">
               <div class="wrapper_spel-min">
                 <div class="wrapper_text-min">
@@ -106,25 +106,26 @@
           <div class="hitbox_tr">
             <img
               class="button_close clickable"
-              src="./icons/nav/cross_s.svg"
+              src="./icons/nav/close.svg"
               alt="close dialog box to return to game"
             />
           </div>
         </div>
 
-        <h2>VILL DU AVSLUTA?</h2>
+        <h2>VILL DU AVSLUTA SPELET?</h2>
 
         <div class="wrapper_buttons">
-          <a href="menu.html"
-            ><div class="button_primary button_text" id="goBackButton">
-              <h3 class="button_label">Ja</h3>
-            </div></a
-          >
           <a class="button_close"
-            ><div class="button_primary button_text">
+            ><div class="button_primary button_text button_warning">
               <h3 class="button_label">Nej</h3>
             </div></a
           >
+          <a href="menu.html"
+            ><div class="button_primary button_text button_cta" id="goBackButton">
+              <h3 class="button_label">Ja</h3>
+            </div></a
+          >
+          
         </div>
       </div>
     </div>
@@ -146,13 +147,13 @@
         </div>
         <div class="wrapper_buttons">
           <div
-            class="actions button_primary button_text"
+            class="actions button_primary button_text button_cta"
             onclick="restartGame()"
           >
             <h3 class="button_label">Spela igen</h3>
           </div>
           <div
-            class="button_primary button_text"
+            class="button_primary button_text button_info"
             onclick="window.location.href='menu.html';"
           >
             <h3 class="button_label">Huvudmeny</h3>

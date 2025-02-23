@@ -282,7 +282,14 @@ function showEndGameInfo() {
   document.querySelector(".section_end-game").style.display = "flex";
 
   // GENERATE RANDOM MESSAGE
-  document.getElementById("popupText").textContent = getRandomMessage();
+  const popupText = document.getElementById("popupText");
+  popupText.textContent = getRandomMessage(); // Uppdatera texten
+  popupText.classList.add("animate-text"); // Lägg till animationen
+
+  // REMOVE POPUP-TEXT ANIMATION AFTER 1500 MS
+  setTimeout(() => {
+    popupText.classList.remove("animate-text");
+  }, 1500);
 
   // PLAY ANIMATION
   const animationContainer = document.querySelector(".lottie-container");
