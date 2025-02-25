@@ -12,19 +12,24 @@ const categories = [
   /*   { id: "fruits-game_mini", name: "fruits_mini" },
    */
   { id: "hello-game_1", name: "hello_1" },
-  { id: "fruits-game_1", name: "fruits_1" },
-  { id: "vegetables-game_1", name: "vegetables_1" },
-  { id: "dishes-game_1", name: "dishes_1" },
   { id: "people-game_1", name: "people_1" },
-  { id: "verbs-game_1", name: "verbs_1" },
-  { id: "numbers-game_1", name: "numbers_1" },
   { id: "drinks-game_1", name: "drinks_1" },
+  { id: "fruits-game_1", name: "fruits_1" },
   { id: "colours-game_1", name: "colours_1" },
+  { id: "verbs-game_1", name: "verbs_1" },
+  { id: "dishes-game_1", name: "dishes_1" },
+  { id: "vegetables-game_1", name: "vegetables_1" },
   { id: "animals-game_1", name: "animals_1" },
-  { id: "fruits-game_2", name: "fruits_2" },
-  { id: "adjectives-game_1", name: "adjectives_1" },
-  { id: "herbs-game_1", name: "herbs_1" },
+  { id: "numbers-game_1", name: "numbers_1" },
+  /*   { id: "adjectives-game_1", name: "adjectives_1" },
+  { id: "travel-game_2", name: "travel_2" },
+  { id: "numbers-game_2", name: "numbers_2" },
   { id: "nature-game_1", name: "nature_1" },
+  { id: "herbs-game_1", name: "herbs_1" },
+  { id: "travel-game_1", name: "travel_1" },
+  { id: "shopping-game_1", name: "shopping_1" },
+  { id: "fruits-game_2", name: "fruits_2" },
+  { id: "numbers-game_3", name: "numbers_3" }, */
 ];
 
 /* HIDE CURSOR FOR IPAD ETC */
