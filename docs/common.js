@@ -243,14 +243,23 @@ function updateRounds() {
 }
 
 function updateTime(time, id) {
+  time = parseInt(time, 10) || 0;
+
   let minutes = Math.floor(time / 60);
   let seconds = time % 60;
-  document.getElementById(id).innerText = minutes + "." + seconds;
+
+  let formattedTime = minutes + "." + (seconds < 10 ? "0" : "") + seconds;
+
+  document.getElementById(id).innerText = formattedTime;
 }
 
 function updateTotalTime() {
   let totalTime = localStorage.getItem("totalTime");
-  updateTime(totalTime, "info-totaltime");
+  if (totalTime) {
+    updateTime(totalTime, "info-totaltime");
+  } else {
+    updateTime(0, "info-totaltime");
+  }
 }
 
 /* FUNCTIONS FOR THE POPUP "AVSLUTA" */
