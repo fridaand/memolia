@@ -152,29 +152,17 @@ a:hover ~ #custom-cursor,
   --petrol3: #003a35;
   --petrol4: #002623;
 
-  /*  --yellow1: #f1c787;
-  --yellow1: #f4c276;
-  --yellow2: #efbe73;
-  --orange1: #d98b5b;
-  --orange2: #f3a367;
-  --pink0: #e99488;
-  --pink1: #e58479;
-  --green1: #8ab894;
-  --green2: #73a482;
-  --petrol1: #85b8aa;
-  --petrol2: #5d9484; */
-
   /* NEW */
   --yellow1: #f4c276;
-  --yellow2: #fbc26d;
-  --orange1: #e88f59;
-  --orange2: #fe9e65;
-  --pink0: #faa498;
+  --yellow2: #fdbd65;
+  --orange1: #ef955e;
+  --orange2: #ef9d61;
+  --pink0: #f9a093;
   --pink1: #ff9688;
-  --green1: #8ac296;
-  --green2: #71af84;
-  --petrol1: #7cc2ac;
-  --petrol2: #58a996;
+  --green1: #74b899;
+  --green2: #609e82;
+  --petrol2: #5ca497;
+  --petrol1: #73c6ba;
 
   /* SHADOW - BG CATEGORY */
 
