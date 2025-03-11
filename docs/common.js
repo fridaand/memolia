@@ -21,15 +21,18 @@ const categories = [
   { id: "vegetables-game_1", name: "vegetables_1" },
   { id: "animals-game_1", name: "animals_1" },
   { id: "numbers-game_1", name: "numbers_1" },
-  /*   { id: "adjectives-game_1", name: "adjectives_1" },
-  { id: "travel-game_2", name: "travel_2" },
-  { id: "numbers-game_2", name: "numbers_2" },
+  { id: "activities-game_1", name: "activities_1" },
   { id: "nature-game_1", name: "nature_1" },
-  { id: "herbs-game_1", name: "herbs_1" },
   { id: "travel-game_1", name: "travel_1" },
-  { id: "shopping-game_1", name: "shopping_1" },
+  { id: "numbers-game_2", name: "numbers_2" },
+  { id: "herbs-game_1", name: "herbs_1" },
+  { id: "adjectives-game_1", name: "adjectives_1" },
+  { id: "travel-game_2", name: "travel_2" },
+  { id: "place_store-game_1", name: "place_store_1" },
   { id: "fruits-game_2", name: "fruits_2" },
-  { id: "numbers-game_3", name: "numbers_3" }, */
+  { id: "place_restaurant-game_1", name: "place_restaurant_1" },
+  /*   { id: "numbers-game_3", name: "numbers_3" },
+   */
 ];
 
 /* HIDE CURSOR FOR IPAD ETC */

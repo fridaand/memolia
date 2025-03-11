@@ -1,0 +1,162 @@
+[
+  {
+    "name": "bill",
+    "image": "images/place_restaurant_1/bill.svg",
+    "language": {
+      "english": "the bill, please",
+      "french": "(l')addition, s'il vous plaît",
+      "swedish": "notan, tack",
+      "portuguese-br": "(a) conta, por favor"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/bill.mp3",
+      "french": "sound/place_restaurant_1/bill_fr.mp3",
+      "swedish": "sound/place_restaurant_1/bill_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/bill_po-br.mp3"
+    }
+  },
+  {
+    "name": "cutlery",
+    "image": "images/place_restaurant_1/cutlery.svg",
+    "language": {
+      "english": "cutlery",
+      "french": "(les) couverts",
+      "swedish": "bestick",
+      "portuguese-br": "(os) talheres"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/cutlery.mp3",
+      "french": "sound/place_restaurant_1/cutlery_fr.mp3",
+      "swedish": "sound/place_restaurant_1/cutlery_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/cutlery_po-br.mp3"
+    }
+  },
+  {
+    "name": "dessert",
+    "image": "images/place_restaurant_1/dessert.svg",
+    "language": {
+      "english": "dessert",
+      "french": "(le) dessert",
+      "swedish": "dessert",
+      "portuguese-br": "(a) sobremesa"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/dessert.mp3",
+      "french": "sound/place_restaurant_1/dessert_fr.mp3",
+      "swedish": "sound/place_restaurant_1/dessert_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/dessert_po-br.mp3"
+    }
+  },
+  {
+    "name": "drink",
+    "image": "images/place_restaurant_1/drink.svg",
+    "language": {
+      "english": "drink",
+      "french": "(la) boisson",
+      "swedish": "dryck",
+      "portuguese-br": "(a) bebida"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/drink.mp3",
+      "french": "sound/place_restaurant_1/drink_fr.mp3",
+      "swedish": "sound/place_restaurant_1/drink_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/drink_po-br.mp3"
+    }
+  },
+  {
+    "name": "food",
+    "image": "images/place_restaurant_1/food.svg",
+    "language": {
+      "english": "food",
+      "french": "(la) nourriture",
+      "swedish": "mat",
+      "portuguese-br": "(a) comida"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/food.mp3",
+      "french": "sound/place_restaurant_1/food_fr.mp3",
+      "swedish": "sound/place_restaurant_1/food_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/food_po-br.mp3"
+    }
+  },
+  {
+    "name": "menu",
+    "image": "images/place_restaurant_1/menu.svg",
+    "language": {
+      "english": "menu",
+      "french": "(le) menu",
+      "swedish": "meny",
+      "portuguese-br": "(o) cardápio"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/menu.mp3",
+      "french": "sound/place_restaurant_1/menu_fr.mp3",
+      "swedish": "sound/place_restaurant_1/menu_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/menu_po-br.mp3"
+    }
+  },
+  {
+    "name": "starter",
+    "image": "images/place_restaurant_1/starter.svg",
+    "language": {
+      "english": "starter",
+      "french": "(l')entrée",
+      "swedish": "förrätt",
+      "portuguese-br": "(a) entrada"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/starter.mp3",
+      "french": "sound/place_restaurant_1/starter_fr.mp3",
+      "swedish": "sound/place_restaurant_1/starter_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/starter_po-br.mp3"
+    }
+  },
+  {
+    "name": "table_for_three",
+    "image": "images/place_restaurant_1/table_for_three.svg",
+    "language": {
+      "english": "a table for three, please",
+      "french": "une table pour trois, s'il vous plaît",
+      "swedish": "ett bord för tre, tack",
+      "portuguese-br": "uma mesa para três, por favor"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/table_for_three.mp3",
+      "french": "sound/place_restaurant_1/table_for_three_fr.mp3",
+      "swedish": "sound/place_restaurant_1/table_for_three_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/table_for_three_po-br.mp3"
+    }
+  },
+  {
+    "name": "skål",
+    "image": "images/place_restaurant_1/cheers.svg",
+    "language": {
+      "english": "cheers",
+      "french": "santé",
+      "swedish": "skål",
+      "portuguese-br": "saúde"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/cheers.mp3",
+      "french": "sound/place_restaurant_1/cheers_fr.mp3",
+      "swedish": "sound/place_restaurant_1/cheers_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/cheers_po-br.mp3"
+    }
+  },
+  {
+    "name": "i_would_like_to_order",
+    "image": "images/place_restaurant_1/order.svg",
+    "language": {
+      "english": "i would like to order",
+      "french": "je voudrais commander",
+      "swedish": "jag skulle vilja beställa",
+      "portuguese-br": "eu gostaria de pedir"
+    },
+    "audio": {
+      "english": "sound/place_restaurant_1/order.mp3",
+      "french": "sound/place_restaurant_1/order_fr.mp3",
+      "swedish": "sound/place_restaurant_1/order_sw.mp3",
+      "portuguese-br": "sound/place_restaurant_1/order_po-br.mp3"
+    }
+  }
+]

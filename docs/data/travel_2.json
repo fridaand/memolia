@@ -1,0 +1,162 @@
+[
+  {
+    "name": "car",
+    "image": "images/travel_2/car.svg",
+    "language": {
+      "english": "Car",
+      "french": "La voiture",
+      "swedish": "Bil",
+      "portuguese-br": "O carro"
+    },
+    "audio": {
+      "english": "sound/travel_2/car.mp3",
+      "french": "sound/travel_2/car_fr.mp3",
+      "swedish": "sound/travel_2/car_sw.mp3",
+      "portuguese-br": "sound/travel_2/car_po-br.mp3"
+    }
+  },
+  {
+    "name": "bus",
+    "image": "images/travel_2/bus.svg",
+    "language": {
+      "english": "Bus",
+      "french": "L'autobus",
+      "swedish": "Buss",
+      "portuguese-br": "O ônibus"
+    },
+    "audio": {
+      "english": "sound/travel_2/bus.mp3",
+      "french": "sound/travel_2/bus_fr.mp3",
+      "swedish": "sound/travel_2/bus_sw.mp3",
+      "portuguese-br": "sound/travel_2/bus_po-br.mp3"
+    }
+  },
+  {
+    "name": "train",
+    "image": "images/travel_2/train.svg",
+    "language": {
+      "english": "Train",
+      "french": "Le train",
+      "swedish": "Tåg",
+      "portuguese-br": "O trem"
+    },
+    "audio": {
+      "english": "sound/travel_2/train.mp3",
+      "french": "sound/travel_2/train_fr.mp3",
+      "swedish": "sound/travel_2/train_sw.mp3",
+      "portuguese-br": "sound/travel_2/train_po-br.mp3"
+    }
+  },
+  {
+    "name": "airplane",
+    "image": "images/travel_2/airplane.svg",
+    "language": {
+      "english": "Airplane",
+      "french": "L'avion",
+      "swedish": "Flygplan",
+      "portuguese-br": "O avião"
+    },
+    "audio": {
+      "english": "sound/travel_2/airplane.mp3",
+      "french": "sound/travel_2/airplane_fr.mp3",
+      "swedish": "sound/travel_2/airplane_sw.mp3",
+      "portuguese-br": "sound/travel_2/airplane_po-br.mp3"
+    }
+  },
+  {
+    "name": "ferry",
+    "image": "images/travel_2/ferry.svg",
+    "language": {
+      "english": "Ferry",
+      "french": "Le ferry",
+      "swedish": "Färja",
+      "portuguese-br": "O ferry"
+    },
+    "audio": {
+      "english": "sound/travel_2/ferry.mp3",
+      "french": "sound/travel_2/ferry_fr.mp3",
+      "swedish": "sound/travel_2/ferry_sw.mp3",
+      "portuguese-br": "sound/travel_2/ferry_po-br.mp3"
+    }
+  },
+  {
+    "name": "taxi",
+    "image": "images/travel_2/taxi.svg",
+    "language": {
+      "english": "Taxi",
+      "french": "Le taxi",
+      "swedish": "Taxi",
+      "portuguese-br": "O táxi"
+    },
+    "audio": {
+      "english": "sound/travel_2/taxi.mp3",
+      "french": "sound/travel_2/taxi_fr.mp3",
+      "swedish": "sound/travel_2/taxi_sw.mp3",
+      "portuguese-br": "sound/travel_2/taxi_po-br.mp3"
+    }
+  },
+  {
+    "name": "bike",
+    "image": "images/travel_2/bike.svg",
+    "language": {
+      "english": "Bike",
+      "french": "Le vélo",
+      "swedish": "Cykel",
+      "portuguese-br": "A bicicleta"
+    },
+    "audio": {
+      "english": "sound/travel_2/bike.mp3",
+      "french": "sound/travel_2/bike_fr.mp3",
+      "swedish": "sound/travel_2/bike_sw.mp3",
+      "portuguese-br": "sound/travel_2/bike_po-br.mp3"
+    }
+  },
+  {
+    "name": "metro",
+    "image": "images/travel_2/metro.svg",
+    "language": {
+      "english": "Metro",
+      "french": "Le métro",
+      "swedish": "Tunnelbana",
+      "portuguese-br": "O metrô"
+    },
+    "audio": {
+      "english": "sound/travel_2/metro.mp3",
+      "french": "sound/travel_2/metro_fr.mp3",
+      "swedish": "sound/travel_2/metro_sw.mp3",
+      "portuguese-br": "sound/travel_2/metro_po-br.mp3"
+    }
+  },
+  {
+    "name": "tram",
+    "image": "images/travel_2/tram.svg",
+    "language": {
+      "english": "Tram",
+      "french": "Le tram",
+      "swedish": "Spårvagn",
+      "portuguese-br": "O bonde"
+    },
+    "audio": {
+      "english": "sound/travel_2/tram.mp3",
+      "french": "sound/travel_2/tram_fr.mp3",
+      "swedish": "sound/travel_2/tram_sw.mp3",
+      "portuguese-br": "sound/travel_2/tram_po-br.mp3"
+    }
+  },
+  {
+    "name": "motorcycle",
+    "image": "images/travel_2/motorcycle.svg",
+    "language": {
+      "english": "Motorcycle",
+      "french": "La moto",
+      "swedish": "Motorcykel",
+      "portuguese-br": "A motocicleta"
+    },
+    "audio": {
+      "english": "sound/travel_2/motorcycle.mp3",
+      "french": "sound/travel_2/motorcycle_fr.mp3",
+      "swedish": "sound/travel_2/motorcycle_sw.mp3",
+      "portuguese-br": "sound/travel_2/motorcycle_po-br.mp3"
+    }
+  }
+]

@@ -283,8 +283,8 @@ function showEndGameInfo() {
 
   // GENERATE RANDOM MESSAGE
   const popupText = document.getElementById("popupText");
-  popupText.textContent = getRandomMessage(); // Uppdatera texten
-  popupText.classList.add("animate-text"); // Lägg till animationen
+  popupText.textContent = getRandomMessage();
+  popupText.classList.add("animate-text");
 
   // REMOVE POPUP-TEXT ANIMATION AFTER 1500 MS
   setTimeout(() => {
@@ -299,11 +299,11 @@ function showEndGameInfo() {
 
   // ADD & PLAY ANIMATION
   lottie.loadAnimation({
-    container: animationContainer, // Var animationen ska visas
-    renderer: "svg", // Andra alternativ: "canvas" eller "html"
-    loop: 1, // Om animationen ska loopa
-    autoplay: true, // Spela automatiskt
-    path: "./animations/confetti_01.json", // Om du har en lokal JSON-fil
+    container: animationContainer,
+    renderer: "svg",
+    loop: 1,
+    autoplay: true,
+    path: "./animations/confetti_01.json",
   });
 }
 
@@ -317,19 +317,7 @@ function resetCards() {
   gridContainer.innerHTML = "";
 }
 
-/* function pause() {
-  const playPause = document.getElementById("play-pause");
-
-  if (isPaused) {
-    isPaused = false;
-    playPause.src = "./icons/buttons/button_pause_default.svg";
-  } else {
-    isPaused = true;
-
-    playPause.src = "./icons/buttons/button_pause_off.svg";
-  }
-} */
-
+/* FUNCTION FOR PAUSE BUTTON */
 function pause() {
   const playPause = document.getElementById("play-pause");
   const pauseButton = document.getElementById("button-pause");
@@ -338,30 +326,24 @@ function pause() {
     isPaused = false;
     playPause.src = "./icons/buttons/button_pause_default.svg";
 
-    // Ta bort pulseringseffekt
     pauseButton.classList.remove("pulse-effect");
 
-    // Ta bort event listener som lyssnar efter klick utanför knappen
     document.removeEventListener("click", handleOutsideClick);
   } else {
     isPaused = true;
     playPause.src = "./icons/buttons/button_pause_off.svg";
 
-    // Lägg till event listener som startar pulseringen vid klick utanför knappen
     document.addEventListener("click", handleOutsideClick);
   }
 }
 
-// Funktion som hanterar klick utanför pausknappen
 function handleOutsideClick(event) {
   const pauseButton = document.getElementById("button-pause");
 
   // Om det klickade elementet INTE är pausknappen
   if (!pauseButton.contains(event.target) && isPaused) {
-    // Lägg till pulseringseffekt
     pauseButton.classList.add("pulse-effect");
 
-    // Ta bort animationen efter 1500ms (3 loops)
     setTimeout(() => {
       pauseButton.classList.remove("pulse-effect");
     }, 1500);

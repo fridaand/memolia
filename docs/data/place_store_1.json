@@ -1,0 +1,162 @@
+[
+  {
+    "name": "pay",
+    "image": "images/place_store_1/pay.svg",
+    "language": {
+      "english": "Pay",
+      "french": "Payer",
+      "swedish": "Betala",
+      "portuguese-br": "Pagar"
+    },
+    "audio": {
+      "english": "sound/place_store_1/pay.mp3",
+      "french": "sound/place_store_1/pay_fr.mp3",
+      "swedish": "sound/place_store_1/pay_sw.mp3",
+      "portuguese-br": "sound/place_store_1/pay_po-br.mp3"
+    }
+  },
+  {
+    "name": "money",
+    "image": "images/place_store_1/money.svg",
+    "language": {
+      "english": "Money",
+      "french": "L'Argent",
+      "swedish": "Pengar",
+      "portuguese-br": "O Dinheiro"
+    },
+    "audio": {
+      "english": "sound/place_store_1/money.mp3",
+      "french": "sound/place_store_1/money_fr.mp3",
+      "swedish": "sound/place_store_1/money_sw.mp3",
+      "portuguese-br": "sound/place_store_1/money_po-br.mp3"
+    }
+  },
+  {
+    "name": "change",
+    "image": "images/place_store_1/change.svg",
+    "language": {
+      "english": "Change",
+      "french": "La Monnaie",
+      "swedish": "Växel",
+      "portuguese-br": "O Troco"
+    },
+    "audio": {
+      "english": "sound/place_store_1/change.mp3",
+      "french": "sound/place_store_1/change_fr.mp3",
+      "swedish": "sound/place_store_1/change_sw.mp3",
+      "portuguese-br": "sound/place_store_1/change_po-br.mp3"
+    }
+  },
+  {
+    "name": "credit card",
+    "image": "images/place_store_1/credit_card.svg",
+    "language": {
+      "english": "Credit card",
+      "french": "La Carte de crédit",
+      "swedish": "Kreditkort",
+      "portuguese-br": "O Cartão de crédito"
+    },
+    "audio": {
+      "english": "sound/place_store_1/credit_card.mp3",
+      "french": "sound/place_store_1/credit_card_fr.mp3",
+      "swedish": "sound/place_store_1/credit_card_sw.mp3",
+      "portuguese-br": "sound/place_store_1/credit_card_po-br.mp3"
+    }
+  },
+  {
+    "name": "cash machine",
+    "image": "images/place_store_1/cash_machine.svg",
+    "language": {
+      "english": "Cash machine",
+      "french": "Le Distributeur automatique",
+      "swedish": "Uttagsautomat",
+      "portuguese-br": "O Caixa eletrônico"
+    },
+    "audio": {
+      "english": "sound/place_store_1/cash_machine.mp3",
+      "french": "sound/place_store_1/cash_machine_fr.mp3",
+      "swedish": "sound/place_store_1/cash_machine_sw.mp3",
+      "portuguese-br": "sound/place_store_1/cash_machine_po-br.mp3"
+    }
+  },
+  {
+    "name": "basket",
+    "image": "images/place_store_1/basket.svg",
+    "language": {
+      "english": "Basket",
+      "french": "Le Panier",
+      "swedish": "Korg",
+      "portuguese-br": "A Cesta"
+    },
+    "audio": {
+      "english": "sound/place_store_1/basket.mp3",
+      "french": "sound/place_store_1/basket_fr.mp3",
+      "swedish": "sound/place_store_1/basket_sw.mp3",
+      "portuguese-br": "sound/place_store_1/basket_po-br.mp3"
+    }
+  },
+  {
+    "name": "price",
+    "image": "images/place_store_1/price.svg",
+    "language": {
+      "english": "Price",
+      "french": "Le Prix",
+      "swedish": "Pris",
+      "portuguese-br": "O Preço"
+    },
+    "audio": {
+      "english": "sound/place_store_1/price.mp3",
+      "french": "sound/place_store_1/price_fr.mp3",
+      "swedish": "sound/place_store_1/price_sw.mp3",
+      "portuguese-br": "sound/place_store_1/price_po-br.mp3"
+    }
+  },
+  {
+    "name": "receipt",
+    "image": "images/place_store_1/receipt.svg",
+    "language": {
+      "english": "Receipt",
+      "french": "Le Reçu",
+      "swedish": "Kvitto",
+      "portuguese-br": "O Recibo"
+    },
+    "audio": {
+      "english": "sound/place_store_1/receipt.mp3",
+      "french": "sound/place_store_1/receipt_fr.mp3",
+      "swedish": "sound/place_store_1/receipt_sw.mp3",
+      "portuguese-br": "sound/place_store_1/receipt_po-br.mp3"
+    }
+  },
+  {
+    "name": "size",
+    "image": "images/place_store_1/size.svg",
+    "language": {
+      "english": "Size",
+      "french": "La Taille",
+      "swedish": "Storlek",
+      "portuguese-br": "O Tamanho"
+    },
+    "audio": {
+      "english": "sound/place_store_1/size.mp3",
+      "french": "sound/place_store_1/size_fr.mp3",
+      "swedish": "sound/place_store_1/size_sw.mp3",
+      "portuguese-br": "sound/place_store_1/size_po-br.mp3"
+    }
+  },
+  {
+    "name": "bag",
+    "image": "images/place_store_1/bag.svg",
+    "language": {
+      "english": "Bag",
+      "french": "Le Sac",
+      "swedish": "Påse",
+      "portuguese-br": "A Sacola"
+    },
+    "audio": {
+      "english": "sound/place_store_1/bag.mp3",
+      "french": "sound/place_store_1/bag_fr.mp3",
+      "swedish": "sound/place_store_1/bag_sw.mp3",
+      "portuguese-br": "sound/place_store_1/bag_po-br.mp3"
+    }
+  }
+]

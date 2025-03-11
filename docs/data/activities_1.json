@@ -1,0 +1,162 @@
+[
+  {
+    "name": "swim",
+    "image": "images/activities_1/swim.svg",
+    "language": {
+      "english": "swim",
+      "french": "baignade",
+      "swedish": "bada",
+      "portuguese-br": "nadar"
+    },
+    "audio": {
+      "english": "sound/activities_1/swim.mp3",
+      "french": "sound/activities_1/swim_fr.mp3",
+      "swedish": "sound/activities_1/swim_sw.mp3",
+      "portuguese-br": "sound/activities_1/swim_po-br.mp3"
+    }
+  },
+  {
+    "name": "exercise",
+    "image": "images/activities_1/exercise.svg",
+    "language": {
+      "english": "exercise",
+      "french": "faire de l'exercice",
+      "swedish": "träna",
+      "portuguese-br": "fazer exercício"
+    },
+    "audio": {
+      "english": "sound/activities_1/exercise.mp3",
+      "french": "sound/activities_1/exercise_fr.mp3",
+      "swedish": "sound/activities_1/exercise_sw.mp3",
+      "portuguese-br": "sound/activities_1/exercise_po-br.mp3"
+    }
+  },
+  {
+    "name": "read",
+    "image": "images/activities_1/read.svg",
+    "language": {
+      "english": "read",
+      "french": "lire",
+      "swedish": "läsa",
+      "portuguese-br": "ler"
+    },
+    "audio": {
+      "english": "sound/activities_1/read.mp3",
+      "french": "sound/activities_1/read_fr.mp3",
+      "swedish": "sound/activities_1/read_sw.mp3",
+      "portuguese-br": "sound/activities_1/read_po-br.mp3"
+    }
+  },
+  {
+    "name": "cook",
+    "image": "images/activities_1/cook.svg",
+    "language": {
+      "english": "cook",
+      "french": "cuisiner",
+      "swedish": "laga mat",
+      "portuguese-br": "cozinhar"
+    },
+    "audio": {
+      "english": "sound/activities_1/cook.mp3",
+      "french": "sound/activities_1/cook_fr.mp3",
+      "swedish": "sound/activities_1/cook_sw.mp3",
+      "portuguese-br": "sound/activities_1/cook_po-br.mp3"
+    }
+  },
+  {
+    "name": "bake",
+    "image": "images/activities_1/bake.svg",
+    "language": {
+      "english": "bake",
+      "french": "faire de la pâtisserie",
+      "swedish": "baka",
+      "portuguese-br": "assar"
+    },
+    "audio": {
+      "english": "sound/activities_1/bake.mp3",
+      "french": "sound/activities_1/bake_fr.mp3",
+      "swedish": "sound/activities_1/bake_sw.mp3",
+      "portuguese-br": "sound/activities_1/bake_po-br.mp3"
+    }
+  },
+  {
+    "name": "listen_to_music",
+    "image": "images/activities_1/listen_to_music.svg",
+    "language": {
+      "english": "listen to music",
+      "french": "écouter de la musique",
+      "swedish": "lyssna på musik",
+      "portuguese-br": "ouvir música"
+    },
+    "audio": {
+      "english": "sound/activities_1/listen_to_music.mp3",
+      "french": "sound/activities_1/listen_to_music_fr.mp3",
+      "swedish": "sound/activities_1/listen_to_music_sw.mp3",
+      "portuguese-br": "sound/activities_1/listen_to_music_po-br.mp3"
+    }
+  },
+  {
+    "name": "cinema",
+    "image": "images/activities_1/cinema.svg",
+    "language": {
+      "english": "go to the cinema",
+      "french": "aller au cinéma",
+      "swedish": "gå på bio",
+      "portuguese-br": "ir ao cinema"
+    },
+    "audio": {
+      "english": "sound/activities_1/cinema.mp3",
+      "french": "sound/activities_1/cinema_fr.mp3",
+      "swedish": "sound/activities_1/cinema_sw.mp3",
+      "portuguese-br": "sound/activities_1/cinema_po-br.mp3"
+    }
+  },
+  {
+    "name": "hike",
+    "image": "images/activities_1/hike.svg",
+    "language": {
+      "english": "hike",
+      "french": "randonnée",
+      "swedish": "vandra",
+      "portuguese-br": "caminhada"
+    },
+    "audio": {
+      "english": "sound/activities_1/hike.mp3",
+      "french": "sound/activities_1/hike_fr.mp3",
+      "swedish": "sound/activities_1/hike_sw.mp3",
+      "portuguese-br": "sound/activities_1/hike_po-br.mp3"
+    }
+  },
+  {
+    "name": "restaurant",
+    "image": "images/activities_1/restaurant.svg",
+    "language": {
+      "english": "go to a restaurant",
+      "french": "aller au restaurant",
+      "swedish": "gå på restaurang",
+      "portuguese-br": "ir ao restaurante"
+    },
+    "audio": {
+      "english": "sound/activities_1/restaurant.mp3",
+      "french": "sound/activities_1/restaurant_fr.mp3",
+      "swedish": "sound/activities_1/restaurant_sw.mp3",
+      "portuguese-br": "sound/activities_1/restaurant_po-br.mp3"
+    }
+  },
+  {
+    "name": "play_video_games",
+    "image": "images/activities_1/play_video_games.svg",
+    "language": {
+      "english": "play video games",
+      "french": "jouer aux jeux vidéo",
+      "swedish": "spela datorspel",
+      "portuguese-br": "jogar videogames"
+    },
+    "audio": {
+      "english": "sound/activities_1/play_video_games.mp3",
+      "french": "sound/activities_1/play_video_games_fr.mp3",
+      "swedish": "sound/activities_1/play_video_games_sw.mp3",
+      "portuguese-br": "sound/activities_1/play_video_games_po-br.mp3"
+    }
+  }
+]

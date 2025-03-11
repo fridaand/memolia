@@ -20,14 +20,14 @@ html {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--pink1);
   opacity: 0.98;
   pointer-events: none;
   transition: width 0.3s ease-out, height 0.3s ease-out;
   transform: translate(-50%, -50%);
   z-index: 9999;
   mix-blend-mode: normal;
-  outline: 8px solid var(--pink0);
+  background: var(--petrol1);
+  outline: 8px solid var(--black_op70);
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -133,37 +133,62 @@ a:hover ~ #custom-cursor,
   --cream2: #ffd8a5;
   --cream2: #fbe0b7;
   --yellow1: #f4c276;
-  --yellow2: #fdba5f;
+  --yellow2: #ffc66e; /*ffc66c; fdbd65;  fdba5f */
   --yellow3: #8a5a1c;
   --yellow4: #905e1d;
   /*   --yellow5: #36230b; */
-  --orange1: #f0a35e;
-  --orange2: #e39559;
+  --orange1: #ef955e; /* f0a35e; */
+  --orange2: #ffa766; /* e39559; */
   --pink0: #ffada2;
-  --pink1: #f47e7e;
+  --pink1: #ff8f89; /*f48c8c;  f47e7e; */
   --pink2: #fd8674;
   --pink3: #eb675e;
-  --green1: #9fcca8;
-  --green2: #6b9984;
+  --green1: #9cc98f; /* 7fb798 */ /* 9fcca8; */
+  --green2: #7da777; /* 74a286 */ /* 6b9984; */
   --green2b: #1d594e;
   --green3: #0a6c64;
-  --petrol1: #8abfbc;
-  --petrol2: #609b97;
+  --petrol1: #6dbaa1; /* 6bc0b4; */ /* 8abfbc */
+  --petrol2: #50a591; /*71a8a4;  609b97; */
   --petrol3: #003a35;
   --petrol4: #002623;
 
+  /*  --yellow1: #f1c787;
+  --yellow1: #f4c276;
+  --yellow2: #efbe73;
+  --orange1: #d98b5b;
+  --orange2: #f3a367;
+  --pink0: #e99488;
+  --pink1: #e58479;
+  --green1: #8ab894;
+  --green2: #73a482;
+  --petrol1: #85b8aa;
+  --petrol2: #5d9484; */
+
+  /* NEW */
+  --yellow1: #f4c276;
+  --yellow2: #fbc26d;
+  --orange1: #e88f59;
+  --orange2: #fe9e65;
+  --pink0: #faa498;
+  --pink1: #ff9688;
+  --green1: #8ac296;
+  --green2: #71af84;
+  --petrol1: #7cc2ac;
+  --petrol2: #58a996;
+
   /* SHADOW - BG CATEGORY */
+
   --shadow_round: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 15%,
+    rgba(255, 255, 255, 0.05) 15%,
     rgba(255, 255, 255, 0) 30%
   );
 
   /* BOX SHADOW */
   --shadow_button: rgba(76, 47, 6, 0.4) -0px -0px 16px 0px inset;
   --shadow_button-hover: rgb(76, 47, 6, 0.2) -0px -0px 8px 0px inset;
-  --shadow_menu-card: rgb(19, 6, 2, 0.8) -0px -8px 20px 4px inset;
+  --shadow_menu-card: rgb(19, 6, 2, 0.6) -0px -8px 20px 4px inset;
   --shadow_card: -1px -1px 4px 0px rgba(0, 0, 0, 0.15) inset,
     1px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
   --shadow_gold: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
@@ -452,25 +477,12 @@ h1 {
 }
 
 .text-effect {
-  /*   background: var(
-    --gold_icon_fade,
-    radial-gradient(ellipse, #fff3d3 3%, #ffefc5 25%, #ffeec1 60%, #b5a26f 98%)
-  ); */
-  color: transparent;
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0), -1px -1px 0 rgba(0, 0, 0, 0),
     -1px 1px 0 rgba(0, 0, 0, 0), 1px 1px 0px rgba(0, 0, 0, 0.1);
-  /*  background: var(--cream1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  color: rgba(29, 153, 145, 1);
-  opacity: 0.75;
-  /*   mix-blend-mode: destination-out;
- */
   color: var(--petrol1);
 }
 .text-effect:hover {
-  color: var(--orange1);
+  color: var(--pink0);
   opacity: 1;
 }
 
@@ -485,23 +497,6 @@ h1 {
 .text_cta {
   color: var(--green1);
 }
-/* .h1-absolute {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1001;
-} */
-
-/* .h1_big-card {
-  text-align: center;
-  color: #af9754;
-  font-size: 3.25rem;
-  line-height: 3.5rem;
-  letter-spacing: 0.1rem;
-  margin: 0;
-  text-shadow: 1px 1px 2px 0px #957a31 inset;
-} */
 
 h2 {
   font-size: 2.75rem;
@@ -558,6 +553,7 @@ h3 {
   color: var(--brown2);
   letter-spacing: 0.06rem;
   text-align: center;
+  font-size: 1.125rem;
 }
 
 .dark {
@@ -627,11 +623,11 @@ strong {
 a {
   text-decoration: none;
 
-  color: var(--petrol2);
+  color: var(--petrol1);
 }
 
 a:hover {
-  color: var(--orange1);
+  color: var(--pink0);
 }
 
 /* TEXT ANIMATION */
@@ -765,11 +761,11 @@ header {
   border-radius: 12px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.06) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  box-shadow: -1px -8px 16px 1px rgba(10, 1, 1, 0.1) inset,
-    0px 0px 4px 2px rgba(140, 127, 69, 0.1) inset;
+  box-shadow: -1px -8px 16px 1px rgba(10, 4, 4, 0.07) inset,
+    0px 0px 4px 2px rgba(140, 127, 69, 0.07) inset;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0.5rem;
@@ -866,12 +862,14 @@ header {
   100% {
     transform: scale(1);
     border-radius: 999%;
-    outline: 1px solid var(--pink0);
+    /*     outline: 1px solid var(--pink0);
+ */
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.25);
     border-radius: 999%;
-    outline: 8px solid var(--pink0);
+    /*     outline: 8px solid var(--pink0);
+ */
   }
 }
 
@@ -937,7 +935,7 @@ header {
   color: var(--brown2);
   background: var(--button_primary_gradient);
   background: var(--cream1);
-  background: var(--orange1);
+  background: var(--orange2);
   /*  box-shadow: var(--shadow_gold); */
   scale: 1;
   transition-timing-function: ease-in-out;
@@ -966,7 +964,7 @@ header {
 }
 
 .button_warning {
-  background: var(--pink1);
+  background: var(--pink0);
 }
 
 .button_cta {
@@ -1110,7 +1108,7 @@ footer {
   overflow: auto;
   overflow-y: scroll;
   overflow: clip;
-  padding: 4rem;
+  padding: 2rem;
   position: relative;
 }
 
@@ -1118,11 +1116,10 @@ footer {
 .container_menu-cards {
   /*  display: flex;
   flex-direction: column; */
-  min-width: var(--measure-total-width-s, 320px);
   /* flex-wrap: wrap; */
   height: 100%;
   min-height: 100%;
-  padding: 0;
+  padding: 2rem 0;
   /*   align-content: center;
  */
   margin-bottom: 0px;
@@ -1147,6 +1144,10 @@ footer {
   position: absolute;
   width: 100%;
   padding: 0 2rem;
+  color: var(--petrol1);
+}
+.wrapper_h3-words {
+  padding: 1rem 0 0 0;
   color: var(--petrol1);
 }
 
@@ -1223,7 +1224,7 @@ footer {
 .dd-category_label {
   width: auto;
   padding: 1rem 1.75rem;
-  box-shadow: rgb(19, 6, 2, 0.8) -0px -8px 20px 4px inset;
+  box-shadow: rgb(19, 6, 2, 0.6) -0px -8px 20px 4px inset;
 }
 
 .wrapper_category {
@@ -1347,6 +1348,7 @@ footer {
   font-weight: 500;
   color: var(--black_op75);
   box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  min-height: 44px;
 }
 
 .list-word:hover {
@@ -1545,7 +1547,7 @@ footer {
   gap: 0.5rem;
   height: 100%;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.5rem;
   box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.1),
     -1px -1px 8px 0px rgba(0, 0, 0, 0.1) inset,
     1px 1px 8px 0px rgba(0, 0, 0, 0.15) inset;
@@ -1651,7 +1653,7 @@ footer {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.5) 20% rgba(0, 0, 0, 0.2) 10%
   );
-  z-index: 19;
+  z-index: 100;
   padding: 15px;
 }
 
@@ -1716,6 +1718,9 @@ footer {
   h2 {
     font-size: 2.25rem;
   }
+  p {
+    font-size: 1.125rem;
+  }
   .navbar {
     height: 3rem;
   }
@@ -1736,8 +1741,8 @@ footer {
   .cate-section_bg {
     padding: 2em;
   }
-  .container_menu-cards {
-    padding: 1.5rem 0;
+  .dd-category_label {
+    padding: 0.75rem 1.25rem;
   }
   .scroll-area {
     padding: 1.25rem;
@@ -1757,6 +1762,9 @@ footer {
   }
   h3 {
     font-size: 1rem;
+  }
+  .h3_menu-card-label {
+    font-size: inherit;
   }
   body {
     font-size: 1rem;
@@ -1828,13 +1836,14 @@ footer {
   .card {
     height: 7rem;
     width: 7rem;
-    padding: var(--spacing-padding-xxs, 8px) var(--spacing-padding-xxs, 8px);
+    padding: 0.25rem;
     border-radius: 0.75rem;
   }
   .front,
   .back {
     border-radius: 0.75rem;
     gap: 0.125rem;
+    padding: 0.25rem;
   }
   .card-text {
     margin: 0.25rem;
@@ -1872,7 +1881,9 @@ footer {
   h2 {
     font-size: 2rem;
   }
-
+  p {
+    font-size: 1rem;
+  }
   .site-wrapper {
     width: 600px;
   }
@@ -1953,6 +1964,7 @@ footer {
   }
   .dd-category_label {
     padding: 0.25rem 1.25rem;
+    box-shadow: (19, 6, 2, 0.6) -0px -4px 16px 2px inset;
   }
   .scroll-area {
     padding: 0.75rem;
@@ -1986,9 +1998,6 @@ footer {
   .menu-card {
     width: 160px;
     height: 160px;
-  }
-  .container_menu-cards {
-    padding: var(--spacing-padding-l, 20px);
   }
   .menu_card_padding_left {
     padding-left: 1.25rem;

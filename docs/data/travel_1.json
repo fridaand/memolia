@@ -1,0 +1,162 @@
+[
+  {
+    "name": "country",
+    "image": "images/travel_1/country.svg",
+    "language": {
+      "english": "Country",
+      "french": "Le pays",
+      "swedish": "Land",
+      "portuguese-br": "O país"
+    },
+    "audio": {
+      "english": "sound/travel_1/country.mp3",
+      "french": "sound/travel_1/country_fr.mp3",
+      "swedish": "sound/travel_1/country_sw.mp3",
+      "portuguese-br": "sound/travel_1/country_po-br.mp3"
+    }
+  },
+  {
+    "name": "passport",
+    "image": "images/travel_1/passport.svg",
+    "language": {
+      "english": "Passport",
+      "french": "Le passeport",
+      "swedish": "Pass",
+      "portuguese-br": "O passaporte"
+    },
+    "audio": {
+      "english": "sound/travel_1/passport.mp3",
+      "french": "sound/travel_1/passport_fr.mp3",
+      "swedish": "sound/travel_1/passport_sw.mp3",
+      "portuguese-br": "sound/travel_1/passport_po-br.mp3"
+    }
+  },
+  {
+    "name": "driving_license",
+    "image": "images/travel_1/driving_licence.svg",
+    "language": {
+      "english": "Driving licence",
+      "french": "Le permis de conduire",
+      "swedish": "Körkort",
+      "portuguese-br": "A carteira de motorista"
+    },
+    "audio": {
+      "english": "sound/travel_1/driving_licence.mp3",
+      "french": "sound/travel_1/driving_licence_fr.mp3",
+      "swedish": "sound/travel_1/driving_licence_sw.mp3",
+      "portuguese-br": "sound/travel_1/driving_licence_po-br.mp3"
+    }
+  },
+  {
+    "name": "ticket",
+    "image": "images/travel_1/ticket.svg",
+    "language": {
+      "english": "Ticket",
+      "french": "Le billet",
+      "swedish": "Biljett",
+      "portuguese-br": "A passagem"
+    },
+    "audio": {
+      "english": "sound/travel_1/ticket.mp3",
+      "french": "sound/travel_1/ticket_fr.mp3",
+      "swedish": "sound/travel_1/ticket_sw.mp3",
+      "portuguese-br": "sound/travel_1/ticket_po-br.mp3"
+    }
+  },
+  {
+    "name": "map",
+    "image": "images/travel_1/map.svg",
+    "language": {
+      "english": "Map",
+      "french": "La carte",
+      "swedish": "Karta",
+      "portuguese-br": "O mapa"
+    },
+    "audio": {
+      "english": "sound/travel_1/map.mp3",
+      "french": "sound/travel_1/map_fr.mp3",
+      "swedish": "sound/travel_1/map_sw.mp3",
+      "portuguese-br": "sound/travel_1/map_po-br.mp3"
+    }
+  },
+  {
+    "name": "luggage",
+    "image": "images/travel_1/luggage.svg",
+    "language": {
+      "english": "Luggage",
+      "french": "Les bagages",
+      "swedish": "Bagage",
+      "portuguese-br": "A bagagem"
+    },
+    "audio": {
+      "english": "sound/travel_1/luggage.mp3",
+      "french": "sound/travel_1/luggage_fr.mp3",
+      "swedish": "sound/travel_1/luggage_sw.mp3",
+      "portuguese-br": "sound/travel_1/luggage_po-br.mp3"
+    }
+  },
+  {
+    "name": "airport",
+    "image": "images/travel_1/airport.svg",
+    "language": {
+      "english": "Airport",
+      "french": "L'aéroport",
+      "swedish": "Flygplats",
+      "portuguese-br": "O aeroporto"
+    },
+    "audio": {
+      "english": "sound/travel_1/airport.mp3",
+      "french": "sound/travel_1/airport_fr.mp3",
+      "swedish": "sound/travel_1/airport_sw.mp3",
+      "portuguese-br": "sound/travel_1/airport_po-br.mp3"
+    }
+  },
+  {
+    "name": "station",
+    "image": "images/travel_1/station.svg",
+    "language": {
+      "english": "Station",
+      "french": "La gare",
+      "swedish": "Station",
+      "portuguese-br": "A estação"
+    },
+    "audio": {
+      "english": "sound/travel_1/station.mp3",
+      "french": "sound/travel_1/station_fr.mp3",
+      "swedish": "sound/travel_1/station_sw.mp3",
+      "portuguese-br": "sound/travel_1/station_po-br.mp3"
+    }
+  },
+  {
+    "name": "gas_station",
+    "image": "images/travel_1/gas_station.svg",
+    "language": {
+      "english": "Gas station",
+      "french": "La station-service",
+      "swedish": "Bensinstation",
+      "portuguese-br": "O posto de gasolina"
+    },
+    "audio": {
+      "english": "sound/travel_1/gas_station.mp3",
+      "french": "sound/travel_1/gas_station_fr.mp3",
+      "swedish": "sound/travel_1/gas_station_sw.mp3",
+      "portuguese-br": "sound/travel_1/gas_station_po-br.mp3"
+    }
+  },
+  {
+    "name": "stop",
+    "image": "images/travel_1/stop.svg",
+    "language": {
+      "english": "Stop",
+      "french": "L'arrêt",
+      "swedish": "Hållplats",
+      "portuguese-br": "O ponto"
+    },
+    "audio": {
+      "english": "sound/travel_1/stop.mp3",
+      "french": "sound/travel_1/stop_fr.mp3",
+      "swedish": "sound/travel_1/stop_sw.mp3",
+      "portuguese-br": "sound/travel_1/stop_po-br.mp3"
+    }
+  }
+]

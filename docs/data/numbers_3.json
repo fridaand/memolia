@@ -1,0 +1,162 @@
+[
+  {
+    "name": "twenty",
+    "image": "images/numbers_3/twenty.svg",
+    "language": {
+      "english": "twenty",
+      "french": "vingt",
+      "swedish": "tjugo",
+      "portuguese-br": "vinte"
+    },
+    "audio": {
+      "english": "sound/numbers_3/twenty.mp3",
+      "french": "sound/numbers_3/twenty_fr.mp3",
+      "swedish": "sound/numbers_3/twenty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/twenty_po-br.mp3"
+    }
+  },
+  {
+    "name": "thirty",
+    "image": "images/numbers_3/thirty.svg",
+    "language": {
+      "english": "thirty",
+      "french": "trente",
+      "swedish": "trettio",
+      "portuguese-br": "trinta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/thirty.mp3",
+      "french": "sound/numbers_3/thirty_fr.mp3",
+      "swedish": "sound/numbers_3/thirty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/thirty_po-br.mp3"
+    }
+  },
+  {
+    "name": "forty",
+    "image": "images/numbers_3/forty.svg",
+    "language": {
+      "english": "forty",
+      "french": "quarante",
+      "swedish": "fyrtio",
+      "portuguese-br": "quarenta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/forty.mp3",
+      "french": "sound/numbers_3/forty_fr.mp3",
+      "swedish": "sound/numbers_3/forty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/forty_po-br.mp3"
+    }
+  },
+  {
+    "name": "fifty",
+    "image": "images/numbers_3/fifty.svg",
+    "language": {
+      "english": "fifty",
+      "french": "cinquante",
+      "swedish": "femtio",
+      "portuguese-br": "cinquenta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/fifty.mp3",
+      "french": "sound/numbers_3/fifty_fr.mp3",
+      "swedish": "sound/numbers_3/fifty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/fifty_po-br.mp3"
+    }
+  },
+  {
+    "name": "sixty",
+    "image": "images/numbers_3/sixty.svg",
+    "language": {
+      "english": "sixty",
+      "french": "soixante",
+      "swedish": "sextio",
+      "portuguese-br": "sessenta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/sixty.mp3",
+      "french": "sound/numbers_3/sixty_fr.mp3",
+      "swedish": "sound/numbers_3/sixty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/sixty_po-br.mp3"
+    }
+  },
+  {
+    "name": "seventy",
+    "image": "images/numbers_3/seventy.svg",
+    "language": {
+      "english": "seventy",
+      "french": "soixante-dix",
+      "swedish": "sjuttio",
+      "portuguese-br": "setenta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/seventy.mp3",
+      "french": "sound/numbers_3/seventy_fr.mp3",
+      "swedish": "sound/numbers_3/seventy_sw.mp3",
+      "portuguese-br": "sound/numbers_3/seventy_po-br.mp3"
+    }
+  },
+  {
+    "name": "eighty",
+    "image": "images/numbers_3/eighty.svg",
+    "language": {
+      "english": "eighty",
+      "french": "quatre-vingts",
+      "swedish": "åttio",
+      "portuguese-br": "oitenta"
+    },
+    "audio": {
+      "english": "sound/numbers_3/eighty.mp3",
+      "french": "sound/numbers_3/eighty_fr.mp3",
+      "swedish": "sound/numbers_3/eighty_sw.mp3",
+      "portuguese-br": "sound/numbers_3/eighty_po-br.mp3"
+    }
+  },
+  {
+    "name": "ninety",
+    "image": "images/numbers_3/ninety.svg",
+    "language": {
+      "english": "ninety",
+      "french": "quatre-vingt-dix",
+      "swedish": "nittio",
+      "portuguese-br": "noventa"
+    },
+    "audio": {
+      "english": "sound/numbers_3/ninety.mp3",
+      "french": "sound/numbers_3/ninety_fr.mp3",
+      "swedish": "sound/numbers_3/ninety_sw.mp3",
+      "portuguese-br": "sound/numbers_3/ninety_po-br.mp3"
+    }
+  },
+  {
+    "name": "hundred",
+    "image": "images/numbers_3/hundred.svg",
+    "language": {
+      "english": "hundred",
+      "french": "cent",
+      "swedish": "hundra",
+      "portuguese-br": "cem"
+    },
+    "audio": {
+      "english": "sound/numbers_3/hundred.mp3",
+      "french": "sound/numbers_3/hundred_fr.mp3",
+      "swedish": "sound/numbers_3/hundred_sw.mp3",
+      "portuguese-br": "sound/numbers_3/hundred_po-br.mp3"
+    }
+  },
+  {
+    "name": "thousand",
+    "image": "images/numbers_3/thousand.svg",
+    "language": {
+      "english": "thousand",
+      "french": "mille",
+      "swedish": "tusen",
+      "portuguese-br": "mil"
+    },
+    "audio": {
+      "english": "sound/numbers_3/thousand.mp3",
+      "french": "sound/numbers_3/thousand_fr.mp3",
+      "swedish": "sound/numbers_3/thousand_sw.mp3",
+      "portuguese-br": "sound/numbers_3/thousand_po-br.mp3"
+    }
+  }
+]
