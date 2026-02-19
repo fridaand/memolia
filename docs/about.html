@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memolia - lingo memory game</title>
+    <link
+      rel="icon"
+      href="icons/favicon/memolia_tree_thumbnail.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-container">
+      <div class="section_environment_crop hide_animated_game_bg">
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.76/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          url="https://prod.spline.design/UwEw1zs2vZxtrtA6/scene.splinecode"
+        ></spline-viewer>
+        <div>
+          <div class="section_block bg_petrol3 width_me clickable">
+            <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-wrapper">
+        <!-- "NAVBAR" -->
+        <header>
+          <nav class="navbar">
+            <a class="text-effect" href="menu.html"><h1>memolia</h1></a>
+            <div class="wrapper-horizontal">
+              
+              
+
+        <!-- NAV MENU - LINKS TO PAGES -->        
+            <button id="nav-menu-toggle" class="clickable">
+              <img class="hamburger-icon" src="icons/nav/hamburger_dots_hitbox.svg" alt="Öppna meny" />
+            </button>    
+            </div>
+          </nav>
+
+          <!-- SECTION PAGE LABEL -->
+          <container class="container_page-label">
+            <div class="wrapper_h2-text-button">
+              <h2>OM SPELET</h2>
+            </div>
+          </container>
+
+
+<!-- SECTION TOTAL GAMES & MINUTES -->
+          <container class="container_total">
+            <!-- <h4 class="h3_label_s">TOTALT</h4> -->
+            <article class="article_game-info">  
+              <div class="wrapper_spel-min">
+                <img
+                    id="selected-flag"
+                    class="flag icon_md"
+                    src="icons/flag/english-br.svg"
+                    alt="choosen language" 
+                  />
+                
+              <div class="star-big wrapper_text-min">
+                <img class="icon_md" src="./icons/star_2.svg" />
+                <div id="info-rounds"></div>
+              </div>
+
+              </div>
+            </article>
+
+
+            <div class="wrapper_buttons-round ">
+              
+              <a href="words.html">
+                <div class="hitbox icon_single">
+                  <img class="icon_md" src="icons/nav/icon_dictionary_cream.svg" alt="go to the dictionary" />
+<!--                   <h4 class="hide-button-text-sm">ORDLISTA</h4>
+ -->             </div>
+              </a>             
+              
+              <a aria-label="go to main menu" href="menu.html">
+                <div class="hitbox icon_single">
+                  <img
+                    class="icon_md"
+                    src="icons/nav/icon_home_cream.svg"
+                    alt="go to main menu"
+                  />
+<!--                   <span class="button_label hide-button-text-sm">SPELKATEGORIER</span>
+ -->                </div>
+              </a>
+    
+            </div>
+          </container>
+
+        </header>
+        <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
+        <main id="scroll-area" class="scroll-area top_minus">
+        
+          <div class="container_text-animation">
+            <svg
+              class="svg-path-container"
+              viewBox="0 0 500 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <path id="wave-path" d="M 0 100 Q 125 50 250 100 T 500 100" />
+              </defs>
+
+              <text class="h3_animated_path">
+                <textPath class="animated-text" href="#wave-path">
+                  Kul att du har hittat hit!
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+          <section class="section_text bg_petrol3">
+            <div class="board">
+              <h3>Välkommen till memolia!</h3>
+
+              <div class="wrapper_p">
+                <p>
+                  <strong class="p_game-title">memolia</strong> - lär dig språk och träna ditt minne genom att
+                  spela memory.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+            <div class="board">
+              <h3>Vad är memolia?</h3>
+
+              <div class="wrapper_p">
+                <p>
+                  <ul>
+                    <li> Interaktivt memoryspel med fokus på språk och minnesträning.</li>
+                    <li> Spela på ett eller två språk samtidigt. Uppbyggt i kapitel – vanliga ord först, svårare ord gradvis.</li>
+                    <li> Träna ditt ordförråd på ett roligt och lekfullt sätt.</li>
+                  </ul>
+
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+            <div class="board">
+              <h3>Hur fungerar lärandet?</h3>
+
+              <div class="wrapper_p">
+                <p>
+                    <ul>
+                    <li>Stegvis utveckling – bygg språkkunskap och minne gradvis.</li>
+                    <li>Lekfullt deltagande – du lär dig genom att spela.</li>
+                    <li>Flera sinnen aktiveras – ljud, bild och text gör att ord memoriseras snabbare och mer effektivt.</li>
+                    <li>Lär av varje drag – även kort som inte matchar ger repetition och stärker både minne och ordförråd.</li>
+                  </ul>
+                  
+                    
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+            <div class="board">
+              <h3>För vem passar spelet?</h3>
+
+              <div class="wrapper_p">
+                <p>
+                
+                    <ul>
+                      <li>Barn och vuxna – roligt och givande för alla åldrar. </li>
+                      <li> Från nybörjare till avancerad – bygg ditt ordförråd i egen takt.</li>
+                      <li> Anpassa spelet efter dig – välj språk, ljud och svårighetsnivå
+                      för rätt utmaning.</li>
+                     </ul>                  
+                
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+            <div class="board">
+              <h3>Projektinformation</h3>
+              <div class="wrapper_p">
+                <p>
+                  <ul>
+                    <li>Designat och utvecklat av Frida.</li>
+                    <li>Beta-version under utveckling – funktioner kan uppdateras över tid.</li>
+                  </ul>
+                
+                </p>
+              </div>
+              </div>
+            
+          </section>
+
+          
+
+        </main>
+
+        <!-- OVERLAY NAV MENU -->
+        <game-nav></game-nav>
+
+        <!-- SECTION FOOTER -->
+        <footer>
+          <div class="footer_container">
+            <div class="hitbox" id="scroll-button">
+              <div class="button">
+                <img
+                  src="icons/nav/arrow_m_cream1.svg"
+                  alt="scroll to bottom/top"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+   
+
+    <script src="dd.js"></script>
+    <script src="common.js"></script>
+    <script src="menu.js"></script>
+     <script src="js/nav.js"></script>
+
+  </body>
+</html>

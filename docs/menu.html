@@ -43,7 +43,7 @@
 
             <div class="wrapper-horizontal">
               <!-- MENU DD LANGUAGE -->
-              <div class="dd">
+              <!-- <div class="dd">
                 <div
                   class="dd-header"
                   class="clickable"
@@ -92,44 +92,72 @@
                     SVENSKA
                   </div>
                 </div>
-              </div>
+              </div> -->
 
+              <!-- NAV MENU - LINKS TO PAGES -->
+              <button id="nav-menu-toggle" class="clickable">
+                <img
+                  class="hamburger-icon"
+                  src="icons/nav/hamburger_dots_hitbox.svg"
+                  alt="Öppna meny"
+                />
+              </button>
+              <!-- 
               <a href="info.html">
                 <div class="hitbox_cr" id="game-info">
                   <div class="button_primary button_mini button_info">
                     <h3>?</h3>
                   </div>
                 </div>
-              </a>
+              </a> -->
             </div>
           </nav>
 
           <!-- SECTION PAGE LABEL -->
           <container class="container_page-label">
             <div class="wrapper_h2-text-button">
-              <h2>SPELKATEGORIER</h2>
+              <h2>Spelkategorier</h2>
             </div>
           </container>
 
           <!-- SECTION TOTAL GAMES & MINUTES -->
           <container class="container_total">
+
             <article class="article_game-info">
+            
               <div class="wrapper_spel-min">
+                <img
+                    id="selected-flag"
+                    class="flag icon_md"
+                    src="icons/flag/english-br.svg"
+                    alt="choosen language" 
+                  />
+                
+              <div class="wrapper_text-min">
+                           
                 <div class="wrapper_text-min">
+                  <img class="star-big icon_md" src="./icons/star_2.svg" />
                   <span id="info-rounds"></span
-                  ><img class="star star-big" src="./icons/star_2.svg" />
+                  >
                 </div>
-                <div class="wrapper_text-min">
+
+<!--                 <div class="wrapper_text-min">
                   <span id="info-totaltime"></span>MINUTER
-                </div>
+                </div> -->
+                
               </div>
+
+
             </article>
-            <a href="words.html">
-              <div class="button_primary button_me button_icon-text">
-                <img class="icon_s" src="icons/nav/icon_words.svg" alt="" />
-                <h3 class="dark hide-button-text-sm">ORDLISTA</h3>
-              </div>
-            </a>
+
+            <div class="wrapper_buttons-round ">
+              
+              <a href="words.html">
+                <div class="hitbox icon_single">
+                  <img class="icon_md" src="icons/nav/icon_dictionary_cream.svg" alt="go to the dictionary" />
+<!--                   <h4 class="hide-button-text-sm">ORDLISTA</h4>
+ -->             </div>
+              </a>    
           </container>
         </header>
 
@@ -137,36 +165,36 @@
         <main id="scroll-area" class="scroll-area">
           <div class="cate-section_bg">
             <div class="wrapper_h3">
-              <h3 class="text-info">1. ORDRESAN</h3>
+              <h4 class="text-info">1. ORDRESAN</h4>
             </div>
 
             <div class="container_menu-cards">
               <div class="container_menu-cards_column">
-                <!--  <div class="menu_card_padding_left">
-                <a
-                  class="menu-card bg_cream2"
-                  id="fruits-game_mini"
-                  data-mission="fruits_mini"
-                  href="game.html?category=fruits_mini&dataFolder=data"
-                  alt="start game fruits mini"
-                >
-                  <div class="wrapper_icon-text-stars">
-                    <img
-                      class="icon_menu-card_image"
-                      src="./images/fruits_1/orange.svg"
-                      alt=""
-                    />
-                    <div class="wrapper_text-stars"></div>
-                    <h3 id="cate-fruits_mini" class="h3_menu-card-label">
-                      Frukter mini
-                    </h3>
-                    <div
-                      id="stars-fruits_mini"
-                      class="wrapper_total-stars"
-                    ></div>
-                  </div>
-                </a>
-              </div> -->
+                <div class="menu_card_padding_left">
+                  <a
+                    class="menu-card bg_cream2"
+                    id="fruits-game_mini"
+                    data-mission="fruits_mini"
+                    href="game.html?category=fruits_mini&dataFolder=data"
+                    alt="start game fruits mini"
+                  >
+                    <div class="wrapper_icon-text-stars">
+                      <img
+                        class="icon_menu-card_image"
+                        src="./images/fruits_1/orange.svg"
+                        alt=""
+                      />
+                      <div class="wrapper_text-stars"></div>
+                      <h3 id="cate-fruits_mini" class="h3_menu-card-label">
+                        Frukter mini
+                      </h3>
+                      <div
+                        id="stars-fruits_mini"
+                        class="wrapper_total-stars"
+                      ></div>
+                    </div>
+                  </a>
+                </div>
 
                 <div class="menu_card_padding_left">
                   <a
@@ -425,7 +453,7 @@
 
           <div class="cate-section_bg">
             <div class="wrapper_h3">
-              <h3 class="h3_sticky">2. HITTA PÅ NÅGOT</h3>
+              <h4 class="h3_sticky">2. HITTA PÅ NÅGOT</h4>
             </div>
             <div class="container_menu-cards">
               <div class="container_menu-cards_column">
@@ -834,6 +862,9 @@
           </div> -->
         </main>
 
+        <!-- OVERLAY NAV MENU -->
+        <game-nav></game-nav>
+
         <!-- SECTION FOOTER -->
         <footer>
           <div class="footer_container">
@@ -852,5 +883,6 @@
     <script src="dd.js"></script>
     <script src="common.js"></script>
     <script src="menu.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

@@ -9,8 +9,7 @@ let customCursor = document.querySelector("#custom-cursor");
 
 // ARRAY WITH CATEGORIES
 const categories = [
-  /*   { id: "fruits-game_mini", name: "fruits_mini" },
-   */
+  { id: "fruits-game_mini", name: "fruits_mini" },
   { id: "hello-game_1", name: "hello_1" },
   { id: "people-game_1", name: "people_1" },
   { id: "drinks-game_1", name: "drinks_1" },
@@ -86,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const textPath = document.querySelector(".animated-text");
   const sectionText = document.querySelector(
-    ".section_text, .container_text-animation"
+    ".section_text, .container_text-animation",
   );
 
   let progress = -50; // Starta från början
@@ -165,7 +164,7 @@ document.addEventListener("mousemove", (e) => {
 
 // Se till att kursorn syns över klickbara element
 const clickableElements = document.querySelectorAll(
-  "a, .clickable, .dropdown-button, .hitbox, [onclick]"
+  "a, .clickable, .dropdown-button, .hitbox, [onclick]",
 );
 
 // Lägg till hover-effekt för alla klickbara element
@@ -228,7 +227,7 @@ function registerCategories() {
         localStorage.setItem("selectedCategory", category.name);
         localStorage.setItem(
           "categoryTitle",
-          document.getElementById("cate-" + category.name).innerText
+          document.getElementById("cate-" + category.name).innerText,
         );
       });
     }
@@ -347,7 +346,7 @@ function loadLanguage() {
   const savedLanguage = localStorage.getItem("language") || "ENG"; // Standardvärde
   const titleElement = document.getElementById("ddTitle");
   const selectedOption = document.querySelector(
-    `.dd__item[data-value="${savedLanguage}"]`
+    `.menu__item[data-value="${savedLanguage}"]`, // här var det dd__item innan
   );
 
   // Updating menu title
@@ -365,11 +364,27 @@ function loadLanguage() {
 
 function selectOption(element) {
   // Ta bort markeringsklassen från alla språk innan vi markerar det valda
-  const allOptions = document.querySelectorAll(".dd__item");
+  const allOptions = document.querySelectorAll(".menu__item"); //här var dd__item innan
   allOptions.forEach((option) => option.classList.remove("selected-language"));
 
-  const selectedLanguageValue = element.getAttribute("data-value");
-  const selectedTitle = element.getAttribute("data-title");
+  // markera vald
+  element.classList.add("selected-language");
+
+  const selectedLanguageValue = element.dataset.value;
+  const selectedTitle = element.dataset.title;
+  const selectedFlag = element.dataset.flag;
+
+  // uppdatera flagga vid rubriken
+  const flagImg = document.getElementById("selected-flag");
+  flagImg.src = selectedFlag;
+  flagImg.alt = selectedLanguageValue + " chosen language";
+
+  // (valfritt) spara i localStorage
+  localStorage.setItem("language", selectedLanguageValue);
+
+  /*   const selectedLanguageValue = element.getAttribute("data-value");
+  const selectedTitle = element.getAttribute("data-title"); */
+
   /*   const selectedLanguageText = element.textContent.trim();
    */
 
@@ -404,7 +419,7 @@ function selectOption(element) {
 function loadLanguage() {
   const savedLanguage = localStorage.getItem("language") || "english"; // Standardvärde
   const selectedOption = document.querySelector(
-    `.dd__item[data-value="${savedLanguage}"]`
+    `.menu__item[data-value="${savedLanguage}"]`, //här var det dd__item innan
   );
 
   if (selectedOption) {

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memolia - lingo memory game</title>
+    <link
+      rel="icon"
+      href="icons/favicon/memolia_tree_thumbnail.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+  </head>
+
+  <body>
+    <div class="background-container">
+      <div class="section_environment_crop hide_animated_game_bg">
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.76/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          url="https://prod.spline.design/UwEw1zs2vZxtrtA6/scene.splinecode"
+        ></spline-viewer>
+        <div>
+          <div class="section_block bg_petrol3 width_me clickable">
+            <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-wrapper">
+
+
+
+        <!-- "NAVBAR" -->
+        <header>
+          <nav class="navbar">
+            <a class="text-effect" href="menu.html"><h1>memolia</h1></a>
+            
+
+            <!-- NAV MENU - LINKS TO PAGES -->        
+            <button id="nav-menu-toggle" class="clickable">
+              <img class="hamburger-icon" src="icons/nav/hamburger_dots_hitbox.svg" alt="Öppna meny" />
+            </button>         
+
+          </nav>
+
+          <!-- SECTION PAGE LABEL -->
+          <container class="container_page-label">
+            <div class="wrapper_h2-text-button">
+              <h2>Inställningar</h2>
+            </div>
+          </container>
+
+          <!-- SECTION TOTAL GAMES & MINUTES -->
+          <container class="container_total">
+            <!-- <h4 class="h3_label_s">TOTALT</h4> -->
+            <article class="article_game-info">  
+              <div class="wrapper_spel-min">
+                <img
+                    id="selected-flag"
+                    class="flag icon_md"
+                    src="icons/flag/english-br.svg"
+                    alt="choosen language" 
+                  />
+                
+              <div class="star-big wrapper_text-min">
+                <img class="icon_md" src="./icons/star_2.svg" />
+                <div id="info-rounds"></div>
+              </div>
+
+              </div>
+            </article>
+
+
+            <div class="wrapper_buttons-round ">
+              
+              <a href="words.html">
+                <div class="hitbox icon_single">
+                  <img class="icon_md" src="icons/nav/icon_dictionary_cream.svg" alt="go to the dictionary" />
+<!--                   <h4 class="hide-button-text-sm">ORDLISTA</h4>
+ -->             </div>
+              </a>             
+              
+              <a aria-label="go to main menu" href="menu.html">
+                <div class="hitbox icon_single">
+                  <img
+                    class="icon_md"
+                    src="icons/nav/icon_home_cream.svg"
+                    alt="go to main menu"
+                  />
+<!--                   <span class="button_label hide-button-text-sm">SPELKATEGORIER</span>
+ -->                </div>
+              </a>
+    
+            </div>
+          </container>
+        </header>
+        <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
+        <main id="scroll-area" class="scroll-area top_minus">
+        
+            <section class="section_text bg_petrol3">
+             
+             <div class="board">
+              <h3>Spelinställningar</h3>
+
+              <div class="wrapper_p">
+                <p>
+                  Spelinställningar Här kan du anpassa spelet efter dina
+                  preferenser och läsa om dess funktioner. Alla inställningar
+                  kan ändras igen.
+                </p>
+              </div>
+              </div>
+            </section>
+
+            <section class="section_text bg_petrol3">
+              <div class="board">
+
+              <h3>Språk jag vill lära mig</h3>
+
+                <div class="menu__list" class="clickable">
+               
+                <div class="menu_item_wrapper">
+                  <div
+                    class="menu__item selected-language"
+                    data-value="english"
+                    data-title="ENG"
+                    data-flag="icons/flag/english-br.svg"
+                    onclick="selectOption(this)"
+                  >  
+                   <img
+                    class="flag flag-eng"
+                    src="icons/flag/english-br.svg"
+                    alt="choose english language" 
+                  />
+                    <h5>Engelska</h5>
+                  </div>
+                </div>
+
+                 <div class="menu_item_wrapper">
+                  <div
+                    class="menu__item"
+                    data-value="french"
+                    data-title="FRA"
+                    data-flag="icons/flag/french-fr.svg"
+                    onclick="selectOption(this)"
+                  >
+                    <img
+                    class="flag flag-fre"
+                    src="icons/flag/french-fr.svg"
+                    alt="choose french language"
+                  />
+                    <h5>Franska</h5>
+                  </div>
+                 </div>
+
+                <div class="menu_item_wrapper">
+                  <div
+                    class="menu__item"
+                    data-value="portuguese-br"
+                    data-title="POR (BR)"
+                    data-flag="icons/flag/portuguese-br.svg"
+                    onclick="selectOption(this)"
+                  >
+                     <img
+                    class="flag flag-por"
+                    src="icons/flag/portuguese-br.svg"
+                    alt="choose portuguese language"
+                  />
+                    <h5>Portugisika (Br)</h5>
+                  </div>
+                </div>
+
+                <div class="menu_item_wrapper">
+                  <div
+                    class="menu__item"
+                    data-value="swedish"
+                    data-title="SVE"
+                    data-flag="icons/flag/swedish.svg"
+                    onclick="selectOption(this)"
+                  >
+                     <img
+                    class="flag flag-swe"
+                    src="icons/flag/swedish.svg"
+                    alt="choose swedish language"
+                  />
+                    <h5>Svenska</h5>
+                  </div>
+                </div>
+              </div>
+          
+                
+           
+              </div>
+            </section>
+
+          
+            <section class="section_text bg_petrol3">
+              <div class="board bg_petrol3">
+                <h3>Välj antal kort per spel</h3>
+            
+                <div class="board-selector">
+                  <button
+                    class="board-option"
+                    data-value="6"
+                    data-img="board_6.svg"
+                    data-img-selected="icons/board/board_6_selected.svg"
+                  >
+                    <img class="img-board" src="icons/board/board_6.svg" alt="6 kort" />
+                    <span>6 kort</span>
+                  </button>
+
+                  <button
+                    class="board-option selected"
+                    data-value="12"
+                    data-img="board_12.svg"
+                    data-img-selected="icons/board/board_12_selected.svg"
+                  >
+                    <img
+                    class="img-board"
+                      src="icons/board/board_12_selected.svg"
+                      alt="12 kort"
+                    />
+                    <span>12 kort</span>
+                  </button>
+
+                  <button
+                    class="board-option"
+                    data-value="16"
+                    data-img="board_16.svg"
+                    data-img-selected="board_16_selected.svg"
+                  >
+                    <img class="img-board" src="icons/board/board_16.svg" alt="16 kort" />
+                    <span>16 kort</span>
+                  </button>
+
+                  <button
+                    class="board-option"
+                    data-value="20"
+                    data-img="board_20.svg"
+                    data-img-selected="board_20_selected.svg"
+                  >
+                    <img class="img-board" src="icons/board/board_20.svg" alt="20 kort" />
+                    <span>20 kort</span>
+                  </button>
+                </div>
+
+                <hr class="line"/>
+
+                <p>Memorykorten matchas två och två. Fler kort ger fler ord att träna på – och en större utmaning.</p>
+
+
+            
+            </section>
+
+          
+          <!-- GÖRA KLART FUNKTIONER FÖR REGLAGE NEDAN -->
+         <!--    <section class="section_text bg_petrol3">
+              <div class="board"> 
+              <h4>Visning i spelet</h4>
+
+              <div class="wrapper_p">
+              
+                <label class="toggle-row">
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <span class="toggle-slider"></span>
+                  <span class="toggle-text"><h5>Ljud för uttal</h5></span>
+                </label>
+
+                <label class="toggle-row">
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <span class="toggle-slider"></span>
+                  <span class="toggle-text"> <h5>Visa översättning</h5></span>
+                </label>
+
+                <label class="toggle-row">
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <span class="toggle-slider"></span>
+                  <span class="toggle-text"> <h5> Visa bilder</h5></span>
+                </label>
+
+                <label class="toggle-row">
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <span class="toggle-slider"></span>
+                  <span class="toggle-text"> <h5>Visa antal drag</h5></span>
+                </label>
+
+                <label class="toggle-row">
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <span class="toggle-slider"></span>
+                  <span class="toggle-text">   <h5>Visa tid</h5>  </span>
+                </label>     
+                
+                
+                        
+              </div>
+              </div>
+            </section> -->
+
+            <section class="section_text bg_petrol3">
+              <div class="board">
+      <h3>Återställ spelet</h3>
+                <div class="wrapper_p">
+            
+                  <p>Vill du återställa tid och poäng för alla spel?</p>
+                  <p>
+                    Tryck på knappen nedan för att återställa all information.
+                    Uppdatera sedan din webbläsare
+                  </p>
+
+                  <div role="alert" class="warning">
+                    <p>
+                      <strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="hitbox_tl">
+                  <div
+                    class="button_primary button_text button_warning clickable"
+                    id="clear-button"
+                  >
+                    <span class="button_label">Nollställ alla spel</span>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+      
+        </main>
+
+        <!-- OVERLAY NAV MENU -->
+        <game-nav></game-nav>
+
+        <!-- SECTION FOOTER -->
+        <footer>
+          <div class="footer_container">
+            <div class="hitbox" id="scroll-button">
+              <div class="button">
+                <img
+                  src="icons/nav/arrow_m_cream1.svg"
+                  alt="scroll to bottom/top"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- POPUP CLEAR -->
+    <div id="clear-dialog" class="popup_bg hidden">
+      <div class="popup_styling">
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl clickable">
+            <img
+              class="button_close"
+              src="./icons/nav/close.svg"
+              alt="close dialog box to return to game"
+            />
+          </div>
+        </div>
+        <div class="wrapper_h2-text">
+          <h2 class="text_warning">RADERA ALLT?</h2>
+          <div class="wrapper_text">
+            <p>
+              Är du säker på att du vill ta bort alla poäng och spelad tid för
+              alla språk?
+            </p>
+            <p class="text_warning">
+              <strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper_buttons">
+          <div
+            class="button_primary button_text button_warning clickable"
+            id="confirm-clear"
+          >
+            <span class="button_label">Radera</span>
+          </div>
+          <div class="button_primary button_text clickable" id="cancel-clear">
+            <span class="button_label">Avbryt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dd.js"></script>
+    <script src="common.js"></script>
+    <script src="menu.js"></script>
+
+    <script src="game.js"></script>
+    <script src="settings.js"></script>
+
+    <script src="js/nav.js"></script>
+
+  </body>
+</html>

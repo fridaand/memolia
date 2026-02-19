@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memolia - lingo memory game</title>
+    <link
+      rel="icon"
+      href="icons/favicon/memolia_tree_thumbnail.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background-container">
+      <div class="section_environment_crop hide_animated_game_bg">
+        <script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.76/build/spline-viewer.js"
+        ></script>
+        <spline-viewer
+          url="https://prod.spline.design/UwEw1zs2vZxtrtA6/scene.splinecode"
+        ></spline-viewer>
+        <div>
+          <div class="section_block bg_petrol3 width_me clickable">
+            <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-wrapper">
+        <!-- "NAVBAR" -->
+        <header>
+          <nav class="navbar">
+            <a class="text-effect" href="menu.html"><h1>memolia</h1></a>
+            <div class="wrapper-horizontal">
+
+              <!-- MENU DD LANGUAGE -->
+              <!-- <div class="dd">
+                <div
+                  class="dd-header"
+                  class="clickable"
+                  onclick="toggleDropdown()"
+                >
+                  <div class="dd-header_title" id="ddTitle">ENG</div>
+                  <img
+                    class="arrow-sm"
+                    src="icons/nav/arrow_m_cream1.svg"
+                    alt="open/close language menu"
+                    id="ddArrow"
+                  />
+                </div>
+
+                <div class="dd__list" class="clickable">
+                  <div
+                    class="dd__item"
+                    data-value="english"
+                    data-title="ENG"
+                    onclick="selectOption(this)"
+                  >
+                    ENGELSKA
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="french"
+                    data-title="FRA"
+                    onclick="selectOption(this)"
+                  >
+                    FRANSKA
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="portuguese-br"
+                    data-title="POR (BR)"
+                    onclick="selectOption(this)"
+                  >
+                    PORTUGISISKA (BR)
+                  </div>
+                  <div
+                    class="dd__item"
+                    data-value="swedish"
+                    data-title="SVE"
+                    onclick="selectOption(this)"
+                  >
+                    SVENSKA
+                  </div>
+                </div>
+              </div> -->
+
+
+            </div>
+
+    <!-- NAV MENU - LINKS TO PAGES -->        
+            <button id="nav-menu-toggle" class="clickable">
+              <img class="hamburger-icon" src="icons/nav/hamburger_dots_hitbox.svg" alt="Öppna meny" />
+            </button>  
+
+          </nav>
+
+          <!-- SECTION PAGE LABEL -->
+          <container class="container_page-label">
+            <div class="wrapper_h2-text-button">
+              <h2>Om spelet</h2>
+            </div>
+          </container>
+
+          <!-- SECTION TOTAL GAMES & MINUTES -->
+          <container class="container_total">
+            <!-- <h4 class="h3_label_s">TOTALT</h4> -->
+            <article class="article_game-info">  
+              <div class="wrapper_spel-min">
+                <img
+                    id="selected-flag"
+                    class="flag icon_md"
+                    src="icons/flag/english-br.svg"
+                    alt="choosen language" 
+                  />
+                
+              <div class="star-big wrapper_text-min">
+                <img class="icon_md" src="./icons/star_2.svg" />
+                <div id="info-rounds"></div>
+              </div>
+
+              </div>
+            </article>
+
+
+            <div class="wrapper_buttons-round ">
+              
+              <a href="words.html">
+                <div class="hitbox icon_single">
+                  <img class="icon_md" src="icons/nav/icon_dictionary_cream.svg" alt="go to the dictionary" />
+<!--                   <h4 class="hide-button-text-sm">ORDLISTA</h4>
+ -->             </div>
+              </a>             
+              
+              <a aria-label="go to main menu" href="menu.html">
+                <div class="hitbox icon_single">
+                  <img
+                    class="icon_md"
+                    src="icons/nav/icon_home_cream.svg"
+                    alt="go to main menu"
+                  />
+<!--                   <span class="button_label hide-button-text-sm">SPELKATEGORIER</span>
+ -->                </div>
+              </a>
+    
+            </div>
+          </container>
+          
+        </header>
+        <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
+        <main id="scroll-area" class="scroll-area top_minus">
+ 
+
+          <section class="section_text bg_petrol3">
+            
+            <div class="board">
+            <h3 class="typing-text">Spelet</h3>
+            <div class="wrapper_p">
+                <h4>Så här spelar du</h4>
+              <p>
+              <ul>
+                <li>För att välja ett spel klickar du på en kategori.</li>
+                <li>Vänd två kort i taget och hitta matchande par.</li>
+                <li>När alla par är hittade har du klarat spelet.</li>
+                <li>Varje avklarat spel ger en eller flera stjärnor.</li>
+              </ul>
+              </p>
+            </div>
+            </div>
+          </section>
+
+          <section class="section_text bg_petrol3">
+  
+            <div class="board">
+<h3>Funktioner</h3>
+
+<div class="wrapper_p">
+<h4>Språk</h4>
+<p>Spela memory på ett eller två språk samtidigt. Som standard är ordparen på svenska och engelska, men du kan byta språk när som helst via flaggikonen.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Antal kort per spel
+</h4>
+<p>Spelplanen finns i fyra storlekar: 6, 12, 16 eller 20 kort. Varje ord finns på två kort, så du matchar alltid par.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Ljud</h4>
+<p>När du vänder på korten spelas orden upp för att hjälpa dig med uttal. Ljudet kan enkelt slås på eller av med ljudikonen.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Bild på memorybricka
+</h4>
+<p>Memorykorten kan visa både bild och text. För extra utmaning kan bilden döljas för det andra språket.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Drag</h4>
+<p>Visa antal drag per omgång för att bli mer uppmärksam på hur du spelar och följa din utveckling över tid. Slå på och av antal drag i Inställningar.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Tid</h4>
+<p>Se hur lång tid varje omgång tar. Hjälper dig se hur snabbt din igenkänning blir med övning. Du kan pausa spelet när du behöver och fortsätta där du slutade. Slå på och av tid i Inställningar.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Ordlista</h4>
+<p>Varje kategori har en ordlista som visar vilka ord som ingår i spelet. Klicka på bok-ikonen för att öppna ordlistan.
+</p>
+</div>
+
+<div class="wrapper_p">
+<h4>Stjärnor</h4>
+<p>När du klarar ett spel får du stjärnor. Större spelplaner ger fler stjärnor eftersom de innehåller fler ord. Stjärnorna visar hur mycket du tränat i varje kategori och hjälper dig att följa dina framsteg.
+</p>
+</div>
+
+
+          </section>
+        </main>
+
+        <!-- OVERLAY NAV MENU -->
+        <game-nav></game-nav>
+
+        <!-- SECTION FOOTER -->
+        <footer>
+          <div class="footer_container">
+            <div class="hitbox" id="scroll-button">
+              <div class="button">
+                <img
+                  src="icons/nav/arrow_m_cream1.svg"
+                  alt="scroll to bottom/top"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- POPUP CLEAR -->
+    <div id="clear-dialog" class="popup_bg hidden">
+      <div class="popup_styling">
+        <div class="wrapper_justify-end">
+          <div class="hitbox_tl clickable">
+            <img
+              class="button_close"
+              src="./icons/nav/close.svg"
+              alt="close dialog box to return to game"
+            />
+          </div>
+        </div>
+        <div class="wrapper_h2-text">
+          <h2 class="text_warning">RADERA ALLT?</h2>
+          <div class="wrapper_text">
+            <p>
+              Är du säker på att du vill ta bort alla poäng och spelad tid för
+              alla språk?
+            </p>
+            <p class="text_warning">
+              <strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper_buttons">
+          <div
+            class="button_primary button_text button_warning clickable"
+            id="confirm-clear"
+          >
+            <h3 class="dark">radera</h3>
+          </div>
+          <div class="button_primary button_text clickable" id="cancel-clear">
+            <h3 class="dark">avbryt</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dd.js"></script>
+    <script src="common.js"></script>
+    <script src="menu.js"></script>
+    <script src="js/nav.js"></script>
+
+  </body>
+</html>
