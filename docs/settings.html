@@ -58,7 +58,8 @@
           <!-- SECTION TOTAL GAMES & MINUTES -->
           <container class="container_total">
             <!-- <h4 class="h3_label_s">TOTALT</h4> -->
-            <article class="article_game-info">  
+ <article class="article_game-info">
+                     
               <div class="wrapper_spel-min">
                 <img
                     id="selected-flag"
@@ -66,13 +67,23 @@
                     src="icons/flag/english-br.svg"
                     alt="choosen language" 
                   />
+                    <language-selector></language-selector>
                 
-              <div class="star-big wrapper_text-min">
-                <img class="icon_md" src="./icons/star_2.svg" />
-                <div id="info-rounds"></div>
+              <div class="wrapper_text-min">
+                           
+                <div class="wrapper_text-min">
+                  <img class="star-big icon_md" src="./icons/star_2.svg" />
+                 <span id="info-rounds"></span> 
+<!--                    <span id="points">0</span>
+ -->                </div>
+
+<!--                 <div class="wrapper_text-min">
+                  <span id="info-totaltime"></span>MINUTER
+                </div> -->
+                
               </div>
 
-              </div>
+
             </article>
 
 
@@ -122,7 +133,7 @@
 
               <h3>Språk jag vill lära mig</h3>
 
-                <div class="menu__list" class="clickable">
+                <div class="menu__list clickable">
                
                 <div class="menu_item_wrapper">
                   <div
@@ -171,7 +182,7 @@
                     src="icons/flag/portuguese-br.svg"
                     alt="choose portuguese language"
                   />
-                    <h5>Portugisika (Br)</h5>
+                    <h5>Portugisiska (Br)</h5>
                   </div>
                 </div>
 
@@ -391,14 +402,15 @@
       </div>
     </div>
 
-    <script src="dd.js"></script>
-    <script src="common.js"></script>
-    <script src="menu.js"></script>
 
-    <script src="game.js"></script>
-    <script src="settings.js"></script>
+    <script src="js/components/nav.js" type="module"></script>
+    <script src="js/components/dd.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/menu.js" defer></script>
+    <script src="js/pages/game.js" defer></script>
+    <script src="js/pages/settings.js" defer></script>
+    <script src="js/components/language-selector.js" type="module"></script>
 
-    <script src="js/nav.js"></script>
 
   </body>
 </html>

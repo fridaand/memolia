@@ -98,7 +98,7 @@ function generateCards(cardsForBoard) {
 
       if (!isMuted) {
         const audioLang = ["french", "swedish", "portuguese-br"].includes(
-          currentLanguage
+          currentLanguage,
         )
           ? currentLanguage
           : "english";
@@ -278,7 +278,7 @@ function showGameInfo() {
 function getRandomMessage() {
   const timeTaken = parseInt(
     document.querySelector(".info-seconds").textContent,
-    10
+    10,
   );
 
   if (timeTaken < 45) {

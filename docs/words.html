@@ -107,15 +107,31 @@
           <!-- SECTION TOTAL GAMES & MINUTES -->
           <container class="container_total">
             <article class="article_game-info">
+                     
               <div class="wrapper_spel-min">
+                <img
+                    id="selected-flag"
+                    class="flag icon_md"
+                    src="icons/flag/english-br.svg"
+                    alt="choosen language" 
+                  />
+                    <language-selector></language-selector>
+                
+              <div class="wrapper_text-min">
+                           
                 <div class="wrapper_text-min">
-                  <span id="info-rounds"></span
-                  ><img class="star star-big" src="./icons/star_2.svg" />
-                </div>
-                <div class="wrapper_text-min">
+                  <img class="star-big icon_md" src="./icons/star_2.svg" />
+                 <span id="info-rounds"></span> 
+<!--                    <span id="points">0</span>
+ -->                </div>
+
+<!--                 <div class="wrapper_text-min">
                   <span id="info-totaltime"></span>MINUTER
-                </div>
+                </div> -->
+                
               </div>
+
+
             </article>
 
                           <a href="menu.html">
@@ -905,10 +921,12 @@
         </div>
       </div> -->
     </div>
+ 
+    <script src="js/components/nav.js" type="module"></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/words.js" defer></script>
+    <script src="js/components/language-selector.js" type="module"></script>
 
-    <script src="common.js"></script>
-    <script src="words.js"></script>
-    <script src="js/nav.js"></script>
 
   </body>
 </html>

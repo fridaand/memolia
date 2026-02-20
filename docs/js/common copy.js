@@ -217,6 +217,19 @@ function updatePage() {
   // updateFlag();
 }
 
+function updateFlag() {
+  const flag = localStorage.getItem("languageFlag");
+  const flagImg = document.getElementById("selected-flag");
+
+  if (flag && flagImg) {
+    flagImg.src = flag;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateFlag();
+});
+
 /* LOAD THE GAME CARDS & CATEGORY TITLE */
 function registerCategories() {
   categories.forEach((category) => {
@@ -381,7 +394,8 @@ function selectOption(element) {
 
   // (valfritt) spara i localStorage
   localStorage.setItem("language", selectedLanguageValue);
-
+  localStorage.setItem("languageFlag", selectedFlag);
+  document.getElementById("selected-flag").src = selectedFlag;
   /*   const selectedLanguageValue = element.getAttribute("data-value");
   const selectedTitle = element.getAttribute("data-title"); */
 

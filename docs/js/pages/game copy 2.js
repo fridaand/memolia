@@ -14,8 +14,6 @@ let xButton = document.getElementById("button_trigger"); // Get the button that 
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
 const goBackButton = document.getElementById("goBackButton");
 
-const boardSize = localStorage.getItem("boardSize") || "12"; // default
-
 // VISIT EARLIER PAGE OR MENU.HTML
 goBackButton.addEventListener("click", function () {
   window.location.href = "menu.html";
@@ -46,16 +44,17 @@ function updateScore() {
   });
 }
 
-function shuffleCards() {
-  let currentIndex = cards.length,
-    randomIndex,
-    temporaryValue;
+function shuffleCards(array) {
+  let currentIndex = array.length;
+  let randomIndex, temporaryValue;
+
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = cards[currentIndex];
-    cards[currentIndex] = cards[randomIndex];
-    cards[randomIndex] = temporaryValue;
+    currentIndex--;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
 }
 
@@ -67,7 +66,9 @@ function updateTitle() {
 // CHANGE LANGUAGE
 function changeLanguage(newLanguage) {
   currentLanguage = newLanguage;
-  regenerateCards();
+
+  const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
+  generateBoard(boardSize);
 }
 
 function generateCardDiv(card) {
@@ -86,40 +87,54 @@ function generateCards(cardsForBoard) {
   const gridContainer = document.querySelector(".container_game");
   gridContainer.innerHTML = ""; // rensa spelplanen först
 
-  for (let card of cardsForBoard) {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.setAttribute("data-name", card.name);
-    cardElement.innerHTML = generateCardDiv(card);
-    gridContainer.appendChild(cardElement);
+  cardsForBoard.forEach((card) => {
+    const cardEl = document.createElement("div");
+    cardEl.classList.add("card");
+    cardEl.setAttribute("data-name", card.name);
+    cardEl.innerHTML = generateCardDiv(card);
 
-    cardElement.clickTrigger = function () {
-      if (isPaused || (firstCard && secondCard)) {
-        return;
-      }
+    cardEl.clickTrigger = function () {
+      if (isPaused || (firstCard && secondCard)) return;
 
       if (!isMuted) {
-        let audioLanguage;
-
-        if (currentLanguage === "french") {
-          audioLanguage = "french";
-        } else if (currentLanguage === "swedish") {
-          audioLanguage = "swedish";
-        } else if (currentLanguage === "portuguese-br") {
-          audioLanguage = "portuguese-br";
-        } else {
-          audioLanguage = "english";
-        }
-
-        playCardSound(card.audio[audioLanguage]);
+        const audioLang = ["french", "swedish", "portuguese-br"].includes(
+          currentLanguage,
+        )
+          ? currentLanguage
+          : "english";
+        playCardSound(card.audio[audioLang]);
       }
 
       flipCard.call(this);
     };
 
-    cardElement.addEventListener("click", cardElement.clickTrigger);
-  }
+    cardEl.addEventListener("click", cardEl.clickTrigger);
+    gridContainer.appendChild(cardEl);
+  });
 }
+
+// Generera bräde med rätt antal kort
+function generateBoard(boardSize) {
+  firstCard = null;
+  secondCard = null;
+  const numPairs = boardSize / 2;
+  const gridContainer = document.querySelector(".container_game");
+  gridContainer.innerHTML = "";
+
+  /* TEST */
+  gridContainer.dataset.cards = boardSize;
+
+  const selectedCards = cards.slice(0, numPairs);
+  const cardsForBoard = [...selectedCards, ...selectedCards]; // duplicera par
+  shuffleCards(cardsForBoard);
+
+  generateCards(cardsForBoard);
+}
+
+// Lyssna på boardSize ändring
+document.addEventListener("boardSizeChanged", (e) => {
+  if (cards.length > 0) generateBoard(e.detail.boardSize);
+});
 
 function playCardSound(audioSrc) {
   lastAudio = new Audio(audioSrc);
@@ -263,7 +278,7 @@ function showGameInfo() {
 function getRandomMessage() {
   const timeTaken = parseInt(
     document.querySelector(".info-seconds").textContent,
-    10
+    10,
   );
 
   if (timeTaken < 45) {
@@ -374,112 +389,27 @@ function restartGame() {
   resetBoard();
   resetScore();
   resetCards();
-  shuffleCards();
-  generateBoard(boardSize); //TEST
-  generateCards();
+  resetTimer();
+
+  const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
+  generateBoard(boardSize); // DENNA räcker
+  /*   generateCards(); */
   updatePage();
 }
 
-// TEST
-function generateBoard(boardSize) {
-  const numPairs = boardSize / 2;
-  const gridContainer = document.querySelector(".container_game");
-  gridContainer.innerHTML = "";
-
-  const selectedCards = cards.slice(0, numPairs); // cards måste vara laddat
-  const cardsForBoard = [...selectedCards, ...selectedCards];
-  shuffle(cardsForBoard);
-
-  generateCards(cardsForBoard); // Skicka alltid arrayen
-}
-
+// Ladda kort från kategori
 function main() {
-  let category = localStorage.getItem("selectedCategory");
-
+  const category = localStorage.getItem("selectedCategory");
   fetch(`./data/${category}.json`)
     .then((res) => res.json())
     .then((data) => {
-      cards = [...data, ...data]; // duplicera alla
-      shuffleCards();
+      cards = [...data]; // duplicera inte här
+      shuffleCards(cards);
 
-      // Skapa initialt bräde
       const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
       generateBoard(boardSize);
     });
 }
-
-// Lyssna på boardSize-changes
-document.addEventListener("boardSizeChanged", (e) => {
-  // Bara uppdatera om cards redan är laddat
-  if (cards.length > 0) {
-    generateBoard(e.detail.boardSize);
-  }
-});
-
-main();
-
-//TS
-//ORGINAL
-/* function main() {
-  let category = localStorage.getItem("selectedCategory");
-
-
-   fetch("./data/" + category + ".json")
-    .then((res) => res.json())
-    .then((data) => {
-      cards = [...data, ...data];
-      shuffleCards();
-
-      generateCards();
-    });  */
-
-// TEST
-// Hämta valt boardSize från settings
-/*       const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
-      updateBoardSize(boardSize);
-
-
-      const numPairs = boardSize / 2;
-
-      // Begränsa till rätt antal par
-      const selectedCards = cards.slice(0, numPairs * 2); // slice tar antal kort, *2 eftersom vi duplicerade alla
-
-      // Skicka dessa kort till generateCards
-      generateCards(selectedCards); */
-
-/*    const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
-      generateBoard(boardSize); */
-
-//TEST2B
-
-/*   fetch("./data/" + category + ".json")
-    .then((res) => res.json())
-    .then((data) => {
-      cards = [...data, ...data]; // duplicera alla
-      shuffleCards();
-
-      const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
-      generateBoard(boardSize); // <-- skapar spelplanen med rätt antal kort
-    });
-  //TEST2S
-}
-
-main(); */
-
-/* //TEST
-// Funktion för att uppdatera spelplanen när boardSize ändras
-function updateBoardSize() {
-  const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
-  const numPairs = boardSize / 2;
-  const selectedCards = cards.slice(0, numPairs * 2);
-
-  generateCards(selectedCards);
-}
-
-// Exempel: lyssna på en custom event från settings.html
-document.addEventListener("boardSizeChanged", updateBoardSize);
-
-//TEST SLUT */
 
 document.addEventListener("DOMContentLoaded", function () {
   hideEndGameInfo();
@@ -487,4 +417,5 @@ document.addEventListener("DOMContentLoaded", function () {
   registerMuteButton();
   updatePage();
   updateStars();
+  main();
 });
