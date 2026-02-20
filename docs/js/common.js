@@ -460,3 +460,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateStars(); // Uppdaterar stjärnvisning för att säkerställa att den visas korrekt
 });
+
+/* BANNER */
+const dateSpan = document.getElementById("banner-date");
+const today = new Date();
+dateSpan.textContent = today.toLocaleDateString("sv-SE"); // t.ex. 2026-02-20
