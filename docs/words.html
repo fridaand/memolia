@@ -26,126 +26,17 @@
         ></spline-viewer>
         <div>
           <div class="section_block bg_petrol3 width_me clickable">
-            <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
+            <div class="p_mini">Klicka på bakgrunden för att ändra färg</div>
           </div>
         </div>
       </div>
 
       <div class="site-wrapper">
-        <header>
-          <nav class="navbar">
-            <a class="text-effect" href="menu.html"><h1>memolia</h1></a>
-
-            <div class="wrapper-horizontal">
-              <!-- MENU DD LANGUAGE -->
-             <!--  <div class="dd">
-                <div
-                  class="dd-header"
-                  class="clickable"
-                  onclick="toggleDropdown()"
-                >
-                  <div class="dd-header_title" id="ddTitle">EN</div>
-                  <img
-                    class="arrow-sm"
-                    src="icons/nav/arrow_m_cream1.svg"
-                    alt="open/close language menu"
-                    id="ddArrow"
-                  />
-                </div>
-
-                <div class="dd__list" class="clickable">
-                  <div
-                    class="dd__item"
-                    data-value="english"
-                    data-title="ENG"
-                    onclick="selectOption(this)"
-                  >
-                    ENGELSKA
-                  </div>
-                  <div
-                    class="dd__item"
-                    data-value="french"
-                    data-title="FRA"
-                    onclick="selectOption(this)"
-                  >
-                    FRANSKA
-                  </div>
-                  <div
-                    class="dd__item"
-                    data-value="portuguese-br"
-                    data-title="POR (BR)"
-                    onclick="selectOption(this)"
-                  >
-                    PORTUGISISKA (BR)
-                  </div>
-                  <div
-                    class="dd__item"
-                    data-value="swedish"
-                    data-title="SVE"
-                    onclick="selectOption(this)"
-                  >
-                    SVENSKA
-                  </div>
-                </div>
-              </div> -->
-
-            <!-- NAV MENU - LINKS TO PAGES -->        
-            <button id="nav-menu-toggle" class="clickable">
-              <img class="hamburger-icon" src="icons/nav/hamburger_dots_hitbox.svg" alt="Öppna meny" />
-            </button>   
-
-            </div>
-          </nav>
-
-          <!-- SECTION PAGE LABEL -->
-          <container class="container_page-label">
-            <div class="wrapper_h2-text-button">
-              <h2>ORDLISTA</h2>
-            </div>
-          </container>
-
-          <!-- SECTION TOTAL GAMES & MINUTES -->
-          <container class="container_total">
-            <article class="article_game-info">
-                     
-              <div class="wrapper_spel-min">
-                <img
-                    id="selected-flag"
-                    class="flag icon_md"
-                    src="icons/flag/english-br.svg"
-                    alt="choosen language" 
-                  />
-                    <language-selector></language-selector>
-                
-              <div class="wrapper_text-min">
-                           
-                <div class="wrapper_text-min">
-                  <img class="star-big icon_md" src="./icons/star_2.svg" />
-                 <span id="info-rounds"></span> 
-<!--                    <span id="points">0</span>
- -->                </div>
-
-<!--                 <div class="wrapper_text-min">
-                  <span id="info-totaltime"></span>MINUTER
-                </div> -->
-                
-              </div>
-
-
-            </article>
-
-                          <a href="menu.html">
-                <div class="hitbox icon_single">
-                  <img
-                    class="icon_md"
-                    src="icons/nav/icon_home_cream.svg"
-                    alt="go to main menu"
-                  />
-<!--                   <h4 class="dark hide-button-text-sm">SPELKATEGORIER</h4>
- -->                </div>
-              </a>
-          </container>
-        </header>
+      <header-default
+          title-primary="Ordlista"
+          show-menu
+        >
+        </header-default>
 
         <!-- SECTION SCROLL AREA WITH GAME BUTTONS & WORDS -->
         <main class="scroll-area" id="scroll-area">
@@ -926,6 +817,7 @@
     <script src="js/common.js" defer></script>
     <script src="js/pages/words.js" defer></script>
     <script src="js/components/language-selector.js" type="module"></script>
+    <script src="js/components/header-default.js" type="module"></script>
 
 
   </body>

@@ -26,7 +26,7 @@
         ></spline-viewer>
         <div>
           <div class="section_block bg_petrol3 width_me clickable">
-            <p class="p_mini">Klicka på bakgrunden för att ändra färg!</p>
+            <div class="p_mini">Klicka på bakgrunden för att ändra färg</div>
           </div>
         </div>
       </div>
@@ -36,87 +36,22 @@
 
 
         <!-- "NAVBAR" -->
-        <header>
-          <nav class="navbar">
-            <a class="text-effect" href="menu.html"><h1>memolia</h1></a>
-            
-
-            <!-- NAV MENU - LINKS TO PAGES -->        
-            <button id="nav-menu-toggle" class="clickable">
-              <img class="hamburger-icon" src="icons/nav/hamburger_dots_hitbox.svg" alt="Öppna meny" />
-            </button>         
-
-          </nav>
-
-          <!-- SECTION PAGE LABEL -->
-          <container class="container_page-label">
-            <div class="wrapper_h2-text-button">
-              <h2>Inställningar</h2>
-            </div>
-          </container>
-
-          <!-- SECTION TOTAL GAMES & MINUTES -->
-          <container class="container_total">
-            <!-- <h4 class="h3_label_s">TOTALT</h4> -->
- <article class="article_game-info">
-                     
-              <div class="wrapper_spel-min">
-                <img
-                    id="selected-flag"
-                    class="flag icon_md"
-                    src="icons/flag/english-br.svg"
-                    alt="choosen language" 
-                  />
-                    <language-selector></language-selector>
-                
-              <div class="wrapper_text-min">
-                           
-                <div class="wrapper_text-min">
-                  <img class="star-big icon_md" src="./icons/star_2.svg" />
-                 <span id="info-rounds"></span> 
-<!--                    <span id="points">0</span>
- -->                </div>
-
-<!--                 <div class="wrapper_text-min">
-                  <span id="info-totaltime"></span>MINUTER
-                </div> -->
-                
-              </div>
+        <header-default
+          page-title="Memory"
+          show-dictionary
+          title-primary="Inställningar"
+          show-menu
+        >
+        </header-default>
 
 
-            </article>
-
-
-            <div class="wrapper_buttons-round ">
-              
-              <a href="words.html">
-                <div class="hitbox icon_single">
-                  <img class="icon_md" src="icons/nav/icon_dictionary_cream.svg" alt="go to the dictionary" />
-<!--                   <h4 class="hide-button-text-sm">ORDLISTA</h4>
- -->             </div>
-              </a>             
-              
-              <a aria-label="go to main menu" href="menu.html">
-                <div class="hitbox icon_single">
-                  <img
-                    class="icon_md"
-                    src="icons/nav/icon_home_cream.svg"
-                    alt="go to main menu"
-                  />
-<!--                   <span class="button_label hide-button-text-sm">SPELKATEGORIER</span>
- -->                </div>
-              </a>
-    
-            </div>
-          </container>
-        </header>
         <!-- SECTION SCROLL AREA WITH GAME BUTTONS -->
         <main id="scroll-area" class="scroll-area top_minus">
         
             <section class="section_text bg_petrol3">
              
              <div class="board">
-              <h3>Spelinställningar</h3>
+              <h3 class="text-heading text--size-md">Spelinställningar</h3>
 
               <div class="wrapper_p">
                 <p>
@@ -131,7 +66,7 @@
             <section class="section_text bg_petrol3">
               <div class="board">
 
-              <h3>Språk jag vill lära mig</h3>
+              <h3 class="text-heading text--size-md">Språk jag vill lära mig</h3>
 
                 <div class="menu__list clickable">
                
@@ -211,8 +146,8 @@
 
           
             <section class="section_text bg_petrol3">
-              <div class="board bg_petrol3">
-                <h3>Välj antal kort per spel</h3>
+              <div class="board">
+                <h3 class="text-heading text--size-md">Välj antal kort per spel</h3>
             
                 <div class="board-selector">
                   <button
@@ -314,7 +249,7 @@
 
             <section class="section_text bg_petrol3">
               <div class="board">
-      <h3>Återställ spelet</h3>
+      <h3 class="text-heading text--size-md">Återställ spelet</h3>
                 <div class="wrapper_p">
             
                   <p>Vill du återställa tid och poäng för alla spel?</p>
@@ -410,6 +345,7 @@
     <script src="js/pages/game.js" defer></script>
     <script src="js/pages/settings.js" defer></script>
     <script src="js/components/language-selector.js" type="module"></script>
+    <script src="js/components/header-default.js" type="module"></script>
 
 
   </body>
