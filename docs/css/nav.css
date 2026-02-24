@@ -9,12 +9,11 @@
   justify-content: space-between;
   align-items: center;
   z-index: 112;
-  background: #905e1dba;
   background: #000000ba;
-
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   padding: 2rem;
+  border-radius: 1.25rem;
 }
 
 .nav-menu-overlay.active {

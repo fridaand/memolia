@@ -495,19 +495,16 @@ main {
   align-self: end;
   bottom: 0;
   right: 0;
-  width: auto;
-  max-width: 300px;
+  max-width: 224px;
   min-height: 40px;
-  padding: 1.5rem 1.75rem;
+  padding: 1rem 1.5rem;
   color: var(--secondary);
   border-radius: 1.25rem;
   margin: 1rem;
   z-index: 10;
   gap: 2rem;
-}
-
-.width_me {
-  max-width: 212 px;
+  background: var(--black_op70);
+  backdrop-filter: blur(100rem);
 }
 
 /* LOGOTYPE */
@@ -2057,6 +2054,7 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
+
 .hidden {
   display: none;
 }
@@ -2083,10 +2081,7 @@ footer {
   .button_icon-text {
     padding: 0.75rem 1rem;
   }
-  .width_me {
-    max-width: 172px;
-    padding: 0.5rem 1.25rem;
-  }
+
   .cate-section_bg {
     padding: 2em;
   }
@@ -2247,6 +2242,10 @@ footer {
   .lottie-container {
     width: 100%;
     height: 100%;
+  }
+  .section_block {
+    max-width: 188px;
+    padding: 0.5rem 1rem;
   }
 }
 
