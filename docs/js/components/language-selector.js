@@ -17,168 +17,66 @@ INTE INNEHÅLLA:
  */
 
 // language-selector.js
+// language-selector.js
 class LanguageSelector extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
 
-    const wrapper = document.createElement("div");
-    wrapper.innerHTML = `
+    this.shadowRoot.innerHTML = `
+      <link rel="stylesheet" href="style.css">
+
+
+       
+          <h2 class="text-title text--size-md">Språk jag vill lära mig</h2>
+
+          <div class="menu__list clickable">
+
+            <div class="menu__item clickable" data-value="english" data-flag="icons/flag/english-br.svg">
+              <img class="flag" src="icons/flag/english-br.svg" alt="">
+              <h4 class="text-headline text--size-sm">Engelska</h4>
+            </div>
+
+            <div class="menu__item clickable" data-value="french" data-flag="icons/flag/french-fr.svg">
+              <img class="flag" src="icons/flag/french-fr.svg" alt="">
+              <h4 class="text-headline text--size-sm">Franska</h4>
+            </div>
+
+            <div class="menu__item clickable" data-value="portuguese-br" data-flag="icons/flag/portuguese-br.svg">
+              <img class="flag" src="icons/flag/portuguese-br.svg" alt="">
+              <h4 class="text-headline text--size-sm">Portugisiska (Br)</h4>
+            </div>
+
+            <div class="menu__item clickable" data-value="swedish" data-flag="icons/flag/swedish.svg">
+              <img class="flag" src="icons/flag/swedish.svg" alt="">
+              <h4 class="text-headline text--size-sm">Svenska</h4>
+            </div>
+
+          </div>
      
-
-<div class="overlay hidden">
-  <div class="popup section_text bg_petrol3" id="language-popup">
-        <div class="board">
-
-            <div class="nav-toggle">
-                <button class="popup-menu-close">
-                    <img class="icon_s" src="icons/nav/close.svg" alt="Stäng meny">
-                </button>
-            </div>
-
-            <h3>Språk jag vill lära mig</h3>
-
-            <div class="menu__list clickable">
-               
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item selected-language"
-                    data-value="english"
-                    data-title="ENG"
-                    data-flag="icons/flag/english-br.svg"
-                    onclick="selectOption(this)"
-                  >  
-                   <img
-                    class="flag flag-eng"
-                    src="icons/flag/english-br.svg"
-                    alt="choose english language" 
-                  />
-                    <h5>Engelska</h5>
-                  </div>
-                </div>
-
-                 <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="french"
-                    data-title="FRA"
-                    data-flag="icons/flag/french-fr.svg"
-                    onclick="selectOption(this)"
-                  >
-                    <img
-                    class="flag flag-fre"
-                    src="icons/flag/french-fr.svg"
-                    alt="choose french language"
-                  />
-                    <h5>Franska</h5>
-                  </div>
-                 </div>
-
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="portuguese-br"
-                    data-title="POR (BR)"
-                    data-flag="icons/flag/portuguese-br.svg"
-                    onclick="selectOption(this)"
-                  >
-                     <img
-                    class="flag flag-por"
-                    src="icons/flag/portuguese-br.svg"
-                    alt="choose portuguese language"
-                  />
-                    <h5>Portugisiska (Br)</h5>
-                  </div>
-                </div>
-
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="swedish"
-                    data-title="SVE"
-                    data-flag="icons/flag/swedish.svg"
-                    onclick="selectOption(this)"
-                  >
-                     <img
-                    class="flag flag-swe"
-                    src="icons/flag/swedish.svg"
-                    alt="choose swedish language"
-                  />
-                    <h5>Svenska</h5>
-                  </div>
-                </div>
-                
-            </div>
-          
-                
-        </div>
-    
-    </div>
-</div>
-`;
-
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "style.css";
-
-    this.shadowRoot.append(link, wrapper);
+    `;
   }
 
   connectedCallback() {
-    this.overlay = this.shadowRoot.querySelector(".overlay");
-    this.popup = this.shadowRoot.querySelector(".popup");
-    this.closeBtn = this.shadowRoot.querySelector(".popup-menu-close");
+    this.items = this.shadowRoot.querySelectorAll(".menu__item");
 
-    this.flagImg = document.getElementById("selected-flag");
-
-    if (this.flagImg) {
-      this.flagImg.addEventListener("click", () => this.open());
-    }
-
-    // kryss
-    this.closeBtn.addEventListener("click", () => this.close());
-
-    // klick utanför
-    this.overlay.addEventListener("click", (e) => {
-      if (!this.popup.contains(e.target)) {
-        this.close();
-      }
+    this.items.forEach((item) => {
+      item.addEventListener("click", () => this.selectLanguage(item));
     });
-
-    // ESC
-    this.handleEsc = (e) => {
-      if (e.key === "Escape") this.close();
-    };
-
-    document.addEventListener("keydown", this.handleEsc);
 
     this.loadCurrentLanguage();
   }
 
   loadCurrentLanguage() {
     const lang = localStorage.getItem("language") || "english";
-    const selectedItem = this.shadowRoot.querySelector(
-      `.menu__item[data-value="${lang}"]`,
-    );
 
-    this.shadowRoot.querySelectorAll(".menu__item").forEach((item) => {
-      item.addEventListener("click", () => this.selectLanguage(item));
+    this.items.forEach((item) => {
+      item.classList.remove("selected-option");
+
+      if (item.dataset.value === lang) {
+        item.classList.add("selected-option");
+      }
     });
-
-    // markera i popup
-    this.shadowRoot
-      .querySelectorAll(".menu__item")
-      .forEach((item) => item.classList.remove("selected-language"));
-    if (selectedItem) selectedItem.classList.add("selected-language");
-
-    // uppdatera flagga
-    if (this.flagImg && selectedItem.dataset.flag) {
-      this.flagImg.src = selectedItem.dataset.flag;
-    }
-
-    // uppdatera stjärnor och kategorier
-    if (typeof updateStars === "function") updateStars();
-    if (typeof updateAllCategories === "function") updateAllCategories(lang);
   }
 
   selectLanguage(item) {
@@ -188,27 +86,21 @@ class LanguageSelector extends HTMLElement {
     localStorage.setItem("language", lang);
     localStorage.setItem("languageFlag", flag);
 
-    // uppdatera popup
     this.loadCurrentLanguage();
 
-    // stäng popup
-    this.popup.classList.remove("open");
-  }
-
-  open() {
-    this.overlay.classList.remove("hidden");
-  }
-
-  close() {
-    this.overlay.classList.add("hidden");
-  }
-
-  disconnectedCallback() {
-    document.removeEventListener("keydown", this.handleEsc);
+    this.dispatchEvent(
+      new CustomEvent("language-changed", {
+        detail: {
+          language: lang,
+          flag: flag,
+        },
+        bubbles: true,
+        composed: true,
+      }),
+    );
   }
 }
 
-// Registrera komponent
 customElements.define("language-selector", LanguageSelector);
 
 /* POPUP TOGGLE */

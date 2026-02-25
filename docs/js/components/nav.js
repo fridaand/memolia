@@ -5,20 +5,40 @@ class GameNav extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="style.css" />  
+    <link rel="stylesheet" href="style.css">  
     <link rel="stylesheet" href="css/nav.css">
       
 
 
-      <nav id="nav-menu" class="nav-menu-overlay">
+      <nav id="nav-menu" class="nav-menu-overlay" aria-label="Meny med länkar till sidor">
         <div class="nav-toggle">
-          <button class="nav-menu-close">
-            <img class="icon_s" src="icons/nav/close.svg" alt="Stäng meny">
+          <button class="nav-menu-close" aria-label="Stäng meny">
+            <img class="icon-sm" src="icons/nav/close.svg" alt="">
           </button>
         </div>
 
        <ul class="nav-list"> 
-        <li><a class="nav-list-item" href="menu.html"><img class="nav-icon" src="icons/nav/icon_home_cream.svg" alt="" />Startsida</a></li> <li><a class="nav-list-item" href="words.html"><img class="nav-icon" src="icons/nav/icon_dictionary_cream.svg" alt="" />Ordlista</a></li> <li><a class="nav-list-item" href="settings.html"><img class="nav-icon" src="icons/nav/icon_settings_cream.svg" alt="" />Inställningar</a></li> <li><a class="nav-list-item" href="instructions.html"><img class="nav-icon" src="icons/nav/icon_instructions_cream.svg" alt="" />Spelguide</a></li> <li><a class="nav-list-item" href="about.html"><img class="nav-icon" src="icons/nav/icon_about_cream.svg" alt="" />Om memolia</a></li> </ul> 
+        <li><a class="nav-list-item" href="menu.html">
+        <img class="nav-icon" src="icons/nav/icon_home_cream.svg" alt="" />Startsida</a>
+        </li> 
+
+        <li><a class="nav-list-item" href="words.html">
+        <img class="nav-icon" src="icons/nav/icon_dictionary_cream.svg" alt="" />Ordlista</a>
+        </li> 
+
+        <li><a class="nav-list-item" href="settings.html">
+        <img class="nav-icon" src="icons/nav/icon_settings_cream.svg" alt="" />Inställningar</a>
+        </li> 
+
+        <li><a class="nav-list-item" href="instructions.html">
+        <img class="nav-icon" src="icons/nav/icon_instructions_cream.svg" alt="" />Spelguide</a>
+        </li> 
+
+        <li><a class="nav-list-item" href="about.html">
+        <img class="nav-icon" src="icons/nav/icon_about_cream.svg" alt="" />Om memolia</a>
+        </li> 
+
+        </ul> 
       </nav>
     `;
   }
@@ -31,9 +51,20 @@ class GameNav extends HTMLElement {
     closeBtn.addEventListener("click", () => this.close());
   }
 
-  // ⭐ detta saknades hos dig
   open() {
     this.menu.classList.add("active");
+    const links = this.shadowRoot.querySelectorAll(".nav-list-item");
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
+
+    links.forEach((link) => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === currentPage) {
+        link.classList.add("selected-option");
+        link.setAttribute("aria-current", "page");
+      }
+    });
   }
 
   close() {

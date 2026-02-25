@@ -35,13 +35,17 @@ class HeaderDefault extends HTMLElement {
           <article class="article_game-info">
             <div class="wrapper_spel-min">
 
+ 
               <img
                 id="selected-flag"
                 class="flag icon_md"
                 src="icons/flag/english-br.svg"
-                alt="choosen language" />
+                alt="Valt språk" />
 
-              <language-selector></language-selector>
+
+<popup-wrapper id="languageModal">
+  <language-selector></language-selector>
+</popup-wrapper>
 
               <div class="wrapper_text-min">
                 <img class="star-big icon_md" src="./icons/star_2.svg" />

@@ -54,14 +54,20 @@
 }
 
 .nav-list-item:hover {
-  background: var(--cream2);
-  color: black;
+  background: var(--green2);
+  color: var(--primary);
+}
+
+.selected-option {
+  background: var(--cream1);
+  color: var(--primary);
+}
+
+.nav-list-item:hover .nav-icon,
+.selected-option .nav-icon {
+  filter: invert(1);
 }
 
 .nav-icon {
   transition: filter 0.2s ease;
-}
-
-.nav-list-item:hover .nav-icon {
-  filter: invert(1);
 }

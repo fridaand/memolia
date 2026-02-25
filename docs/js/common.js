@@ -274,6 +274,34 @@ function updateTotalTime() {
   }
 }
 
+/* POPUP - LANGUAGE */
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("languageModal");
+  const flagBtn = document.getElementById("selected-flag");
+
+  if (flagBtn && popup) {
+    flagBtn.addEventListener("click", () => popup.open());
+  }
+});
+
+document.addEventListener("language-changed", (e) => {
+  const { language, flag } = e.detail;
+
+  if (typeof updateStars === "function") updateStars();
+  if (typeof updateAllCategories === "function") {
+    updateAllCategories(language);
+  }
+
+  const flagImg = document.getElementById("selected-flag");
+  if (flagImg && flag) {
+    flagImg.src = flag;
+  }
+
+  document
+    .querySelectorAll("language-selector")
+    .forEach((el) => el.loadCurrentLanguage());
+});
+
 /* FUNCTIONS FOR THE POPUP "AVSLUTA" */
 function registerPopup() {
   let popup = document.querySelector("#popUpId");

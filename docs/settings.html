@@ -65,83 +65,8 @@
 
             <section class="section_text bg_petrol3">
               <div class="board">
-
-              <h3 class="text-heading text--size-md">Språk jag vill lära mig</h3>
-
-                <div class="menu__list clickable">
-               
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item selected-language"
-                    data-value="english"
-                    data-title="ENG"
-                    data-flag="icons/flag/english-br.svg"
-                    onclick="selectOption(this)"
-                  >  
-                   <img
-                    class="flag flag-eng"
-                    src="icons/flag/english-br.svg"
-                    alt="choose english language" 
-                  />
-                    <h5>Engelska</h5>
-                  </div>
-                </div>
-
-                 <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="french"
-                    data-title="FRA"
-                    data-flag="icons/flag/french-fr.svg"
-                    onclick="selectOption(this)"
-                  >
-                    <img
-                    class="flag flag-fre"
-                    src="icons/flag/french-fr.svg"
-                    alt="choose french language"
-                  />
-                    <h5>Franska</h5>
-                  </div>
-                 </div>
-
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="portuguese-br"
-                    data-title="POR (BR)"
-                    data-flag="icons/flag/portuguese-br.svg"
-                    onclick="selectOption(this)"
-                  >
-                     <img
-                    class="flag flag-por"
-                    src="icons/flag/portuguese-br.svg"
-                    alt="choose portuguese language"
-                  />
-                    <h5>Portugisiska (Br)</h5>
-                  </div>
-                </div>
-
-                <div class="menu_item_wrapper">
-                  <div
-                    class="menu__item"
-                    data-value="swedish"
-                    data-title="SVE"
-                    data-flag="icons/flag/swedish.svg"
-                    onclick="selectOption(this)"
-                  >
-                     <img
-                    class="flag flag-swe"
-                    src="icons/flag/swedish.svg"
-                    alt="choose swedish language"
-                  />
-                    <h5>Svenska</h5>
-                  </div>
-                </div>
-              </div>
-          
-                
-           
-              </div>
+                <language-selector></language-selector>
+              </div> 
             </section>
 
           
@@ -344,9 +269,9 @@
     <script src="js/pages/menu.js" defer></script>
     <script src="js/pages/game.js" defer></script>
     <script src="js/pages/settings.js" defer></script>
-    <script src="js/components/language-selector.js" type="module"></script>
     <script src="js/components/header-default.js" type="module"></script>
-
+    <script src="js/components/language-selector.js" type="module"></script>
+    <script src="js/components/popup-wrapper.js" type="module"></script>
 
   </body>
 </html>
