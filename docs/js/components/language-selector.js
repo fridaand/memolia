@@ -17,7 +17,6 @@ INTE INNEHÅLLA:
  */
 
 // language-selector.js
-// language-selector.js
 class LanguageSelector extends HTMLElement {
   constructor() {
     super();
@@ -102,29 +101,3 @@ class LanguageSelector extends HTMLElement {
 }
 
 customElements.define("language-selector", LanguageSelector);
-
-/* POPUP TOGGLE */
-/* const overlay = this.shadowRoot.querySelector(".overlay"); */
-/* const popup = this.shadowRoot.querySelector(".popup");
-const closeBtn = this.shadowRoot.querySelector(".popup-menu-close");
-
-// --- öppna / stäng funktioner
-this.open = () => overlay.classList.remove("hidden");
-this.close = () => overlay.classList.add("hidden");
-
-// ✅ klick på kryss
-closeBtn.addEventListener("click", () => this.close());
-
-// ✅ klick utanför popup
-overlay.addEventListener("click", (e) => {
-  if (!popup.contains(e.target)) {
-    this.close();
-  }
-});
-
-// ✅ ESC tangent
-this.handleEsc = (e) => {
-  if (e.key === "Escape") this.close();
-};
-
-document.addEventListener("keydown", this.handleEsc); */

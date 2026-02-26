@@ -287,6 +287,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("language-changed", (e) => {
   const { language, flag } = e.detail;
 
+  updateStars();
+  updateTotalStarsForCurrentLanguage();
+
   if (typeof updateStars === "function") updateStars();
   if (typeof updateAllCategories === "function") {
     updateAllCategories(language);
@@ -302,34 +305,53 @@ document.addEventListener("language-changed", (e) => {
     .forEach((el) => el.loadCurrentLanguage());
 });
 
-/* FUNCTIONS FOR THE POPUP "AVSLUTA" */
-function registerPopup() {
-  let popup = document.querySelector("#popUpId");
-  let closeElements = document.querySelectorAll(".button_close");
-  let langButton = document.querySelector("#choose_language");
+/* UPDATE TOTAL STARS */
+function updateTotalStarsForCurrentLanguage() {
+  const language = localStorage.getItem("language") || "english";
+  let totalStars = 0;
 
-  langButton.onclick = function () {
-    // When the user clicks the button, open the popup
-    popup.style.display = "flex";
-    popup.style.animationPlayState = "running"; // Starta animationen
-    //popup.classList.add("fade");
-  };
+  categories.forEach((category) => {
+    const key = `stars-${category.name}-${language}`;
+    const stars = parseInt(localStorage.getItem(key), 10) || 0;
 
-  closeElements.forEach((e) => {
-    e.onclick = function () {
-      popup.style.display = "none";
-      // popup.classList.remove("fade");
-    };
+    totalStars += stars;
   });
 
-  window.onclick = function (event) {
-    // When the user clicks anywhere outside of the popup, close it
-    if (event.target == popup) {
-      popup.style.display = "none";
-      // popup.classList.remove("fade");
-    }
-  };
+  const totalElement = document.getElementById("info-rounds");
+  if (totalElement) {
+    totalElement.textContent = totalStars;
+  }
 }
+
+function updateStars() {
+  const language = localStorage.getItem("language") || "english";
+
+  categories.forEach((category) => {
+    const starsElement = document.getElementById("stars-" + category.name);
+    if (!starsElement) return;
+
+    const key = `stars-${category.name}-${language}`;
+    let numberOfStars = parseInt(localStorage.getItem(key), 10) || 0;
+    numberOfStars = Math.min(numberOfStars, maxNumberOfStartsPerCategory);
+
+    starsElement.innerHTML = "";
+    for (let i = 0; i < maxNumberOfStartsPerCategory; i++) {
+      const isFilled = i < numberOfStars;
+      const icon = isFilled ? "./icons/star_5d.svg" : "./icons/star_5d.svg";
+
+      starsElement.innerHTML += `
+    <img 
+      class="star ${isFilled ? "star-filled" : "star-empty"}" 
+      src="${icon}" 
+      alt="${isFilled ? "Fylld stjärna" : "Tom stjärna"}"
+    />
+  `;
+    }
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  updateStars(); // Uppdaterar alla stjärnbehållare baserat på sparat språk
+});
 
 /* SCROLL-FUNCTION */
 // Function to check if at bottom
@@ -374,118 +396,19 @@ scrollArea.addEventListener("scroll", () => {
 });
 // Scroll-area ends
 
-/* DROPDOWN */
-function toggleDropdown() {
+/* DROPDOWN SPARA TILLS VIDARE */
+/* function toggleDropdown() {
   const dropdown = document.querySelector(".dd");
   dropdown.classList.toggle("dd--open");
-}
+} */
 
 function updateAllCategories(selectedLanguageValue) {}
 
-// Hämtar och visar valt språk vid sidladdning
-/* function loadLanguage() {
-  const savedLanguage = localStorage.getItem("language") || "ENG"; // Standardvärde
-  const titleElement = document.getElementById("ddTitle");
-  const selectedOption = document.querySelector(
-    `.menu__item[data-value="${savedLanguage}"]`, // här var det dd__item innan
-  );
-
-  // Updating menu title
-  if (selectedOption) {
-    titleElement.textContent = selectedOption.textContent.slice(0, 3);
-    selectedOption.classList.add("selected-language");
-  } else {
-    // Om inget språk är sparat, sätt standardtexten
-    titleElement.textContent = "ENG";
-  }
-
-  updateStars(); // Uppdatera stjärnorna baserat på valt språk
-  updateAllCategories(savedLanguage);
-} */
-
-function selectOption(element) {
-  // Ta bort markeringsklassen från alla språk innan vi markerar det valda
-  const allOptions = document.querySelectorAll(".menu__item"); //här var dd__item innan
-  allOptions.forEach((option) => option.classList.remove("selected-language"));
-
-  // markera vald
-  element.classList.add("selected-language");
-
-  const selectedLanguageValue = element.dataset.value;
-  const selectedTitle = element.dataset.title;
-  const selectedFlag = element.dataset.flag;
-
-  // uppdatera flagga vid rubriken
-  const flagImg = document.getElementById("selected-flag");
-  flagImg.src = selectedFlag;
-  flagImg.alt = selectedLanguageValue + " chosen language";
-
-  // (valfritt) spara i localStorage
-  localStorage.setItem("language", selectedLanguageValue);
-  localStorage.setItem("languageFlag", selectedFlag);
-  document.getElementById("selected-flag").src = selectedFlag;
-  /*   const selectedLanguageValue = element.getAttribute("data-value");
-  const selectedTitle = element.getAttribute("data-title"); */
-
-  /*   const selectedLanguageText = element.textContent.trim();
-   */
-
-  // Uppdatera headern för att visa valt språk
-  /*   document.getElementById("ddTitle").textContent = selectedLanguageText.slice(
-    0,
-    3
-  );
- */
-
-  document.getElementById("ddTitle").textContent = selectedTitle;
-
-  // Lägg till markeringsklassen på det valda språket
-  element.classList.add("selected-language");
-
-  /// Spara endast data-value i localStorage för språkinställningen
-  localStorage.setItem("language", selectedLanguageValue);
-
-  // Uppdatera alla kategorier med det nya språket
-  updateAllCategories(selectedLanguageValue);
-
-  // Uppdatera stjärnorna omedelbart vid språkbyte, inte som tidigare i updateStarsForLanguageChange
-  updateStars();
-
-  // Stäng dropdown
-  toggleDropdown();
-
-  console.log("Valt språk:", selectedLanguageValue);
-  console.log("Språk i localStorage:", localStorage.getItem("language"));
-}
-
-/* function loadLanguage() {
-  const savedLanguage = localStorage.getItem("language") || "english"; // Standardvärde
-  const selectedOption = document.querySelector(
-    `.menu__item[data-value="${savedLanguage}"]`, //här var det dd__item innan
-  );
-
-  if (selectedOption) {
-    // Hämta titeln från data-title
-    const selectedTitle = selectedOption.getAttribute("data-title");
-    document.getElementById("ddTitle").textContent = selectedTitle;
-
-    // Lägg till markeringsklass på valt språk
-    selectedOption.classList.add("selected-language");
-  } else {
-    // Om inget språk är sparat, sätt standardtitel
-    document.getElementById("ddTitle").textContent = "ENG";
-  }
-
-  // Uppdatera stjärnor och kategorier
-  updateAllCategories(savedLanguage);
-  updateStars();
-} */
-
 document.addEventListener("DOMContentLoaded", () => {
   updatePage(); // Uppdaterar runda, tid och stjärnor
-  loadLanguage(); // Laddar språk
-  updateAllCategories(localStorage.getItem("language") || "ENG"); // Uppdatera kategorier
-
+  /*   loadLanguage(); // Laddar språk
+   */ updateAllCategories(localStorage.getItem("language") || "ENG"); // Uppdatera kategorier
+  updateTotalStarsForCurrentLanguage();
   updateStars(); // Uppdaterar stjärnvisning för att säkerställa att den visas korrekt
 });
 

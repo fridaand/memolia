@@ -1531,8 +1531,7 @@ footer {
 
 .wrapper_total-stars {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
   gap: var(--spacing-gap-xxs, 4px);
   object-fit: cover;
 }
@@ -1561,16 +1560,34 @@ footer {
 } */
 
 .star {
+  position: relative;
   width: 1rem;
+  height: 1rem;
   object-fit: contain;
   /* previous star - filter: contrast(125%) hue-rotate(350deg); */
-  filter: contrast(80%) hue-rotate(325deg) brightness(40%);
+  filter: contrast(80%) hue-rotate(325deg) brightness(50%);
 }
 .star-big {
   /*   width: 1.5rem; */
-  filter: contrast(70%) hue-rotate(350deg) brightness(110%);
+  /*   filter: contrast(70%) hue-rotate(350deg) brightness(110%);
   filter: contrast(80%) hue-rotate(325deg) brightness(100%);
+ */
+  filter: brightness(150%);
 }
+
+.star-filled {
+  width: 1rem;
+  height: 1rem;
+  filter: none;
+  filter: brightness(75%);
+}
+
+.star-empty {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.3;
+}
+
 .hide {
   display: none;
 }

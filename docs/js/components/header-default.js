@@ -35,20 +35,21 @@ class HeaderDefault extends HTMLElement {
           <article class="article_game-info">
             <div class="wrapper_spel-min">
 
- 
+            <!-- BYTA DIV TILL BUTTON VID TILLFÄLLE -->
+            <div class="icon-wrapper" aria-label="Välj språk">
               <img
                 id="selected-flag"
                 class="flag icon_md"
                 src="icons/flag/english-br.svg"
                 alt="Valt språk" />
-
-
-<popup-wrapper id="languageModal">
-  <language-selector></language-selector>
-</popup-wrapper>
+                <span class="tooltip">Välj språk</span>
+            </div>
+                <popup-wrapper id="languageModal">
+                  <language-selector></language-selector>
+                </popup-wrapper>
 
               <div class="wrapper_text-min">
-                <img class="star-big icon_md" src="./icons/star_2.svg" />
+                <img class="star-big icon_md" src="./icons/star_5c.svg" />
                 <span id="info-rounds"></span>
               </div>
 
