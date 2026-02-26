@@ -2403,8 +2403,8 @@ footer {
     height: 2.5rem;
   }
   .menu-card {
-    width: 164px;
-    height: 164px;
+    width: 156px;
+    height: 156px;
   }
   .menu_card_padding_left {
     padding-left: 1.25rem;
@@ -2420,11 +2420,12 @@ footer {
     flex-direction: column;
   }
   .container_menu-cards_column {
-    margin: -0.5rem;
-  }
-  .container_menu-cards_column1 {
+    margin: -0.75rem;
     row-gap: 1rem;
   }
+  /*   .container_menu-cards_column1 {
+    row-gap: 1rem;
+  } */
   .popup_styling {
     padding: 1.75rem 1.75rem;
     gap: 2rem;
