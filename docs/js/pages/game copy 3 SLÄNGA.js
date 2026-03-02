@@ -8,37 +8,21 @@ let isMuted = false;
 let isPaused = false;
 let lastAudio = undefined;
 
+const currentLanguage = localStorage.getItem("language");
+
 let popup = document.getElementById("popUpId"); // Get the popup
 let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
 let closeElements = document.querySelectorAll(".button_close"); // Get the element that closes the popup
 const goBackButton = document.getElementById("goBackButton");
 
+let translationMode = false;
 const flagLeft = document.querySelector(".flag-left");
 const flagRight = document.querySelector(".flag-right");
 const toggleBtn = document.getElementById("toggle-translation");
-
 const tooltip = toggleBtn.querySelector(".icon-wrapper tooltip");
 
-let translationMode = false;
-
-/* function getCurrentLanguage() {
-  return localStorage.getItem("language") || "english";
-} */
-
-function logStorageStatus() {
-  console.log("=== LOCAL STORAGE STATUS ===");
-  console.log("Current language:", getCurrentLanguage());
-  Object.keys(localStorage)
-    .filter(
-      (key) =>
-        key.includes("time") || key.includes("rounds") || key.includes("stars"),
-    )
-    .forEach((key) => console.log(key, "=", localStorage.getItem(key)));
-  console.log("============================");
-}
-
 function updateToggleFlags() {
-  const selectedLang = getCurrentLanguage();
+  const selectedLang = currentLanguage;
 
   const flagMap = {
     english: "icons/flag/english-br.svg",
@@ -47,16 +31,19 @@ function updateToggleFlags() {
     "portuguese-br": "icons/flag/portuguese-br.svg",
   };
 
-  const tooltipEl = toggleBtn.parentElement.querySelector(".tooltip");
+  const selectedFlag = flagMap[selectedLang];
+  const swedishFlag = flagMap["swedish"];
 
   if (!translationMode) {
-    flagLeft.src = flagMap[selectedLang];
-    flagRight.src = flagMap[selectedLang];
-    tooltipEl.textContent = "Visa översättning";
+    // dubbla valt språk
+    flagLeft.src = selectedFlag;
+    flagRight.src = selectedFlag;
+    tooltip.textContent = "Visa översättning";
   } else {
-    flagLeft.src = flagMap[selectedLang];
-    flagRight.src = flagMap["swedish"];
-    tooltipEl.textContent = "Visa valt språk";
+    // valt språk + svenska
+    flagLeft.src = selectedFlag;
+    flagRight.src = swedishFlag;
+    tooltip.textContent = "Visa valt språk";
   }
 }
 
@@ -69,12 +56,13 @@ toggleBtn.addEventListener("click", () => {
 /* test */
 function updateCardTexts() {
   const allCards = document.querySelectorAll(".card");
+
   const grouped = {};
-  const selectedLang = getCurrentLanguage(); // ✅ hämta EN gång
 
   // gruppera kort per namn
   allCards.forEach((card) => {
     const name = card.dataset.baseName;
+
     if (!grouped[name]) grouped[name] = [];
     grouped[name].push(card);
   });
@@ -86,17 +74,17 @@ function updateCardTexts() {
     if (!translationMode) {
       // båda kort samma språk
       pair.forEach((cardEl) => {
-        cardEl.dataset.currentLanguage = selectedLang;
+        cardEl.dataset.currentLanguage = currentLanguage;
         cardEl.querySelector(".card-text").textContent =
-          cardData.language[selectedLang];
+          cardData.language[currentLanguage];
       });
     } else {
       // ett kort = valt språk
-      pair[0].dataset.currentLanguage = selectedLang;
-      pair[0].querySelector(".card-text").textContent =
-        cardData.language[selectedLang];
-
       // ett kort = svenska
+      pair[0].dataset.currentLanguage = currentLanguage;
+      pair[0].querySelector(".card-text").textContent =
+        cardData.language[currentLanguage];
+
       pair[1].dataset.currentLanguage = "swedish";
       pair[1].querySelector(".card-text").textContent =
         cardData.language["swedish"];
@@ -128,6 +116,12 @@ window.onclick = function (event) {
   }
 };
 
+function updateScore() {
+  document.querySelectorAll(".score").forEach((span) => {
+    span.textContent = score;
+  });
+}
+
 function shuffleCards(array) {
   let currentIndex = array.length;
   let randomIndex, temporaryValue;
@@ -142,22 +136,25 @@ function shuffleCards(array) {
   }
 }
 
+function updateTitle() {
+  document.getElementById("cate").innerText =
+    localStorage.getItem("categoryTitle");
+}
+
 // CHANGE LANGUAGE
 function changeLanguage(newLanguage) {
-  localStorage.setItem("language", newLanguage);
+  currentLanguage = newLanguage;
 
-  generateBoard(getBoardSize());
-  updateStatisticsUI(); // uppdatera poäng, tid, stjärnor, rundor
-  updateGameUI(); // uppdatera score, timer, titel
-  updateToggleFlags(); // uppdatera flaggor
+  const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
+  generateBoard(boardSize);
 }
 
 function generateCardDiv(card) {
-  const selectedLang = getCurrentLanguage();
+  const language = currentLanguage === "french" ? "french" : "english";
   return `
   <div class="front">
   <img class="front-image" alt="" aria-hidden="true" src=${card.image} />
-  <p class="card-text">${card.language[selectedLang]}</p>
+  <p class="card-text">${card.language[currentLanguage]}</p>
 </div>
 <div class="back"></div>
     `;
@@ -171,17 +168,34 @@ function generateCards(cardsForBoard) {
   cardsForBoard.forEach((card) => {
     const cardEl = document.createElement("div");
     cardEl.classList.add("card");
+    cardEl.setAttribute("data-name", card.name);
+    /* test */
     cardEl.dataset.baseName = card.name;
-    cardEl.dataset.currentLanguage = getCurrentLanguage();
+    cardEl.dataset.currentLanguage = currentLanguage;
+    /* slut */
+
     cardEl.innerHTML = generateCardDiv(card);
 
     cardEl.clickTrigger = function () {
       if (isPaused || (firstCard && secondCard)) return;
 
+      /*       if (!isMuted) {
+        const audioLang = ["french", "swedish", "portuguese-br"].includes(
+          currentLanguage,
+        )
+          ? currentLanguage
+          : "english";
+        playCardSound(card.audio[audioLang]);
+      }
+
+      flipCard.call(this);
+    }; */
       if (!isMuted) {
-        const cardData = cards.find((c) => c.name === this.dataset.baseName);
-        const languageToPlay =
-          this.dataset.currentLanguage || getCurrentLanguage();
+        const baseName = this.dataset.baseName;
+        const cardData = cards.find((c) => c.name === baseName);
+
+        const languageToPlay = this.dataset.currentLanguage || currentLanguage;
+
         playCardSound(cardData.audio[languageToPlay]);
       }
 
@@ -193,15 +207,20 @@ function generateCards(cardsForBoard) {
   });
 }
 
-// Generera bräde med rätt antal kort
+// Generera bräde med rätt antal kort UTMARKERAR
 function generateBoard(boardSize) {
   firstCard = null;
   secondCard = null;
-
   const numPairs = boardSize / 2;
+  const gridContainer = document.querySelector(".container_game");
+  gridContainer.innerHTML = "";
+
+  gridContainer.dataset.cards = boardSize;
+
   const selectedCards = cards.slice(0, numPairs);
   const cardsForBoard = [...selectedCards, ...selectedCards]; // duplicera par
   shuffleCards(cardsForBoard);
+
   generateCards(cardsForBoard);
 }
 
@@ -224,9 +243,12 @@ function flipCard() {
     firstCard = this;
     startTimer();
     return;
-  } else secondCard = this;
+  }
+
+  secondCard = this;
   score++;
   updateScore();
+
   checkForMatch();
 }
 
@@ -236,51 +258,21 @@ function startTimer() {
       if (!isPaused) {
         timer++;
         updateGameSeconds();
-
-        /*      document.querySelectorAll(".info-seconds").forEach((span) => {
-          span.textContent = timer;
-        }); */
       }
     }, 1000);
   }
 }
 
-/* function checkForMatch() {
+function checkForMatch() {
   let isMatch = firstCard.dataset.name === secondCard.dataset.name;
   isMatch ? disableCards() : unflipCards();
-} */
-
-function checkForMatch() {
-  const isMatch = firstCard.dataset.baseName === secondCard.dataset.baseName;
-
-  if (isMatch) {
-    disableCards();
-  } else {
-    unflipCards();
-  }
 }
 
 function disableCards() {
   firstCard.removeEventListener("click", firstCard.clickTrigger);
   secondCard.removeEventListener("click", secondCard.clickTrigger);
   resetBoard();
-
-  // Kolla om spelet är slut
   if (document.querySelectorAll(".card:not(.flipped)").length === 0) {
-    /*    console.log("END GAME language:", getCurrentLanguage());
-    console.log("Timer this round:", timer);
-    console.log("Saved total time:", localStorage.getItem("time-all")); */
-
-    Object.keys(localStorage)
-      .filter(
-        (key) =>
-          key.includes("time") ||
-          key.includes("rounds") ||
-          key.includes("stars"),
-      )
-      .forEach((key) => console.log(key, "=", localStorage.getItem(key)));
-    console.log("============================");
-
     endGame();
   }
 }
@@ -303,6 +295,26 @@ function updateGameSeconds() {
     span.innerText = timer;
   });
 }
+
+/* function updatePage() {
+  updateRounds();
+  updateScore();
+  updateTitle();
+  updateTotalTime();
+  updateGameSeconds();
+} */
+
+/* function updatePage() {
+  updateRounds();
+  updateScore();
+  updateTitle();
+  updateTotalTime();
+  updateGameSeconds();
+
+  updateRoundsPerLanguage();
+  updateTotalRounds();
+  updateTimePerLanguage();
+} */
 
 function registerMuteButton() {
   const muteButton = document.getElementById("button-mute");
@@ -369,10 +381,7 @@ function increaseTotalRounds() {
   const key = `stars-${category}-${language}`; */
 function increaseStars() {
   const category = localStorage.getItem("selectedCategory");
-  /*   const key = `stars-${category}-${currentLanguage}`;
-   */
-  const selectedLang = getCurrentLanguage();
-  const key = `stars-${category}-${selectedLang}`;
+  const key = `stars-${category}-${currentLanguage}`;
 
   let stars = localStorage.getItem(key) || 0;
   stars = parseInt(stars, 10) + 1;
@@ -506,23 +515,17 @@ function handleOutsideClick(event) {
   }
 }
 
-function getBoardSize() {
-  return parseInt(localStorage.getItem("boardSize")) || 12;
-}
-
 // Ladda kort från kategori
 function main() {
   const category = localStorage.getItem("selectedCategory");
   fetch(`./data/${category}.json`)
     .then((res) => res.json())
     .then((data) => {
-      cards = [...data];
+      cards = [...data]; // duplicera inte här
       shuffleCards(cards);
 
-      generateBoard(getBoardSize());
-      updateStatisticsUI(); // uppdatera totaler/statistik
-      updateGameUI(); // uppdatera runda/timer/titel
-      updateToggleFlags();
+      const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
+      generateBoard(boardSize);
     });
 }
 
@@ -535,85 +538,44 @@ function restartGame() {
   resetCards();
   resetTimer();
 
-  generateBoard(getBoardSize());
-  updateStatisticsUI(); // uppdatera statistik
-  updateGameUI(); // uppdatera spel-UI
+  const boardSize = parseInt(localStorage.getItem("boardSize")) || 12;
+  generateBoard(boardSize);
+  /*   generateCards(); */
+  updatePage();
 }
 
-// --- SPEL SLUT ---
-/* function registerGameEnd() {
-  const selectedLang = getCurrentLanguage();
-  const category = localStorage.getItem("selectedCategory");
-
-  console.log("=== GAME END ===");
-  console.log("Language:", selectedLang);
-  console.log("Category:", category);
-  console.log("Timer:", timer);
-
-  addToStorage(`time-${selectedLang}`, timer);
-  addToStorage(`rounds-${selectedLang}`, 1);
-  addToStorage(`stars-${category}-${selectedLang}`, 1);
-} */
-function registerGameEnd() {
-  const selectedLang = getCurrentLanguage();
-  const category = localStorage.getItem("selectedCategory");
-  const boardSize = getBoardSize();
-  const starPoints = getStarPoints(boardSize);
-
-  // --- RUNDOR ---
-  addToStorage(`rounds-${selectedLang}`, 1);
-  addToStorage(`rounds-${category}-${selectedLang}`, 1);
-
-  // --- TID ---
-  addToStorage(`time-${selectedLang}`, timer);
-  addToStorage(`time-${category}-${selectedLang}`, timer);
-
-  // --- STJÄRNPOÄNG ---
-  addToStorage(`stars-${category}-${selectedLang}`, starPoints);
-}
-
-function addToStorage(key, value) {
-  const prev = parseInt(localStorage.getItem(key), 10) || 0;
-  const newValue = prev + value;
-  localStorage.setItem(key, newValue);
-
-  console.log("Updated:", key, newValue);
-}
-
+// WHEN GAME IS OVER
 function endGame() {
-  const category = localStorage.getItem("selectedCategory");
-  registerGameEnd();
-  showEndGameInfo();
+  console.log("END GAME language:", currentLanguage);
+  console.log("Timer this round:", timer);
 
-  updateStatisticsUI();
-  updateGameUI();
+  increaseRounds();
+  increaseTotalRounds();
+  /*   increaseTimePerLanguage();
+   */
+  increaseTotalTime();
+  increaseTotalTimeAll();
+
+  console.log(
+    "Saved language time:",
+    localStorage.getItem(`time-${currentLanguage}`),
+  );
+  console.log("Saved total time:", localStorage.getItem("time-all"));
+
+  increaseStars();
+  updatePage();
   resetTimer();
-}
-
-function updateGameUI() {
-  updateScore();
-  updateGameSeconds();
-  updateTitle();
-}
-
-function updateScore() {
-  document.querySelectorAll(".score").forEach((span) => {
-    span.textContent = score;
-  });
-}
-
-function updateTitle() {
-  document.getElementById("cate").innerText =
-    localStorage.getItem("categoryTitle");
+  hideGameInfo();
+  showEndGameInfo();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   hideEndGameInfo();
   showGameInfo();
   registerMuteButton();
-  timer = 0;
-  updateGameSeconds();
-  updateGameUI();
+  updatePage();
+  updateStars();
+  updateRounds();
   main();
   updateToggleFlags();
 });

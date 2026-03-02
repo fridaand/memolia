@@ -1,4 +1,4 @@
-const boardSelector = document.getElementById("board-selector");
+/* const boardSelector = document.getElementById("board-selector");
 
 if (boardSelector) {
   const boardOptions = boardSelector.querySelectorAll(".board-option");
@@ -41,3 +41,4 @@ if (boardSelector) {
     });
   });
 }
+ */

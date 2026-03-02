@@ -35,24 +35,33 @@ class HeaderDefault extends HTMLElement {
           <article class="article_game-info">
             <div class="wrapper_spel-min">
 
-            <!-- BYTA DIV TILL BUTTON VID TILLFÄLLE -->
-            <div class="icon-wrapper" aria-label="Välj språk">
-              <img
-                id="selected-flag"
-                class="flag icon_md"
-                src="icons/flag/english-br.svg"
-                alt="Valt språk" />
-                <span class="tooltip">Välj språk</span>
-            </div>
-                <popup-wrapper id="languageModal">
-                  <language-selector></language-selector>
-                </popup-wrapper>
-
-              <div class="wrapper_text-min">
-                <img class="star-big icon_md" src="./icons/star_5c.svg" />
-                <span id="info-rounds"></span>
+              <!-- BYTA DIV TILL BUTTON VID TILLFÄLLE -->
+             
+             
+              <div class="icon-wrapper" aria-label="Välj språk">
+                <img
+                  id="selected-flag"
+                  class="flag icon_md"
+                  src="icons/flag/english-br.svg"
+                  alt="Valt språk" />
+                  <span class="tooltip">Välj språk</span>
               </div>
+                  <popup-wrapper id="languageModal">
+                    <language-selector></language-selector>
+                  </popup-wrapper>
 
+              <div class="icon-wrapper" aria-label="Visa statistik">
+                <div class="wrapper_text-min" id="statistics-trigger">                  
+                <img class="star-bright icon_md" src="./icons/star/star-md.svg" />
+                <span id="header-stars"></span>            
+              </div> 
+
+                  <span class="tooltip">Visa statistik</span>
+              </div>
+                  <popup-wrapper id="statisticsModal">
+                    <statistics-modal></statistics-modal>
+                  </popup-wrapper>
+                  
             </div>
           </article>
 
@@ -102,5 +111,19 @@ class HeaderDefault extends HTMLElement {
     `;
   }
 }
+function updateHeaderStars() {
+  const lang = getCurrentLanguage();
+  let totalStarsHeader = 0;
+
+  categories.forEach((category) => {
+    const key = `stars-${category.name}-${lang}`;
+    totalStarsHeader += parseInt(localStorage.getItem(key), 10) || 0;
+  });
+
+  const el = document.getElementById("header-stars");
+  if (el) el.textContent = totalStarsHeader;
+}
 
 customElements.define("header-default", HeaderDefault);
+document.addEventListener("DOMContentLoaded", updateHeaderStars);
+document.addEventListener("language-changed", updateHeaderStars);

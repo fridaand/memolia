@@ -70,7 +70,9 @@ class PopupWrapper extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="style.css" />
 
-
+  <style>.position-bottom {
+                    bottom: -0.5rem;
+                  }</style>
         
     <div class="overlay hidden">
         <div class="popup">

@@ -25,7 +25,7 @@ class LanguageSelector extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="style.css">
 
-<div class="board-gap">
+      <div class="board-gap">
        
           <h2 class="text-title text--size-md">Språk jag vill lära mig</h2>
 
