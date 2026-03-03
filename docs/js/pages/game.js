@@ -236,10 +236,6 @@ function startTimer() {
       if (!isPaused) {
         timer++;
         updateGameSeconds();
-
-        /*      document.querySelectorAll(".info-seconds").forEach((span) => {
-          span.textContent = timer;
-        }); */
       }
     }, 1000);
   }
@@ -582,12 +578,21 @@ function addToStorage(key, value) {
 
 function endGame() {
   const category = localStorage.getItem("selectedCategory");
+  clearInterval(timerInterval);
+  timerInterval = null;
+
   registerGameEnd();
+
   showEndGameInfo();
 
   updateStatisticsUI();
   updateGameUI();
-  resetTimer();
+
+  // VISA POPUP EFTER 500ms
+  setTimeout(() => {
+    showEndGameInfo();
+  }, 2000);
+  /* resetTimer(); */
 }
 
 function updateGameUI() {
