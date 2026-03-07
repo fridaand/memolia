@@ -10,7 +10,7 @@
       href="icons/favicon/memolia_tree_thumbnail.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
   </head>
 
@@ -97,33 +97,6 @@
 
         <main class="main_card-area">
           <div class="container_game clickable"></div>
-          <!-- 
-
-<div class="board">
-                <h3>Välj antal kort per spel</h3>
-              <div id="board-selector" class="board-selector">
-  <button class="board-option" data-value="6" data-img="icons/board/board_6.svg" data-img-selected="icons/board/board_6_selected.svg">
-    <img src="icons/board/board_6.svg" alt="6 kort">
-    <span>6 kort</span>
-  </button>
-
-  <button class="board-option" data-value="12" data-img="icons/board/board_12.svg" data-img-selected="icons/board/board_12_selected.svg">
-    <img src="icons/board/board_12.svg" alt="12 kort">
-    <span>12 kort</span>
-  </button>
-
-  <button class="board-option" data-value="16" data-img="icons/board/board_16.svg" data-img-selected="icons/board/board_16_selected.svg">
-    <img src="icons/board/board_16.svg" alt="16 kort">
-    <span>16 kort</span>
-  </button>
-
-  <button class="board-option" data-value="20" data-img="icons/board/board_20.svg" data-img-selected="icons/board/board_20_selected.svg">
-    <img src="icons/board/board_20.svg" alt="20 kort">
-    <span>20 kort</span>
-  </button>
-</div>
-
-</div> -->
         </main>
 
         <footer>
@@ -133,18 +106,6 @@
               <div class="wrapper_text-min text--uppercase">
                 <span class="score container-direction"></span> Drag
               </div>
-
-              <!--               <div>
-
-                  <div class="wrapper_text-min">
-                    <span id="info-rounds"></span>TOTALT <SPEL>  
-                  </div>
-
-                  <div class="wrapper_text-min">
-                    <span id="info-totaltime"></span>MINUTER
-                  </div>
-
-                </div>  -->
             </article>
 
             <div class="wrapper_total-stars_horizontal"></div>
@@ -152,6 +113,12 @@
         </footer>
       </div>
     </div>
+
+    <!--    
+    <popup-wrapper id="appModal">         
+      <game-end-finished id="endGameFinishedModal"></game-end-finished>
+      <game-end-modal id="endGameModal"></game-end-modal>
+    </popup-wrapper> -->
 
     <!-- POPUP EXIT GAME-->
     <div id="popUpId" class="popup_bg">
@@ -187,6 +154,7 @@
     </div>
 
     <!-- POPUP GAME ENDS-->
+
     <div class="popup_bg section_end-game">
       <div class="lottie-container"></div>
 
@@ -200,6 +168,7 @@
             </p>
           </div>
         </div>
+
         <div class="wrapper_buttons">
           <div
             class="actions button_primary button_text button_cta"
@@ -218,12 +187,17 @@
         </div>
       </div>
     </div>
+    <!-- 
+    <game-exit-modal></game-exit-modal>
+    <game-finished-modal></game-finished-modal>
+ -->
+    <script type="module" src="js/components.js"></script>
 
-    <!-- script tag last in the body-->
     <script src="js/common.js" defer></script>
-    <script src="js/components/language-selector.js" type="module"></script>
-    <script src="js/components/board-selector.js" defer></script>
-    <script src="js/pages/settings.js" defer></script>
     <script src="js/pages/game.js" defer></script>
+    <script src="js/pages/settings.js" defer></script>
+
+    <!-- <script src="js/components/language-selector.js" type="module"></script>
+    <script src="js/components/board-selector.js" defer></script> -->
   </body>
 </html>

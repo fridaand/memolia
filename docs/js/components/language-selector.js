@@ -23,11 +23,13 @@ class LanguageSelector extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style.css">
+
+
 
       <div class="board-gap">
        
-          <h2 class="text-title text--size-md">Språk jag vill lära mig</h2>
+          <h2 class="text-headline-md">Språk jag vill lära mig</h2>
 
           <div class="menu__list clickable">
 
@@ -53,6 +55,8 @@ class LanguageSelector extends HTMLElement {
 
           </div>
           </div>
+
+          
      
     `;
   }

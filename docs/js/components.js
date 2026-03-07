@@ -1,0 +1,9 @@
+import "./components/popup-wrapper.js";
+import "./components/nav.js";
+import "./components/header-default.js";
+import "./components/language-selector.js";
+import "./components/statistics.js";
+import "./components/clear-dialog.js";
+import "./components/clear-storage-modal.js";
+import "./components/game-exit-modal.js";
+import "./components/game-finished-modal.js";

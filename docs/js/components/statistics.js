@@ -1,3 +1,7 @@
+/* class StatisticsModal extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = ` */
+
 class StatisticsModal extends HTMLElement {
   constructor() {
     super();
@@ -15,15 +19,16 @@ class StatisticsModal extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-         <link rel="stylesheet" href="style.css">
-  <style>.text--color-primary {
-                    color: var(--primary-light);
-                  }</style>
+    this.shadowRoot.innerHTML = ` 
 
-    <div class="flex-column width-popup">
+        <link rel="stylesheet" href="css/style.css">
+
+
+  <div class="board-gap">
       
       <h2 class="text-headline-md">Överblick</h2>
+
+    <div class="menu__list clickable">
 
       <div class="wrapper-horizontal">
         <img id="stats-flag" class="flag" src="icons/flag/french-fr.svg" alt="">
@@ -36,58 +41,61 @@ class StatisticsModal extends HTMLElement {
               <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
               <p class="text--color-primary">Poäng</p>   
             
-            <span class="text--weight-regular" id="stars-language"></span>   
-            </div> 
-        </div>
+          <span class="text--weight-regular" id="stars-language"></span>   
+          </div> 
+      </div>
 
-        <div class="wrapper_p spacing-sm">
-         <div class="wrapper-horizontal">
-              <img class="icon_xs" src="./icons/arrow-refresh.svg">
-              <p class="text--color-primary">Spelade rundor</p>
-             
-          <span class="text--weight-regular" id="rounds-language"></span>
-           </div>
-        </div>
-
-        <div class="wrapper_p spacing-sm">  
-         <div class="wrapper-horizontal">
-              <img class="icon_xs" src="./icons/clock.svg">
-              <p class="text--color-primary">Total tid</p>    
-              <span class="text--weight-regular" id="time-language"></span>
+      <div class="wrapper_p spacing-sm">
+        <div class="wrapper-horizontal">
+            <img class="icon_xs" src="./icons/arrow-refresh.svg">
+            <p class="text--color-primary">Spelade rundor</p>
+            
+        <span class="text--weight-regular" id="rounds-language"></span>
           </div>
+      </div>
+
+      <div class="wrapper_p spacing-sm">  
+        <div class="wrapper-horizontal">
+            <img class="icon_xs" src="./icons/clock.svg">
+            <p class="text--color-primary">Total tid</p>    
+            <span class="text--weight-regular" id="time-language"></span>
         </div>
       </div>
 
-      <hr class="line"/>
+    </div>
 
-      <h3 class="text-headline-sm">Totalt - alla språk</h3>
+  </div>
 
-      <div class="wrapper_p spacing-md">
+  <hr class="line"/>
 
-          <div class="wrapper_p spacing-sm">   
-              <div class="wrapper-horizontal">
-                <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
-                <p class="text--color-primary">Poäng</p>   
-                <span class="text--weight-regular" id="stars-all"></span>  
-              </div>  
-          </div>
+    <h3 class="text-headline-sm">Totalt - alla språk</h3>
 
-          <div class="wrapper_p spacing-sm">
+    <div class="wrapper_p spacing-md">
+
+        <div class="wrapper_p spacing-sm">   
             <div class="wrapper-horizontal">
-                <img class="icon_xs" src="./icons/arrow-refresh.svg">
-                <p class="text--color-primary">Spelade rundor</p>          
-                <span class="text--weight-regular" id="rounds-all"></span>
-            </div>
-          </div>
+              <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
+              <p class="text--color-primary">Poäng</p>   
+              <span class="text--weight-regular" id="stars-all"></span>  
+            </div>  
+        </div>
 
-          <div class="wrapper_p spacing-md">        
-            <div class="wrapper-horizontal">
-                <img class="icon_xs" src="./icons/clock.svg">
-                <p class="text--color-primary">Total tid</p>    
-                <span class="text--weight-regular" id="time-all"></span>
-            </div>
+        <div class="wrapper_p spacing-sm">
+          <div class="wrapper-horizontal">
+              <img class="icon_xs" src="./icons/arrow-refresh.svg">
+              <p class="text--color-primary">Spelade rundor</p>          
+              <span class="text--weight-regular" id="rounds-all"></span>
           </div>
-    
+        </div>
+
+        <div class="wrapper_p spacing-md">        
+          <div class="wrapper-horizontal">
+              <img class="icon_xs" src="./icons/clock.svg">
+              <p class="text--color-primary">Total tid</p>    
+              <span class="text--weight-regular" id="time-all"></span>
+          </div>
+        </div>
+  
       </div>
 
     </div>

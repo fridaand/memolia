@@ -10,7 +10,7 @@
       href="icons/favicon/memolia_tree_thumbnail.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="/css/nav.css" />
   </head>
 
@@ -77,7 +77,7 @@
                 <div class="board-selector">
                   <button
                     class="board-option"
-                    data-value="6"
+                    data-cards="6"
                     data-img="board_6.svg"
                     data-img-selected="icons/board/board_6_selected.svg"
                   >
@@ -87,7 +87,7 @@
 
                   <button
                     class="board-option selected"
-                    data-value="12"
+                    data-cards="12"
                     data-img="board_12.svg"
                     data-img-selected="icons/board/board_12_selected.svg"
                   >
@@ -101,7 +101,7 @@
 
                   <button
                     class="board-option"
-                    data-value="16"
+                    data-cards="16"
                     data-img="board_16.svg"
                     data-img-selected="board_16_selected.svg"
                   >
@@ -111,7 +111,7 @@
 
                   <button
                     class="board-option"
-                    data-value="20"
+                    data-cards="20"
                     data-img="board_20.svg"
                     data-img-selected="board_20_selected.svg"
                   >
@@ -174,7 +174,7 @@
 
             <section class="section_text bg_petrol3">
               <div class="board board-gap">
-      <h3 class="text-headline-md">Återställ spelet</h3>
+            <h3 class="text-headline-md">Återställ spelet</h3>
                 <div class="wrapper_p">
             
                   <p>Vill du återställa tid och poäng för alla spel?</p>
@@ -191,12 +191,13 @@
                 </div>
 
                 <div class="hitbox_tl">
-                  <div
+                  <div 
                     class="button_primary button_text button_warning clickable"
                     id="clear-button"
                   >
                     <span class="button_label">Nollställ alla spel</span>
-                  </div>
+                    
+                </div>
 
                 </div>
               </div>
@@ -207,6 +208,11 @@
 
         <!-- OVERLAY NAV MENU -->
         <game-nav></game-nav>
+
+        
+        <popup-wrapper id="appModal">
+          
+        </popup-wrapper>
 
         <!-- SECTION FOOTER -->
         <footer>
@@ -225,7 +231,7 @@
     </div>
 
     <!-- POPUP CLEAR -->
-    <div id="clear-dialog" class="popup_bg hidden">
+   <!--  <div id="clear-dialog" class="popup_bg hidden">
       <div class="popup_styling">
         <div class="wrapper_justify-end">
           <div class="hitbox_tl clickable">
@@ -260,19 +266,17 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-   
+    <script type="module" src="js/components.js"></script>
+    <script src="js/common.js" defer></script>
+
+
     <script src="js/pages/menu.js" defer></script>
     <script src="js/pages/game.js" defer></script>
     <script src="js/pages/settings.js" defer></script>
-     <script src="js/common.js" defer></script>
-    <script src="js/components/nav.js" type="module"></script>
-    <script src="js/components/header-default.js" type="module"></script>
-    <script src="js/components/language-selector.js" type="module"></script>
-    <script src="js/components/statistics.js" defer></script>
-    <script src="js/components/popup-wrapper.js" type="module"></script>
+  
 
   </body>
 </html>

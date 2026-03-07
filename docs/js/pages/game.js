@@ -6,7 +6,9 @@ let timer = 0;
 let timerInterval;
 let isMuted = false;
 let isPaused = false;
-let lastAudio = undefined;
+/* let lastAudio = undefined;
+ */ const audioCache = {}; // globalt cache
+let lastAudio = null;
 
 let popup = document.getElementById("popUpId"); // Get the popup
 let xButton = document.getElementById("button_trigger"); // Get the button that opens the popup
@@ -17,7 +19,7 @@ const flagLeft = document.querySelector(".flag-left");
 const flagRight = document.querySelector(".flag-right");
 const toggleBtn = document.getElementById("toggle-translation");
 
-const tooltip = toggleBtn.querySelector(".icon-wrapper tooltip");
+const tooltip = toggleBtn.querySelector(".icon-wrapper .tooltip");
 
 let translationMode = false;
 
@@ -70,7 +72,7 @@ toggleBtn.addEventListener("click", () => {
 function updateCardTexts() {
   const allCards = document.querySelectorAll(".card");
   const grouped = {};
-  const selectedLang = getCurrentLanguage(); // ✅ hämta EN gång
+  const selectedLang = getCurrentLanguage();
 
   // gruppera kort per namn
   allCards.forEach((card) => {
@@ -148,6 +150,7 @@ function changeLanguage(newLanguage) {
 
   generateBoard(getBoardSize());
   updateStatisticsUI(); // uppdatera poäng, tid, stjärnor, rundor
+
   updateGameUI(); // uppdatera score, timer, titel
   updateToggleFlags(); // uppdatera flaggor
 }
@@ -164,7 +167,6 @@ function generateCardDiv(card) {
 }
 
 function generateCards(cardsForBoard) {
-  /* function generateCards() */
   const gridContainer = document.querySelector(".container_game");
   gridContainer.innerHTML = ""; // rensa spelplanen först
 
@@ -175,7 +177,7 @@ function generateCards(cardsForBoard) {
     cardEl.dataset.currentLanguage = getCurrentLanguage();
     cardEl.innerHTML = generateCardDiv(card);
 
-    cardEl.clickTrigger = function () {
+    /*  cardEl.clickTrigger = function () {
       if (isPaused || (firstCard && secondCard)) return;
 
       if (!isMuted) {
@@ -186,6 +188,44 @@ function generateCards(cardsForBoard) {
       }
 
       flipCard.call(this);
+    }; */
+
+    /*  cardEl.clickTrigger = function () {
+      if (isPaused || (firstCard && secondCard)) return;
+
+      const baseName = this?.dataset?.baseName;
+      if (!baseName) return; // skydda mot undefined
+
+      const cardData = cards.find((c) => c.name === baseName);
+      if (!cardData) {
+        console.warn("cardData not found for", baseName);
+        return;
+      }
+
+      if (!isMuted) {
+        const languageToPlay =
+          this.dataset.currentLanguage || getCurrentLanguage();
+        playCardSound(cardData.audio[languageToPlay]);
+      }
+
+      flipCard.call(this);
+    }; */
+    cardEl.clickTrigger = function () {
+      if (isPaused || (firstCard && secondCard)) return;
+
+      const baseName = this?.dataset?.baseName;
+      const currentLang =
+        this?.dataset?.currentLanguage || getCurrentLanguage();
+      if (!baseName) return; // <--- skydd mot undefined
+
+      const cardData = cards.find((c) => c.name === baseName);
+      if (!cardData) return; // <--- skydd mot undefined
+
+      if (!isMuted && cardData.audio && cardData.audio[currentLang]) {
+        playCardSound(cardData.audio[currentLang]);
+      }
+
+      flipCard.call(this);
     };
 
     cardEl.addEventListener("click", cardEl.clickTrigger);
@@ -193,8 +233,41 @@ function generateCards(cardsForBoard) {
   });
 }
 
+/* function generateCards(cardsForBoard) {
+  const gridContainer = document.querySelector(".container_game");
+  gridContainer.innerHTML = "";
+
+  cardsForBoard.forEach((card) => {
+    const cardEl = document.createElement("div");
+    cardEl.classList.add("card");
+    cardEl.dataset.baseName = card.name;
+    cardEl.dataset.currentLanguage = getCurrentLanguage();
+    cardEl.innerHTML = generateCardDiv(card);
+
+    cardEl.clickTrigger = function () {
+      const card = this; // spara 'this' som kortet
+      if (isPaused || (firstCard && secondCard)) return;
+
+      if (!isMuted) {
+        const cardData = cards.find((c) => c.name === card.dataset.baseName);
+        const languageToPlay =
+          card.dataset.currentLanguage || getCurrentLanguage();
+
+        playCardSound(cardData.audio[languageToPlay]);
+      }
+
+      flipCard.call(card);
+    };
+
+    cardEl.addEventListener("click", cardEl.clickTrigger);
+    gridContainer.appendChild(cardEl);
+  });
+} */
+
 // Generera bräde med rätt antal kort
 function generateBoard(boardSize) {
+  const board = document.querySelector(".container_game");
+  board.dataset.cards = boardSize;
   firstCard = null;
   secondCard = null;
 
@@ -210,10 +283,61 @@ document.addEventListener("boardSizeChanged", (e) => {
   if (cards.length > 0) generateBoard(e.detail.boardSize);
 });
 
-function playCardSound(audioSrc) {
+/* function playCardSound(audioSrc) {
   lastAudio = new Audio(audioSrc);
   lastAudio.play();
+} */
+
+/* function playCardSound(audioSrc) {
+  // Om ljudet redan finns, använd det
+  if (!audioCache[audioSrc]) {
+    audioCache[audioSrc] = new Audio(audioSrc);
+  }
+
+  const audio = audioCache[audioSrc];
+
+  // Stoppa tidigare ljud bara om det är ett annat ljud
+  if (lastAudio && lastAudio !== audio) {
+    lastAudio.pause();
+    lastAudio.currentTime = 0;
+  }
+
+  lastAudio = audio;
+
+  // Spela ljudet
+  audio.play();
+
+  audio.onended = () => console.log("Ended:", audioSrc);
+  console.log("Playing:", audioSrc);
+} */
+
+/* function playCardSound(audioSrc) {
+  if (!audioCache[audioSrc]) {
+    audioCache[audioSrc] = new Audio(audioSrc);
+  }
+  const audio = audioCache[audioSrc];
+  audio.currentTime = 0;
+  audio.play().catch((err) => console.warn("Audio play error:", err));
+} */
+
+function playCardSound(audioSrc) {
+  if (!audioSrc) return;
+  if (lastAudio) {
+    lastAudio.pause();
+    lastAudio.currentTime = 0;
+  }
+  lastAudio = new Audio(audioSrc);
+  lastAudio.play().catch((err) => console.warn("Audio play error:", err));
 }
+
+let isUserInteracted = false;
+document.addEventListener(
+  "click",
+  () => {
+    isUserInteracted = true;
+  },
+  { once: true },
+);
 
 function flipCard() {
   if (this === firstCard) return;
@@ -294,8 +418,16 @@ function resetBoard() {
   secondCard = null;
 }
 
-function updateGameSeconds() {
+/* function updateGameSeconds() {
   document.querySelectorAll(".info-seconds").forEach((span) => {
+    span.innerText = timer;
+  });
+} */
+function updateGameSeconds() {
+  const spans = document.querySelectorAll(".info-seconds");
+  if (!spans.length) return;
+
+  spans.forEach((span) => {
     span.innerText = timer;
   });
 }
@@ -398,14 +530,6 @@ const successMessagesFast = [
   "Det här var nästan olagligt snabbt!",
 ];
 
-function hideGameInfo() {
-  document.querySelector(".article_game-info").style.display = "flex";
-}
-
-function showGameInfo() {
-  document.querySelector(".article_game-info").style.display = "flex";
-}
-
 function getRandomMessage() {
   const timeTaken = parseInt(
     document.querySelector(".info-seconds").textContent,
@@ -425,12 +549,57 @@ function getRandomMessage() {
   return successMessages[randomIndex]; */
 }
 
-function hideEndGameInfo() {
-  document.querySelector(".section_end-game").style.display = "none";
+function hideGameInfo() {
+  document.querySelector(".article_game-info").style.display = "flex";
 }
 
-// POPUP WHEN GAME IS FINISHED (MESSAGE, ANIMATION)
+function showGameInfo() {
+  document.querySelector(".article_game-info").style.display = "flex";
+}
+
+/* TEST */
+
+function hideEndGameInfo() {
+  const el = document.querySelector(".section_end-game");
+  if (el) el.style.display = "none";
+}
+
 function showEndGameInfo() {
+  const modal = document.querySelector(".section_end-game");
+  if (!modal) return;
+
+  modal.style.display = "flex";
+
+  const popupText = document.getElementById("popupText");
+  if (popupText) {
+    popupText.textContent = getRandomMessage();
+    popupText.classList.add("animate-text");
+
+    setTimeout(() => {
+      popupText.classList.remove("animate-text");
+    }, 1500);
+  }
+
+  const animationContainer = document.querySelector(".lottie-container");
+  if (!animationContainer) return;
+
+  animationContainer.innerHTML = "";
+
+  lottie.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: 1,
+    autoplay: true,
+    path: "./animations/confetti_01.json",
+  });
+}
+
+/* function hideEndGameInfo() {
+  document.querySelector(".section_end-game").style.display = "none";
+}
+ */
+// POPUP WHEN GAME IS FINISHED (MESSAGE, ANIMATION)
+/* function showEndGameInfo() {
   document.querySelector(".section_end-game").style.display = "flex";
 
   // GENERATE RANDOM MESSAGE
@@ -457,7 +626,7 @@ function showEndGameInfo() {
     autoplay: true,
     path: "./animations/confetti_01.json",
   });
-}
+} */
 
 function resetScore() {
   score = 0;
@@ -517,6 +686,7 @@ function main() {
 
       generateBoard(getBoardSize());
       updateStatisticsUI(); // uppdatera totaler/statistik
+
       updateGameUI(); // uppdatera runda/timer/titel
       updateToggleFlags();
     });
@@ -568,9 +738,9 @@ function registerGameEnd() {
   addToStorage(`stars-${category}-${selectedLang}`, starPoints);
 }
 
-function addToStorage(key, value) {
+function addToStorage(key, cards) {
   const prev = parseInt(localStorage.getItem(key), 10) || 0;
-  const newValue = prev + value;
+  const newValue = prev + cards;
   localStorage.setItem(key, newValue);
 
   console.log("Updated:", key, newValue);
@@ -601,15 +771,29 @@ function updateGameUI() {
   updateTitle();
 }
 
-function updateScore() {
+/* function updateScore() {
   document.querySelectorAll(".score").forEach((span) => {
+    span.textContent = score;
+  });
+} */
+function updateScore() {
+  const scores = document.querySelectorAll(".score");
+  if (!scores.length) return;
+
+  scores.forEach((span) => {
     span.textContent = score;
   });
 }
 
-function updateTitle() {
+/* function updateTitle() {
   document.getElementById("cate").innerText =
     localStorage.getItem("categoryTitle");
+} */
+function updateTitle() {
+  const el = document.getElementById("cate");
+  if (!el) return;
+
+  el.innerText = localStorage.getItem("categoryTitle") || "";
 }
 
 document.addEventListener("DOMContentLoaded", function () {

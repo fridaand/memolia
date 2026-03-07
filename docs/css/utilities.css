@@ -1,0 +1,218 @@
+/* gap / bg / text / helpers */
+
+/* ===================================== */
+/* COLOR UTILITIES */
+/* ===================================== */
+
+/* DARK SURFACES AUTO TEXT */
+
+.bg-green-700,
+.bg-green-900,
+.bg-petrol-700,
+.bg-petrol-900,
+.bg-pink-800,
+.bg-yellow-600,
+.bg-yellow-800,
+.bg-gold-400,
+.bg-gold-600,
+.bg-brown-600,
+.bg-brown-800 {
+  color: var(--text-on-dark);
+}
+
+/* LIGHT SURFACES AUTO TEXT */
+
+.bg-green-200,
+.bg-green-400,
+.bg-petrol-200,
+.bg-petrol-400,
+.bg-pink-200,
+.bg-pink-400,
+.bg-pink-600,
+.bg-orange-200,
+.bg-orange-400,
+.bg-cream-200,
+.bg-cream-400,
+.bg-yellow-200,
+.bg-yellow-400,
+.bg-white-200 {
+  color: var(--text-on-light);
+}
+
+/* ===================================== */
+/* BACKGROUND COLOR CLASSES */
+/* ===================================== */
+
+/* GREEN – SUCCESS / CATEGORY */
+.bg-green-200 {
+  background-color: var(--green-200);
+}
+.bg-green-400 {
+  background-color: var(--green-400);
+}
+.bg-green-700 {
+  background-color: var(--green-700);
+}
+.bg-green-900 {
+  background-color: var(--green-900);
+}
+
+/* PETROL */
+.bg-petrol-200 {
+  background-color: var(--petrol-200);
+}
+.bg-petrol-400 {
+  background-color: var(--petrol-400);
+}
+.bg-petrol-700 {
+  background-color: var(--petrol-700);
+}
+.bg-petrol-900 {
+  background-color: var(--petrol-900);
+}
+
+/* ORANGE */
+.bg-orange-200 {
+  background-color: var(--orange-200);
+}
+.bg-orange-400 {
+  background-color: var(--orange-400);
+}
+
+/* PINK – WARNING */
+.bg-pink-200 {
+  background-color: var(--pink-200);
+}
+.bg-pink-400 {
+  background-color: var(--pink-400);
+}
+.bg-pink-600 {
+  background-color: var(--pink-600);
+}
+.bg-pink-800 {
+  background-color: var(--pink-800);
+}
+
+/* CREAM / LIGHT BACKGROUNDS */
+.bg-cream-200 {
+  background-color: var(--cream-200);
+}
+.bg-cream-400 {
+  background-color: var(--cream-400);
+}
+
+/* YELLOW */
+.bg-yellow-200 {
+  background-color: var(--yellow-200);
+}
+.bg-yellow-400 {
+  background-color: var(--yellow-400);
+}
+.bg-yellow-600 {
+  background-color: var(--yellow-600);
+}
+.bg-yellow-800 {
+  background-color: var(--yellow-800);
+}
+
+/* GOLD – highlights */
+.bg-gold-400 {
+  background-color: var(--gold-400);
+}
+.bg-gold-600 {
+  background-color: var(--gold-600);
+}
+
+/* BROWN / DARK BACKGROUNDS */
+.bg-brown-800 {
+  background-color: var(--brown-800);
+}
+.bg-brown-600 {
+  background-color: var(--brown-600);
+}
+
+/* WHITE / LIGHT */
+.bg-white-200 {
+  background-color: var(--white-200);
+}
+
+/* SPECIALS */
+.bg-primary-light {
+  background-color: var(--color-bg-light);
+}
+.bg-secondary-bright {
+  background-color: var(--secondary-bright);
+}
+.bg-accent {
+  background-color: var(--brown-600);
+}
+.bg-black-op80 {
+  background-color: var(--black-op80);
+}
+
+/* TEXT COLORS (uppdaterade variabler) */
+.text-effect {
+  color: var(--petrol-200);
+}
+.text-effect:hover {
+  color: var(--pink-200);
+}
+.text-warning {
+  color: var(--color-text-warning);
+}
+.text-cta {
+  color: var(--green-200);
+}
+.bg-warning {
+  color: var(--warning);
+}
+
+.text-cta {
+  color: var(--green-200);
+}
+
+/* ===================================== */
+/* GAP UTILITIES */
+/* ===================================== */
+
+.gap-xs {
+  gap: var(--space-xs);
+}
+.gap-sm {
+  gap: var(--space-sm);
+}
+.gap-md {
+  gap: var(--space-md);
+}
+.gap-lg {
+  gap: var(--space-lg);
+}
+.gap-xl {
+  gap: var(--space-xl);
+}
+
+/* ===================================== */
+/* ALIGNMENT UTILITIES */
+/* ===================================== */
+
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+}

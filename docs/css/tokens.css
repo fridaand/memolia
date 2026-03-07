@@ -1,0 +1,239 @@
+/* variabler */
+
+:root {
+  /* ===================================== */
+  /* PRIMITIVE COLORS – CATEGORY COLORS */
+  /* ===================================== */
+
+  /* GREEN – SUCCESS / CATEGORY */
+  --green-200: #74b899; /* green1, ljusast */
+  --green-400: #609e82; /* green2 */
+  --green-700: #1d594e; /* green2b */
+  --green-900: #0a6c64; /* green3, mörkast */
+
+  /* PETROL */
+  --petrol-200: #73c6ba; /* petrol1, ljusast */
+  --petrol-400: #5ca497; /* petrol2 */
+  --petrol-700: #003a35; /* petrol3 */
+  --petrol-900: #002623; /* petrol4, mörkast */
+
+  /* ORANGE */
+  --orange-200: #ef955e; /* orange1, ljusast */
+  --orange-400: #ef9d61; /* orange2 */
+
+  /* PINK / WARNING */
+  --pink-200: #f9a093; /* pink0, ljusast */
+  --pink-400: #ff9688; /* pink1 */
+  --pink-600: #fd8674; /* pink2 */
+  --pink-800: #eb675e; /* pink3, mörkast */
+
+  /* CREAM / LIGHT BG */
+  --cream-200: #ffebd2; /* cream1, ljusare */
+  --cream-400: #fbe0b7; /* cream2 */
+
+  /* YELLOW */
+  --yellow-200: #f4c276; /* yellow1, ljus */
+  --yellow-400: #fdbd65; /* yellow2 */
+  --yellow-600: #8a5a1c; /* yellow3 */
+  --yellow-800: #905e1d; /* yellow4, mörkast */
+
+  /* GOLD – highlights */
+  --gold-400: #53451f; /* gold2 */
+  --gold-600: #2a2310; /* gold3 */
+
+  /* BROWN / DARK BG */
+  --brown-600: #a16920; /* accent / cursor */
+  --brown-800: #26211a; /* brown2 */
+
+  /* WHITE / LIGHTS */
+  --white-200: #f2efea;
+
+  /* BLACK OPACITY */
+  --black-op90: rgba(0, 0, 0, 0.9);
+  --black-op80: rgba(0, 0, 0, 0.8);
+  --black-op70: rgba(0, 0, 0, 0.7);
+
+  /* ===================================== */
+  /* SEMANTIC COLORS */
+  /* ===================================== */
+
+  /* BACKGROUNDS */
+  --color-bg-primary: var(--petrol-900);
+  --color-bg-surface: var(--petrol-700);
+  --color-bg-overlay: var(--black-op80);
+  --color-bg-light: var(--cream-200);
+  --color-bg-info: var(--petrol-200);
+  --color-bg-warning: var(--pink-200);
+  --color-bg-success: var(--green-200);
+
+  /* TEXT */
+  --color-text-primary: var(--white-200); /* text på mörk bg */
+  --color-text-secondary: var(--cream-400);
+  --color-text-muted: var(--petrol-900); /* text på ljus bg */
+  --color-text-dark: var(--brown-800);
+
+  /* ACCENTS & STATES */
+  --color-accent: var(--brown-600);
+  --color-warning: var(--pink-600); /* warning / alert */
+
+  /* ===================================== */
+  /* SHADOWS */
+  /* ===================================== */
+  --shadow-round: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 15%,
+    rgba(255, 255, 255, 0) 30%
+  );
+  --shadow-button: rgba(76, 47, 6, 0.4) -0px -0px 16px 0px inset;
+  --shadow-button-hover: rgba(76, 47, 6, 0.2) -0px -0px 8px 0px inset;
+  --shadow-menu-card: rgba(19, 6, 2, 0.6) -0px -8px 20px 4px inset;
+  --shadow-card:
+    -1px -1px 4px 0px rgba(0, 0, 0, 0.15) inset,
+    1px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+  --shadow-gold:
+    0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 0px 8px 2px rgba(0, 0, 0, 0.2) inset;
+
+  /* ===================================== */
+  /* GRADIENTS */
+  /* ===================================== */
+  --gold: linear-gradient(
+    180deg,
+    #b5a26f 0%,
+    #bfaf83 5.95%,
+    #fff3d3 17.86%,
+    #ffeec1 52.58%,
+    #bfaf83 88.79%,
+    #b5a26f 95.24%
+  );
+  --gold-light: linear-gradient(
+    180deg,
+    #f9f1dd 0%,
+    #f2f0e7 5%,
+    #fdfaf3 10%,
+    #f4f1e9 50%,
+    #e6e0d6 90%,
+    #e1dccb 95%,
+    #bbb5a3 100%
+  );
+  --gold-light2: linear-gradient(
+    180deg,
+    #e6dcc2 0%,
+    #f4f1e7 5%,
+    #f0eee9 10%,
+    #d5d0c3 50%,
+    #eae4d8 90%,
+    #e1dac6 95%,
+    #bbb5a3 100%
+  );
+  --gold-card-menu: linear-gradient(
+    180deg,
+    #b5a26f 0%,
+    #fff3d3 1.98%,
+    #ffeec1 25.3%,
+    #b5a26f 83.33%,
+    #b5a26f 95.24%
+  );
+  --fade-forest: linear-gradient(
+    175deg,
+    #36827c 5%,
+    #1e6f69 25%,
+    #11423e 75%,
+    #1b4845 100%
+  );
+  --button-primary-gradient:
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #fff3d3 0%,
+      #ffeec1 22.32%,
+      #b9ab84 68.45%,
+      #b5a26f 95.24%
+    );
+  --button-primary-gradient-pink:
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #ff9485 0%,
+      #f09083 22.32%,
+      #ff9485 68.45%,
+      #fd8674 95.24%
+    );
+
+  /* ===================================== */
+  /* TYPOGRAPHY */
+  /* ===================================== */
+  --font-primary:
+    "Montserrat", "Figtree", "Be Vietnam Pro", "Golos Text", "Zain", sans-serif;
+  --font-weight-light: 350;
+  --font-weight-regular: 450;
+  --font-weight-bold: 700;
+  --font-size-display: 1.5rem;
+  --font-size-lg: 3rem;
+  --font-size-md: 2.25rem;
+  --font-size-sm: 1.25rem;
+  --font-size-xs: 1rem;
+  --font-size-xxs: 0.825rem;
+  --font-size-body: 0.875rem;
+  --font-size-tooltip: 0.825rem;
+
+  /* ===================================== */
+  /* SPACING SCALE */
+  /* ===================================== */
+
+  :root {
+    --hit-box: 2.5rem;
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.75rem;
+    --space-xl: 2.5rem;
+  }
+
+  /* ===================================== */
+  /* RADIUS */
+  /* ===================================== */
+  /* Border-radius mm */
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-display: 1.25rem;
+    --font-size-lg: 2.75rem;
+    --font-size-md: 2rem;
+  }
+}
+@media (max-width: 880px) {
+  :root {
+    --font-size-display: 1.125rem;
+    --font-size-lg: 2.5rem;
+    --font-size-md: 1.75rem;
+    --font-size-sm: 1.125rem;
+    --font-size-xs: 0.825rem;
+    --font-size-xxs: 0.75rem;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --font-size-display: 1.125rem;
+    --font-size-lg: 2.25rem;
+    --font-size-md: 1.5rem;
+    --font-size-sm: 1rem;
+  }
+}
+@media (max-width: 468px) {
+  :root {
+    --font-size-lg: 2rem;
+    --font-size-md: 1.25rem;
+    --font-size-xxs: 0.625rem;
+  }
+}

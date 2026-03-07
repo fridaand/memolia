@@ -1,0 +1,6 @@
+/* tooltip / buttons / cards */
+
+.tooltip {
+  background: var(--petrol-200);
+  color: var(--black-op80);
+}

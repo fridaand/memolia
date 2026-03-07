@@ -46,10 +46,7 @@ class HeaderDefault extends HTMLElement {
                   alt="Valt språk" />
                   <span class="tooltip">Välj språk</span>
               </div>
-                  <popup-wrapper id="languageModal">
-                    <language-selector></language-selector>
-                  </popup-wrapper>
-
+                
               <div class="icon-wrapper" aria-label="Visa statistik">
                 <div class="wrapper_text-min" id="statistics-trigger">                  
                 <img class="star-bright icon_md" src="./icons/star/star-md.svg" />
@@ -58,9 +55,7 @@ class HeaderDefault extends HTMLElement {
 
                   <span class="tooltip">Visa statistik</span>
               </div>
-                  <popup-wrapper id="statisticsModal">
-                    <statistics-modal></statistics-modal>
-                  </popup-wrapper>
+           
                   
             </div>
           </article>

@@ -7,7 +7,7 @@ function updateBoardSelectionUI() {
   const savedBoardSize = localStorage.getItem("boardSize") || "12";
 
   boardOptions.forEach((option) => {
-    const boardNum = option.dataset.value;
+    const boardNum = option.dataset.cards;
     const img = option.querySelector("img");
 
     if (boardNum === savedBoardSize) {
@@ -23,7 +23,7 @@ function updateBoardSelectionUI() {
 // Klickhantering
 boardOptions.forEach((option) => {
   option.addEventListener("click", () => {
-    const selectedBoard = option.dataset.value;
+    const selectedBoard = option.dataset.cards;
 
     // Spara valet
     localStorage.setItem("boardSize", selectedBoard);
@@ -32,7 +32,12 @@ boardOptions.forEach((option) => {
     updateBoardSelectionUI();
 
     // Dispatcha event för game.js
-    document.dispatchEvent(new Event("boardSizeChanged"));
+    /*    document.dispatchEvent(new Event("boardSizeChanged")); */
+    document.dispatchEvent(
+      new CustomEvent("boardSizeChanged", {
+        detail: { boardSize: selectedBoard },
+      }),
+    );
   });
 });
 
@@ -41,19 +46,4 @@ document.addEventListener("DOMContentLoaded", updateBoardSelectionUI);
 
 document.addEventListener("DOMContentLoaded", () => {
   updateBoardSelectionUI(); // visar rätt knapp vid laddning
-});
-
-boardOptions.forEach((option) => {
-  option.addEventListener("click", () => {
-    const selectedBoard = option.dataset.value;
-
-    // Spara valet
-    localStorage.setItem("boardSize", selectedBoard);
-
-    // Dispatcha ett custom event som game.js kan lyssna på
-    document.dispatchEvent(new Event("boardSizeChanged"));
-
-    // Uppdatera UI direkt
-    updateBoardSelectionUI();
-  });
 });

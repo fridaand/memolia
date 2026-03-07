@@ -184,34 +184,90 @@ clickableElements.forEach((el) => {
 // CURSOR ENDS
 
 function getCurrentLanguage() {
-  return localStorage.getItem("language");
+  return localStorage.getItem("language") || "english";
 }
 
-/* UPDATE STARS TA BORT*/
+function getStarPoints(boardSize) {
+  const starMap = {
+    4: 1,
+    6: 1,
+    12: 2,
+    16: 3,
+    20: 4,
+  };
 
-function updateStarsForLanguageChange() {
-  updateStars(); // Uppdate stars for current language
+  return starMap[boardSize] || 0;
 }
 
-/* function updatePage() {
-  updateRounds();
-  updateTotalTime();
-  updateStars();
-  // updateFlag();
+// Uppdatera stjärnor på sidan
+function updateStars() {
+  const language = getCurrentLanguage();
+
+  categories.forEach((category) => {
+    const starsElement = document.getElementById("stars-" + category.name);
+    if (!starsElement) return;
+
+    const key = `stars-${category.name}-${language}`;
+    let numberOfStars = parseInt(localStorage.getItem(key), 10) || 0;
+    numberOfStars = Math.min(numberOfStars, maxNumberOfStartsPerCategory);
+
+    starsElement.innerHTML = "";
+    for (let i = 0; i < maxNumberOfStartsPerCategory; i++) {
+      const isFilled = i < numberOfStars;
+      const icon = "./icons/star/star-sm.svg";
+      starsElement.innerHTML += `
+        <img class="star ${isFilled ? "star-filled" : "star-empty"}" src="${icon}" alt="${isFilled ? "Fylld stjärna" : "Tom stjärna"}" />
+      `;
+    }
+  });
+}
+
+/* function updateStars() {
+  const totalStars = parseInt(localStorage.getItem("stars-all"), 10) || 0;
+  const el = document.getElementById("info-total-stars");
+  if (el) el.textContent = totalStars;
+  return totalStars;
 } */
 
-function updatePage() {
-  updateStars();
-  updateScore(); // stjärnor
-
-  updateRoundsPerLanguage();
-  updateTotalRounds();
-  updateTimePerLanguage();
-  updateTotalTimeAll();
-
-  updateTitle();
-  updateGameSeconds();
+function getStarsForCategory(category) {
+  const selectedLang = getCurrentLanguage();
+  return (
+    parseInt(localStorage.getItem(`stars-${category}-${selectedLang}`), 10) || 0
+  );
 }
+
+function getTotalStarsForLanguage(selectedLang) {
+  let total = 0;
+
+  Object.keys(localStorage).forEach((key) => {
+    if (key.startsWith("stars-") && key.endsWith(`-${selectedLang}`)) {
+      total += parseInt(localStorage.getItem(key), 10) || 0;
+    }
+  });
+
+  return total;
+}
+
+function getTotalStarsAllLanguages() {
+  let total = 0;
+
+  Object.keys(localStorage).forEach((key) => {
+    if (key.startsWith("stars-")) {
+      total += parseInt(localStorage.getItem(key), 10) || 0;
+    }
+  });
+
+  return total;
+}
+
+/* STARS END */
+
+/* UPDATE FLAG */
+// Uppdatera flagga direkt
+/* function updateFlag(flag) {
+  const flagImg = document.getElementById("selected-flag");
+  if (flagImg && flag) flagImg.src = flag;
+} */
 
 function updateFlag() {
   const flag = localStorage.getItem("languageFlag");
@@ -222,8 +278,14 @@ function updateFlag() {
   }
 }
 
+// Language selector (flagga)
 document.addEventListener("DOMContentLoaded", () => {
-  updateFlag();
+  const flagBtn = document.getElementById("selected-flag");
+  const popup = document.getElementById("languageModal");
+
+  if (flagBtn && popup) {
+    flagBtn.addEventListener("click", () => popup.open());
+  }
 });
 
 /* LOAD THE GAME CARDS & CATEGORY TITLE */
@@ -246,89 +308,10 @@ function registerCategories() {
 
 /* UPDATE ROUNDS AND TIME */
 
-function updateRounds() {
-  const element = document.getElementById("info-total-rounds");
-  if (!element) return;
-
-  const language = localStorage.getItem("language") || "english";
-  const roundsKey = `rounds-${language}`;
-  let rounds = localStorage.getItem(roundsKey) || 0;
-
-  element.innerText = rounds;
-}
-
 /* function updateTotalRounds() {
   const totalRounds = parseInt(localStorage.getItem("rounds-all"), 10) || 0;
   document.getElementById("totalRounds").textContent = totalRounds;
-} */
-
-/* TEST */
-
-// Totalt antal rundor per språk
-// Totalt antal rundor per språk
-function updateRoundsPerLanguage(
-  language = localStorage.getItem("language") || "english",
-) {
-  const roundsKey = `rounds-${language}`;
-  const rounds = parseInt(localStorage.getItem(roundsKey), 10) || 0;
-  const el = document.getElementById("info-total-rounds-language");
-  if (el) el.textContent = rounds;
-  return rounds;
-}
-
-// Totalt antal rundor för alla språk
-function updateTotalRounds() {
-  let totalRounds = 0;
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith("rounds-")) {
-      totalRounds += parseInt(localStorage.getItem(key), 10) || 0;
-    }
-  });
-  localStorage.setItem("rounds-all", totalRounds);
-  const el = document.getElementById("info-total-rounds-all");
-  if (el) el.textContent = totalRounds;
-  return totalRounds;
-}
-
-// Total tid per språk
-function updateTimePerLanguage(
-  language = localStorage.getItem("language") || "english",
-) {
-  const timeKey = `time-${language}`;
-  const time = parseInt(localStorage.getItem(timeKey), 10) || 0;
-  const el = document.getElementById("info-total-time-language");
-  if (el) el.textContent = formatTime(time);
-  return time;
-}
-
-// Total tid för alla språk
-function updateTotalTimeAll() {
-  let totalTime = 0;
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith("time-")) {
-      totalTime += parseInt(localStorage.getItem(key), 10) || 0;
-    }
-  });
-  localStorage.setItem("time-all", totalTime);
-  const el = document.getElementById("info-total-time-all");
-  if (el) el.textContent = formatTime(totalTime);
-  return totalTime;
-}
-
-// Hjälpfunktion för att formatera tid mm:ss
-function formatTime(totalSeconds) {
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-  return `${minutes}.${seconds < 10 ? "0" : ""}${seconds}`;
-}
-
-// Hjälpfunktion för att formatera tid mm:ss
-function formatTime(totalSeconds) {
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-  return `${minutes}.${seconds < 10 ? "0" : ""}${seconds}`;
-}
-/* SLUT */
+} 
 
 function updateTime(time, id) {
   time = parseInt(time, 10) || 0;
@@ -351,6 +334,7 @@ function updateTotalTime() {
   let totalTime = localStorage.getItem(timeKey) || 0;
   updateTime(totalTime, "info-total-time");
 }
+  
 
 /* POPUP - LANGUAGE */
 document.addEventListener("DOMContentLoaded", () => {
@@ -363,22 +347,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("statisticsModal");
+  const starBtn = document.getElementById("statistics-trigger");
+
+  if (starBtn && popup) {
+    starBtn.addEventListener("click", () => popup.open());
+  }
+});
+
+// Statistics button
+document.addEventListener("DOMContentLoaded", () => {
+  const starBtn = document.getElementById("statistics-trigger");
+  const popup = document.getElementById("statisticsModal");
+
+  if (starBtn && popup) {
+    starBtn.addEventListener("click", () => popup.open());
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateStars();
+  updateFlag();
+  /*   updateStatisticsUI();
   updateStarsPerLanguage();
   updateRoundsPerLanguage();
   updateTotalRounds();
   updateTimePerLanguage();
-  updateTotalTimeAll();
+  updateTotalTimeAll(); */
 });
 
 document.addEventListener("language-changed", (e) => {
   const { language, flag } = e.detail;
-
   updateStars();
+  updateFlag();
+  updateStatisticsUI();
   updateTotalStarsForCurrentLanguage();
 
-  if (typeof updateStars === "function") updateStars();
-  if (typeof updateAllCategories === "function") {
-    updateAllCategories(language);
+  /*   if (typeof updateStars === "function") updateStars();
+   */ if (typeof updateAllCategories === "function") {
+    updateAllCategories(getCurrentLanguage);
   }
 
   const flagImg = document.getElementById("selected-flag");
@@ -406,36 +413,6 @@ function updateTotalStarsForCurrentLanguage() {
   const element = document.getElementById("info-total-stars");
   if (element) element.textContent = totalStars;
 }
-
-function updateStars() {
-  const language = localStorage.getItem("language") || "english";
-
-  categories.forEach((category) => {
-    const starsElement = document.getElementById("stars-" + category.name);
-    if (!starsElement) return;
-
-    const key = `stars-${category.name}-${language}`;
-    let numberOfStars = parseInt(localStorage.getItem(key), 10) || 0;
-    numberOfStars = Math.min(numberOfStars, maxNumberOfStartsPerCategory);
-
-    starsElement.innerHTML = "";
-    for (let i = 0; i < maxNumberOfStartsPerCategory; i++) {
-      const isFilled = i < numberOfStars;
-      const icon = isFilled ? "./icons/star_5d.svg" : "./icons/star_5d.svg";
-
-      starsElement.innerHTML += `
-    <img 
-      class="star ${isFilled ? "star-filled" : "star-empty"}" 
-      src="${icon}" 
-      alt="${isFilled ? "Fylld stjärna" : "Tom stjärna"}"
-    />
-  `;
-    }
-  });
-}
-document.addEventListener("DOMContentLoaded", () => {
-  updateStars(); // Uppdaterar alla stjärnbehållare baserat på sparat språk
-});
 
 /* SCROLL-FUNCTION */
 // Function to check if at bottom
@@ -487,16 +464,6 @@ scrollArea.addEventListener("scroll", () => {
 } */
 
 function updateAllCategories(selectedLanguageValue) {}
-
-document.addEventListener("DOMContentLoaded", () => {
-  updatePage(); // Uppdaterar runda, tid och stjärnor
-  /*   loadLanguage(); // Laddar språk
-   */
-  /*   updateAllCategories(localStorage.getItem("language") || "ENG"); // Uppdatera kategorier
-   */ updateTotalStarsForCurrentLanguage();
-  /*   updateRounds();
-   */ /*  updateStars(); */ // Uppdaterar stjärnvisning för att säkerställa att den visas korrekt
-});
 
 /* BANNER */
 const dateSpan = document.getElementById("banner-date");

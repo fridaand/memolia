@@ -5,8 +5,11 @@ class GameNav extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="style.css">  
-    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css">  
+ <style>.nav-list-item:hover {
+  background: var(--green-400);
+  color: var(--color-text-muted);
+}</style>
       
 
 
