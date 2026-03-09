@@ -60,7 +60,7 @@ class HeaderDefault extends HTMLElement {
             </div>
           </article>
 
-          <div class="wrapper_buttons-round">
+          <div class="wrapper-buttons-round">
 
             ${
               showDictionary

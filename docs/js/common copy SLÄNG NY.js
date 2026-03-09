@@ -217,7 +217,7 @@ document.addEventListener("storage-cleared", () => {
     <div class="board-gap">
       <h2 class="text-warning">INSTÄLLNINGAR RADERADE</h2>
       <p>Alla inställningar har raderats</p>
-      <div class="wrapper_buttons">
+      <div class="wrapper-buttons">
         <button class="button_primary button_text confirm">OK</button>
       </div>
     </div>
@@ -259,7 +259,7 @@ document.addEventListener("storage-cleared", () => {
         <div class="board-gap">
           <h2 class="text-warning">INSTÄLLNINGAR RADERADE</h2>
           <p>Alla inställningar har raderats</p>
-          <div class="wrapper_buttons">
+          <div class="wrapper-buttons">
             <button class="button_primary button_text confirm">OK</button>
           </div>
         </div>
@@ -298,7 +298,7 @@ document.addEventListener("storage-cleared", () => {
     <div class="board-gap">
       <h2 class="text-warning">INSTÄLLNINGAR RADERADE</h2>
       <p>Alla inställningar har raderats</p>
-      <div class="wrapper_buttons">
+      <div class="wrapper-buttons">
         <button class="button_primary button_text confirm">OK</button>
       </div>
     </div>

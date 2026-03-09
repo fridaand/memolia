@@ -1,0 +1,69 @@
+button {
+  border: none;
+  background: none;
+  cursor: none;
+  font: inherit;
+  align-items: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+  white-space: nowrap;
+  transition: var(--btn-transition);
+  border: none;
+  background: none;
+}
+
+/* PRIMARY */
+.button--primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.button--info {
+  background-color: var(--btn-info-bg);
+  color: var(--btn-info-text);
+}
+
+/* DANGER - DELETE, EXIT WITHOUT SAVING */
+.button--danger {
+  background-color: var(--btn-danger-bg);
+  color: var(--btn-danger-text);
+}
+
+/* WARNING - NOT DESTRUCTIVE, ATTENTION, ESC  */
+.button--warning {
+  background-color: var(--btn-warning-bg);
+  color: var(--btn-warning-text);
+}
+
+.button:hover {
+  filter: var(--btn-filter-hover);
+}
+
+.button--rect-lg {
+  border-radius: var(--btn-radius-rect);
+  padding: var(--btn-padding-lg);
+  font-size: var(--btn-font-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.button--round-sm {
+  width: var(--btn-size-sm);
+  height: var(--btn-size-sm);
+  border-radius: var(--btn-radius-round);
+  padding: 0;
+}
+.button--round-md {
+  width: var(--btn-size-md);
+  height: var(--btn-size-md);
+  border-radius: var(--btn-radius-round);
+  padding: 0;
+}
+.button--full {
+  width: 100%;
+  justify-content: start;
+}

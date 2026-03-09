@@ -1,0 +1,42 @@
+:root {
+  --icon-md: 2rem;
+  --icon-sm: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --icon-md: 1.825rem;
+    --icon-sm: 1.125rem;
+  }
+}
+@media (max-width: 880px) {
+  :root {
+    --icon-md: 1.75rem;
+    --icon-sm: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --icon-md: 1.625rem;
+    --icon-sm: 0.825rem;
+  }
+}
+@media (max-width: 468px) {
+  :root {
+    --icon-md: 1.5rem;
+    --icon-sm: 0.75rem;
+  }
+}
+
+.icon-sm {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+.icon-md {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+.icon-lg {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}

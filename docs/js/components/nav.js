@@ -5,20 +5,46 @@ class GameNav extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="css/style.css">  
- <style>.nav-list-item:hover {
-  background: var(--green-400);
-  color: var(--color-text-muted);
-}</style>
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <style>.nav-list-item:hover {
+      background: var(--green-400);
+      color: var(--color-text-muted);
+    }
+          .nav-toggle {
+      position: relative;
+      bottom: 1rem;
+      justify-content: end;
+      width: 100%;
+      display: inline-flex;
+    }
+      .hit-box {
+      display: flex;
+      min-width: var(--hit-box);
+      min-height: var(--hit-box);
+      width: auto;
+      align-items: center;
+      cursor: pointer;
+    }
+      .nav-menu-overlay {
+      padding: 3rem 1rem;
+      }
+    </style>
       
 
 
+
       <nav id="nav-menu" class="nav-menu-overlay" aria-label="Meny med länkar till sidor">
+
         <div class="nav-toggle">
-          <button class="nav-menu-close" aria-label="Stäng meny">
+        <div class="hit-box justify-end">
+          <button class="nav-menu-close clickable" aria-label="Stäng meny">
             <img class="icon-sm" src="icons/nav/close.svg" alt="">
           </button>
         </div>
+        </div>
+
+         
 
        <ul class="nav-list"> 
         <li><a class="nav-list-item" href="menu.html">

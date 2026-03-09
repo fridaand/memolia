@@ -1,0 +1,18 @@
+:root {
+  /* ===================================== */
+  /* SHADOWS */
+  /* ===================================== */
+  --shadow-round: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 15%,
+    rgba(255, 255, 255, 0) 30%
+  );
+
+  --shadow-menu-card: rgba(19, 6, 2, 0.6) -0px -8px 20px 4px inset;
+  --shadow-card:
+    -1px -1px 4px 0px rgba(0, 0, 0, 0.15) inset,
+    1px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
+  --shadow-gold:
+    0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 0px 8px 2px rgba(0, 0, 0, 0.2) inset;
+}

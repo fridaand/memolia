@@ -21,84 +21,89 @@ class StatisticsModal extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = ` 
 
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
   <div class="board-gap">
-      
+    
       <h2 class="text-headline-md">Överblick</h2>
+
+      <div class="menu__list clickable">
+
+        <div class="wrapper-horizontal">
+          <img id="stats-flag" class="flag" src="icons/flag/french-fr.svg" alt="">
+          <h3 id="stats-language-title" class="text-headline-sm">Aktuellt språk</h3>
+        </div>
+
+        <div class="modal-list">      
+            <div class="wrapper_p spacing-sm">   
+                <div class="wrapper-horizontal">
+                  <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
+                  <p class="text--color-primary">Poäng</p>   
+                  <span class="text--weight-regular" id="stars-language"></span>   
+              </div> 
+            </div>
+
+          <div class="wrapper_p spacing-sm">
+            <div class="wrapper-horizontal">
+                <img class="icon_xs" src="./icons/arrow-refresh.svg">
+                <p class="text--color-primary">Spelade rundor</p>
+                
+            <span class="text--weight-regular" id="rounds-language"></span>
+              </div>
+          </div>
+
+          <div class="wrapper_p spacing-sm">  
+            <div class="wrapper-horizontal">
+                <img class="icon_xs" src="./icons/clock.svg">
+                <p class="text--color-primary">Total tid</p>    
+                <span class="text--weight-regular" id="time-language"></span>
+            </div>
+          </div>  
+
+        </div>
+
+      </div>
+
+    <hr class="line"/>
+
+
+    <div class="menu__list clickable">
+    
+      <h3 class="text-headline-sm">Totalt - alla språk</h3>
+
+        <div class="modal-list">      
+
+          <div class="wrapper_p spacing-sm">   
+              <div class="wrapper-horizontal">
+                <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
+                <p class="text--color-primary">Poäng</p>   
+                <span class="text--weight-regular" id="stars-all"></span>  
+              </div>  
+          </div>
+
+          <div class="wrapper_p spacing-sm">
+            <div class="wrapper-horizontal">
+                <img class="icon_xs" src="./icons/arrow-refresh.svg">
+                <p class="text--color-primary">Spelade rundor</p>          
+                <span class="text--weight-regular" id="rounds-all"></span>
+            </div>
+          </div>
+
+          <div class="wrapper_p spacing-md">        
+            <div class="wrapper-horizontal">
+                <img class="icon_xs" src="./icons/clock.svg">
+                <p class="text--color-primary">Total tid</p>    
+                <span class="text--weight-regular" id="time-all"></span>
+            </div>
+          </div>
+    
+        </div>
 
     <div class="menu__list clickable">
 
-      <div class="wrapper-horizontal">
-        <img id="stats-flag" class="flag" src="icons/flag/french-fr.svg" alt="">
-        <h3 id="stats-language-title" class="text-headline-sm">Aktuellt språk</h3>
-      </div>
-
-      <div class="wrapper_p spacing-md">
-        <div class="wrapper_p spacing-sm">   
-            <div class="wrapper-horizontal">
-              <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
-              <p class="text--color-primary">Poäng</p>   
-            
-          <span class="text--weight-regular" id="stars-language"></span>   
-          </div> 
-      </div>
-
-      <div class="wrapper_p spacing-sm">
-        <div class="wrapper-horizontal">
-            <img class="icon_xs" src="./icons/arrow-refresh.svg">
-            <p class="text--color-primary">Spelade rundor</p>
-            
-        <span class="text--weight-regular" id="rounds-language"></span>
-          </div>
-      </div>
-
-      <div class="wrapper_p spacing-sm">  
-        <div class="wrapper-horizontal">
-            <img class="icon_xs" src="./icons/clock.svg">
-            <p class="text--color-primary">Total tid</p>    
-            <span class="text--weight-regular" id="time-language"></span>
-        </div>
-      </div>
-
-    </div>
 
   </div>
-
-  <hr class="line"/>
-
-    <h3 class="text-headline-sm">Totalt - alla språk</h3>
-
-    <div class="wrapper_p spacing-md">
-
-        <div class="wrapper_p spacing-sm">   
-            <div class="wrapper-horizontal">
-              <img class="star-bright icon_xs" src="./icons/star/star-md.svg">
-              <p class="text--color-primary">Poäng</p>   
-              <span class="text--weight-regular" id="stars-all"></span>  
-            </div>  
-        </div>
-
-        <div class="wrapper_p spacing-sm">
-          <div class="wrapper-horizontal">
-              <img class="icon_xs" src="./icons/arrow-refresh.svg">
-              <p class="text--color-primary">Spelade rundor</p>          
-              <span class="text--weight-regular" id="rounds-all"></span>
-          </div>
-        </div>
-
-        <div class="wrapper_p spacing-md">        
-          <div class="wrapper-horizontal">
-              <img class="icon_xs" src="./icons/clock.svg">
-              <p class="text--color-primary">Total tid</p>    
-              <span class="text--weight-regular" id="time-all"></span>
-          </div>
-        </div>
-  
-      </div>
-
-    </div>
     `;
   }
 

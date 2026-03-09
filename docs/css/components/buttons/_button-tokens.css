@@ -1,0 +1,100 @@
+:root {
+  --btn-font-weight: var(--font-weight-bold);
+
+  /* PRIMARY BUTTON */
+
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-text: var(--color-text-on-primary);
+  /*  --btn-primary-hover-bg: var(--orange-200);
+  --btn-primary-hover-text: var(--brown-800);
+ */
+  /* SECONDARY BUTTON */
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-text: var(--color-text-on-secondary);
+  /*  --btn-secondary-hover-bg: var(--cream-400);
+  --btn-secondary-hover-text: var(--brown-800);
+ */
+  /* INFO BUTTON */
+  --btn-info-bg: var(--color-info);
+  --btn-info-text: var(--color-text-on-info);
+  /* DESTRUCTIVE BUTTON */
+  --btn-danger-bg: var(--color-error);
+  --btn-danger-text: var(--color-text-on-error);
+  /*   --btn-danger-hover-bg: var(--red-400);
+  --btn-danger-hover-text: var(--color-text-primary);
+ */
+  /* DESTRUCTIVE BUTTON */
+  --btn-warning-bg: var(--color-warning);
+  --btn-warning-text: var(--color-text-on-warning);
+  /*   --btn-warning-hover-bg: var(--red-400);
+  --btn-warning-hover-text: var(--color-text-primary);
+ */
+  /* SHARED BUTTON TOKENS */
+  --btn-gap: 1rem;
+
+  --btn-radius-rect: 999px;
+  --btn-radius-round: 50%; /* alt   --btn-border-radius: var(--radius-md);
+ */
+
+  --btn-font-sm: 0.875rem; /* alt   --btn-font-size: var(--font-size-sm);
+ */
+  --btn-font-md: 0.825rem;
+  --btn-font-lg: 1rem;
+
+  --btn-size-sm: 1rem;
+  --btn-size-md: 2rem;
+  --btn-size-lg: 2.5rem;
+
+  --btn-filter-hover: contrast(1.1) brightness(1.1);
+
+  /* Padding för rektangulära knappar */
+  --btn-padding-sm: 0.5rem 0.75rem;
+  --btn-padding-md: 0.75rem 1.5rem;
+  --btn-padding-lg: 1rem 2rem;
+  /* alt */
+  --btn-padding-y: var(--space-sm);
+  --btn-padding-x: var(--space-md);
+
+  --btn-transition: all 0.2s ease-in-out;
+}
+
+/* 
+PRIMARY/CTA
+fortsätt spela
+spela igen
+OK 
+
+
+SECONDARY
+gå till huvudmenyn
+avbryt
+
+DANGER/DESTRUCTIVE
+radera
+nollställ poäng
+*/
+
+@media (max-width: 1024px) {
+  :root {
+    --btn-size-md: 1.825rem;
+    --btn-size-sm: 1rem;
+  }
+}
+@media (max-width: 880px) {
+  :root {
+    --btn-size-md: 1.75rem;
+    --btn-size-sm: 1rem;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --btn-size-md: 1.625rem;
+    --btn-size-sm: 1rem;
+  }
+}
+@media (max-width: 468px) {
+  :root {
+    --btn-size-md: 1.5rem;
+    --btn-size-sm: 1rem;
+  }
+}

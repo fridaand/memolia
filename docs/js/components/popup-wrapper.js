@@ -8,7 +8,7 @@ class PopupWrapper extends HTMLElement {
           <div class="modal-section">
 
               <div class="nav-toggle">
-                <button class="popup-menu-close position-bottom clickable">
+                <button class="popup-menu-close hit-box justify-end clickable">
                   <img class="icon-sm" src="icons/nav/close.svg" alt="Stäng">
                 </button>
               </div>

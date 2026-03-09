@@ -1,5 +1,3 @@
-/* variabler */
-
 :root {
   /* ===================================== */
   /* PRIMITIVE COLORS – CATEGORY COLORS */
@@ -59,12 +57,10 @@
 
   /* BACKGROUNDS */
   --color-bg-primary: var(--petrol-900);
-  --color-bg-surface: var(--petrol-700);
+  /*   --color-bg-surface: var(--petrol-700);
+ */
   --color-bg-overlay: var(--black-op80);
   --color-bg-light: var(--cream-200);
-  --color-bg-info: var(--petrol-200);
-  --color-bg-warning: var(--pink-200);
-  --color-bg-success: var(--green-200);
 
   /* TEXT */
   --color-text-primary: var(--white-200); /* text på mörk bg */
@@ -72,27 +68,27 @@
   --color-text-muted: var(--petrol-900); /* text på ljus bg */
   --color-text-dark: var(--brown-800);
 
-  /* ACCENTS & STATES */
-  --color-accent: var(--brown-600);
-  --color-warning: var(--pink-600); /* warning / alert */
+  /* BRAND COLORS */
 
-  /* ===================================== */
-  /* SHADOWS */
-  /* ===================================== */
-  --shadow-round: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 15%,
-    rgba(255, 255, 255, 0) 30%
-  );
-  --shadow-button: rgba(76, 47, 6, 0.4) -0px -0px 16px 0px inset;
-  --shadow-button-hover: rgba(76, 47, 6, 0.2) -0px -0px 8px 0px inset;
-  --shadow-menu-card: rgba(19, 6, 2, 0.6) -0px -8px 20px 4px inset;
-  --shadow-card:
-    -1px -1px 4px 0px rgba(0, 0, 0, 0.15) inset,
-    1px 1px 4px 0px rgba(0, 0, 0, 0.15) inset;
-  --shadow-gold:
-    0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 0px 8px 2px rgba(0, 0, 0, 0.2) inset;
+  /* STATUS COLORS */
+  --color-primary: var(--green-200);
+  --color-success: var(--green-200);
+  --color-info: var(--cream-200);
+  --color-warning: var(--orange-200);
+  --color-error: var(--pink-200);
+
+  /* STATUS BACKGROUNDS */
+  --color-bg-success: var(--color-success);
+  --color-bg-info: var(--color-info);
+  --color-bg-warning: var(--color-warning);
+  --color-bg-error: var(--color-error);
+
+  /* TEXT ON STATUS */
+  --color-text-on-primary: var(--color-text-dark);
+  --color-text-on-success: var(--color-text-dark);
+  --color-text-on-info: var(--color-text-dark);
+  --color-text-on-warning: var(--color-text-dark);
+  --color-text-on-error: var(--color-text-dark);
 
   /* ===================================== */
   /* GRADIENTS */
@@ -167,73 +163,4 @@
       #ff9485 68.45%,
       #fd8674 95.24%
     );
-
-  /* ===================================== */
-  /* TYPOGRAPHY */
-  /* ===================================== */
-  --font-primary:
-    "Montserrat", "Figtree", "Be Vietnam Pro", "Golos Text", "Zain", sans-serif;
-  --font-weight-light: 350;
-  --font-weight-regular: 450;
-  --font-weight-bold: 700;
-  --font-size-display: 1.5rem;
-  --font-size-lg: 3rem;
-  --font-size-md: 2.25rem;
-  --font-size-sm: 1.25rem;
-  --font-size-xs: 1rem;
-  --font-size-xxs: 0.825rem;
-  --font-size-body: 0.875rem;
-  --font-size-tooltip: 0.825rem;
-
-  /* ===================================== */
-  /* SPACING SCALE */
-  /* ===================================== */
-
-  :root {
-    --hit-box: 2.5rem;
-
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 1.75rem;
-    --space-xl: 2.5rem;
-  }
-
-  /* ===================================== */
-  /* RADIUS */
-  /* ===================================== */
-  /* Border-radius mm */
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --font-size-display: 1.25rem;
-    --font-size-lg: 2.75rem;
-    --font-size-md: 2rem;
-  }
-}
-@media (max-width: 880px) {
-  :root {
-    --font-size-display: 1.125rem;
-    --font-size-lg: 2.5rem;
-    --font-size-md: 1.75rem;
-    --font-size-sm: 1.125rem;
-    --font-size-xs: 0.825rem;
-    --font-size-xxs: 0.75rem;
-  }
-}
-@media (max-width: 640px) {
-  :root {
-    --font-size-display: 1.125rem;
-    --font-size-lg: 2.25rem;
-    --font-size-md: 1.5rem;
-    --font-size-sm: 1rem;
-  }
-}
-@media (max-width: 468px) {
-  :root {
-    --font-size-lg: 2rem;
-    --font-size-md: 1.25rem;
-    --font-size-xxs: 0.625rem;
-  }
 }

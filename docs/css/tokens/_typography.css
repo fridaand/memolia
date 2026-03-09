@@ -1,0 +1,51 @@
+:root {
+  /* ===================================== */
+  /* TYPOGRAPHY */
+  /* ===================================== */
+  --font-primary:
+    "Montserrat", "Figtree", "Be Vietnam Pro", "Golos Text", "Zain", sans-serif;
+  --font-weight-light: 350;
+  --font-weight-regular: 450;
+  --font-weight-bold: 700;
+  --font-size-display: 1.5rem;
+  --font-size-lg: 3rem;
+  --font-size-md: 2.25rem;
+  --font-size-sm: 1.25rem;
+  --font-size-xs: 1rem;
+  --font-size-xxs: 0.825rem;
+  --font-size-body: 0.875rem;
+  --font-size-tooltip: 0.825rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-display: 1.25rem;
+    --font-size-lg: 2.75rem;
+    --font-size-md: 2rem;
+  }
+}
+@media (max-width: 880px) {
+  :root {
+    --font-size-display: 1.125rem;
+    --font-size-lg: 2.5rem;
+    --font-size-md: 1.75rem;
+    --font-size-sm: 1.125rem;
+    --font-size-xs: 0.825rem;
+    --font-size-xxs: 0.75rem;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --font-size-display: 1.125rem;
+    --font-size-lg: 2.25rem;
+    --font-size-md: 1.5rem;
+    --font-size-sm: 1rem;
+  }
+}
+@media (max-width: 468px) {
+  :root {
+    --font-size-lg: 2rem;
+    --font-size-md: 1.25rem;
+    --font-size-xxs: 0.625rem;
+  }
+}

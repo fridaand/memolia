@@ -20,7 +20,7 @@ class ClearStorageModal extends HTMLElement {
         </div>
       </div>
 
-      <div class="wrapper_buttons">
+      <div class="wrapper-buttons">
         <button class="button_primary button_text button-info clickable confirm">
           <span class="button_label">Ok</span>
         </button>

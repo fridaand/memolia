@@ -19,14 +19,14 @@ class GameFinishedModal extends HTMLElement {
             </div>
           </div>
 
-          <div class="wrapper_buttons">
+          <div class="wrapper-buttons">
 
             <div
               class="actions button_primary button_text button_cta"
               onclick="restartGame()"
             >
               <img src="/docs/icons/buttons/play_again.svg" alt="" />
-              <span class="button_label">Spela igen</span>
+              <span class="button_label">Spela ige</span>
             </div>
 
             <div

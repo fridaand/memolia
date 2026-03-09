@@ -16,7 +16,7 @@ class GameExitModal extends HTMLElement {
 
           <h2 class="text-title">Vill du avsluta spelet?</h2>
 
-          <div class="wrapper_buttons">
+          <div class="wrapper-buttons">
             <a href="menu.html">
               <div class="button_primary button_text button_warning" id="goBackButton">
                 <span class="button_label">Avsluta</span>

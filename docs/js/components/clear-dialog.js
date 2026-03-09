@@ -14,7 +14,7 @@ class ClearDialog extends HTMLElement {
             <p><strong>OBS!</strong> Detta kan <strong>INTE</strong> ångras.</p>
           </div>
         </div>
-        <div class="wrapper_buttons">
+        <div class="wrapper-buttons">
           <div class="button_primary button_text button_warning clickable" id="confirm">
             <span class="button_label">Radera</span>
           </div>
@@ -68,7 +68,7 @@ class ClearDialog extends HTMLElement {
             <p>Alla inställningar har raderats</p>
           </div>
         </div>
-        <div class="wrapper_buttons">
+        <div class="wrapper-buttons">
           <button class="button_primary button_text button-info clickable confirm">
             <span class="button_label">Ok</span>
           </button>

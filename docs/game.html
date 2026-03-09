@@ -20,14 +20,15 @@
         <header>
           <!-- SECTION PAGE LABEL -->
           <section class="section_title-play">
-            <container class="container_page-label">
+            <container class="container_page-label justify-between">
               <div class="wrapper_h2-text-button h2-padding">
                 <h2 id="cate" class="text-title"></h2>
                 <div class="wrapper_text-button"></div>
               </div>
 
-              <div class="hitbox_tr clickable" id="button_trigger">
+              <div class="hit-box justify-end clickable" id="button_trigger">
                 <img
+               
                   src="./icons/nav/close.svg"
                   alt="opens a dialog box to exit the game"
                 />
@@ -44,17 +45,17 @@
                       class="btn-switch"
                       aria-label="Växla översättning"
                     >
-                      <img class="flag flag-left icon_lg" />
-                      <img class="flag flag-right icon_lg" />
+                      <img class="flag icon-md flag-left" />
+                      <img class="flag icon-md flag-right" />
                     </button>
                     <span class="tooltip">Visa översättning</span>
                   </div>
                 </div>
 
-                <div id="button-mute" class="hitbox button-mute r">
+                <div id="button-mute" class="hit-box justify-center">
                   <img
                     id="sound-icon"
-                    class="button_m_r icon_lg"
+                    class="button--round-md"
                     src="./icons/buttons/button_sound_on.svg"
                     alt="Mute sound for the memory cards"
                   />
@@ -62,12 +63,12 @@
 
                 <div
                   id="button-pause"
-                  class="hitbox button-pause"
+                  class="hit-box justify-center"
                   onclick="pause()"
                 >
                   <img
                     id="play-pause"
-                    class="button_m_r icon_lg"
+                    class="button--round-md"
                     src="./icons/buttons/button_pause_default.svg"
                     alt="Play/pause time for the memory game"
                   />
@@ -122,71 +123,84 @@
 
     <!-- POPUP EXIT GAME-->
     <div id="popUpId" class="popup_bg">
-      <div class="popup_styling">
-        <div class="wrapper_justify-end">
-          <div class="hitbox_tr">
+      <!--       <div class="popup_styling">
+ -->
+     <section class="popup">
+      <div class="modal-section">
+        <div class="nav-toggle">
+          <div class="hit-box justify-end clickable">
             <img
-              class="button_close clickable"
+              class="button_close"
               src="./icons/nav/close.svg"
               alt="close dialog box to return to game"
             />
           </div>
         </div>
 
-        <h2 class="text-title">Vill du avsluta spelet?</h2>
+        <div class="modal-content">
+          <h2 class="text-headline-md">Vill du avsluta spelet?</h2>
 
-        <div class="wrapper_buttons">
-          <a href="menu.html"
-            ><div
-              class="button_primary button_text button_warning"
-              id="goBackButton"
+          <div class="wrapper-buttons">
+            <a href="menu.html"
+              ><div
+                class="button button--rect-lg button--full button--danger"
+                id="goBackButton"
+              >
+                <span class="button_label">Avsluta</span>
+              </div></a
             >
-              <span class="button_label">Avsluta</span>
-            </div></a
-          >
-          <a class="button_close"
-            ><div class="button_primary button_text button_cta">
-              <span class="button_label">Fortsätt spela</span>
-            </div></a
-          >
+            <a class="button_close"
+              ><div class="button button--rect-lg button--full button--primary">
+                <span class="button_label">Fortsätt spela</span>
+              </div></a
+              >
+            </div>
         </div>
       </div>
     </div>
+    </section>
 
     <!-- POPUP GAME ENDS-->
 
     <div class="popup_bg section_end-game">
       <div class="lottie-container"></div>
 
-      <div class="container_end-game popup_styling">
-        <div class="wrapper_h2-text">
-          <h2 class="text-title" id="popupText">Bra gjort!</h2>
-          <div class="p-gap">
-            <p>
-              Du klarade spelet med <span class="score"></span> drag på
-              <span class="info-seconds"></span> sekunder
-            </p>
-          </div>
-        </div>
+    <section class="popup">
 
-        <div class="wrapper_buttons">
-          <div
-            class="actions button_primary button_text button_cta"
-            onclick="restartGame()"
-          >
-            <img src="/docs/icons/buttons/play_again.svg" alt="" />
-            <span class="button_label">Spela igen</span>
+      <div class="modal-section">
+        <div class="modal-content">
+          <div class="wrapper_h2-text">
+            <h2 class="text-headline-md" id="popupText">Bra gjort!</h2>
+            <div class="p-gap">
+              <p>
+                Du klarade spelet med <span class="score"></span> drag på
+                <span class="info-seconds"></span> sekunder
+              </p>
+            </div>
           </div>
-          <div
-            class="button_primary button_text button_warning"
-            onclick="window.location.href = 'menu.html'"
-          >
-            <img src="/docs/icons/nav/icon_home_black.svg" alt="" />
-            <span class="button_label">Huvudmeny</span>
+
+          <div class="wrapper-buttons">
+            <button
+              class="button button--rect-lg button--full button--primary"
+              onclick="restartGame()"
+            >
+  <!--             <img src="/docs/icons/buttons/play_again.svg" alt="" />
+  -->            <span class="button_label">Spela igen</span>
+            </button>
+            <button
+              class="button button--rect-lg button--full button--danger"
+              onclick="window.location.href = 'menu.html'"
+            >
+  <!--             <img src="/docs/icons/nav/icon_home_black.svg" alt="" />
+  -->            <span class="button_label">Huvudmeny</span>
+            </button>
           </div>
         </div>
       </div>
+    </section>
+
     </div>
+
     <!-- 
     <game-exit-modal></game-exit-modal>
     <game-finished-modal></game-finished-modal>
