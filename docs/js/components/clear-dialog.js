@@ -6,6 +6,13 @@ class ClearDialog extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="css/style.css">
 
+<style>
+.text--weight-light {
+  font-weight: var(--font-weight-light);
+}
+  </style>
+
+
       <div class="board-gap">
         <h2 class="text-headline-md text-warning">Radera allt?</h2>
         <div class="wrapper_p">
@@ -15,12 +22,13 @@ class ClearDialog extends HTMLElement {
           </div>
         </div>
         <div class="wrapper-buttons">
-          <div class="button_primary button_text button_warning clickable" id="confirm">
+          <button class="button button--rect-lg button--full button--danger clickable" id="confirm">
             <span class="button_label">Radera</span>
-          </div>
-          <div class="button_primary button_text clickable" id="cancel">
+          </button>
+
+          <button class="button button--rect-lg button--full button--primary clickable" id="cancel">
             <span class="button_label">Avbryt</span>
-          </div>
+          </button>
         </div>
       </div>
     `;
@@ -31,8 +39,18 @@ class ClearDialog extends HTMLElement {
     const cancelBtn = this.shadowRoot.getElementById("cancel");
 
     // AVBRYT: stäng popup-wrapper
-    cancelBtn.addEventListener("click", () => {
+    /*    cancelBtn.addEventListener("click", () => {
       this.dispatchEvent(new CustomEvent("close-popup", { bubbles: true }));
+    }); */
+
+    cancelBtn.addEventListener("click", () => {
+      console.log("cancel clicked");
+      this.dispatchEvent(
+        new CustomEvent("close-popup", {
+          bubbles: true,
+          composed: true,
+        }),
+      );
     });
 
     // RADERA ALLT + bekräftelse-popup
@@ -54,7 +72,14 @@ class ClearDialog extends HTMLElement {
         }),
       );
 
-      this.dispatchEvent(new CustomEvent("close-popup", { bubbles: true }));
+      /*       this.dispatchEvent(new CustomEvent("close-popup", { bubbles: true }));
+       */
+      this.dispatchEvent(
+        new CustomEvent("close-popup", {
+          bubbles: true,
+          composed: true,
+        }),
+      );
 
       // Skapa bekräftelse-dialog
       const confirmation = document.createElement("div");
@@ -63,16 +88,11 @@ class ClearDialog extends HTMLElement {
 
 
       <div class="board-gap">
-          <h2 class="text-headline-md text-warning">Inställningar raderade</h2>
-          <div class="wrapper_p">
+       <div class="wrapper_p">
             <p>Alla inställningar har raderats</p>
           </div>
         </div>
-        <div class="wrapper-buttons">
-          <button class="button_primary button_text button-info clickable confirm">
-            <span class="button_label">Ok</span>
-          </button>
-        </div>
+      
       `;
 
       // Dispatch event för popup-wrapper att ersätta innehållet

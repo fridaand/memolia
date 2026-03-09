@@ -36,6 +36,13 @@ class PopupWrapper extends HTMLElement {
     };
 
     document.addEventListener("keydown", this.handleEsc);
+
+    this.addEventListener("show-confirmation", (e) => {
+      this.content.innerHTML = "";
+      this.content.appendChild(e.detail.content);
+    });
+
+    this.addEventListener("close-popup", () => this.close());
   }
 
   open(htmlContent) {

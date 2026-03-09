@@ -14,14 +14,13 @@ class ClearStorageModal extends HTMLElement {
       </div>
 
       <div class="wrapper_h2-text">
-        <h2 class="text_warning">RADERA ALLT?</h2>
-        <div class="wrapper_text">
+          <div class="wrapper_text">
           <p>Alla poäng och spelad tid har raderats</p>
         </div>
       </div>
 
       <div class="wrapper-buttons">
-        <button class="button_primary button_text button-info clickable confirm">
+        <button class="button button--rect-lg button--full button--primary clickable confirm">
           <span class="button_label">Ok</span>
         </button>
       </div>
