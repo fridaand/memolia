@@ -1,13 +1,13 @@
 /* ===== Tokens ===== */
-@import "tokens/_colors.css";
-@import "tokens/_typography.css";
-@import "tokens/_spacing.css";
-@import "tokens/_radius.css";
-@import "tokens/_shadows.css";
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";
+@import "tokens/radius.css";
+@import "tokens/shadows.css";
 
 /* ===== Utilities ===== */
-@import "utilities/_helpers.css";
-@import "utilities/_animations.css";
+/* @import "utilities/helpers.css";
+@import "utilities/animations.css"; */
 
 /* ===== Layout ===== */
 /* @import "layout/_grid.css";
@@ -16,8 +16,8 @@
 @import "layout/_cards.css"; */
 
 /* ===== Components ===== */
-@import "components/buttons/_button-tokens.css";
-@import "components/buttons/_buttons.css";
-@import "components/buttons/_button-animations.css";
+@import "components/buttons/button-tokens.css";
+@import "components/buttons/buttons.css";
+@import "components/buttons/button-animations.css";
 
-@import "components/icons/_icons.css";
+@import "components/icons/icons.css";
