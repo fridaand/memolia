@@ -24,6 +24,7 @@ class StatisticsModal extends HTMLElement {
     <link rel="stylesheet" href="css/style.css">
 
 
+
   <div class="board-gap">
     
       <h2 class="text-headline-md">Överblick</h2>
